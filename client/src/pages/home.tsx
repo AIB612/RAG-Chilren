@@ -8,8 +8,16 @@ import { cn } from "@/lib/utils";
 // Assets
 import avatarXiaoBai from "@/assets/avatar-xiaobai.png";
 
+
+interface Message {
+  id: number;
+  sender: string;
+  text: string;
+  sourceTag?: string;
+}
+
 export default function Home() {
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<Message[]>([
     { id: 1, sender: "bot", text: "你好呀！我是小白，你的私密健康小助手。✨" },
     { id: 2, sender: "bot", text: "关于青春期、避孕、身体变化，或者任何小秘密，都可以问我哦～ 我会优先查找专业知识库回答你！📚" },
   ]);

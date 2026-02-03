@@ -2,7 +2,7 @@ import { MobileLayout } from "@/components/mobile-layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChevronLeft, Share2, ThumbsUp, BookOpen, AlertCircle, Info, HelpCircle, CheckCircle2 } from "lucide-react";
+import { ChevronLeft, Share2, ThumbsUp, BookOpen, AlertCircle, Info, HelpCircle, CheckCircle2, Heart } from "lucide-react";
 import { useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 
@@ -86,7 +86,7 @@ const articles: Record<string, any> = {
            <InfoCard title="宫内节育器 (IUD)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
             <p>一种放置在子宫内的小型装置（T形），有效期可达 3-10 年。它是最有效的长效可逆避孕方法之一。</p>
             <div className="mt-2 flex gap-2 text-xs font-semibold">
-              <span className="px-2 py-0.5 bg-blue-100 rounded text-blue-600">有效率: >99%</span>
+              <span className="px-2 py-0.5 bg-blue-100 rounded text-blue-600">有效率: &gt;99%</span>
               <span className="px-2 py-0.5 bg-red-100 rounded text-red-600">防 STDs: 否</span>
             </div>
           </InfoCard>
@@ -191,7 +191,7 @@ const articles: Record<string, any> = {
           </InfoCard>
 
           <InfoCard title="铜宫内节育器 (Copper IUD)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
-            <p>如果在性行为后5天内放入，它是最有效的紧急避孕方式（有效率>99%），并且可以作为长效避孕措施继续使用。</p>
+            <p>如果在性行为后5天内放入，它是最有效的紧急避孕方式（有效率&gt;99%），并且可以作为长效避孕措施继续使用。</p>
           </InfoCard>
         </div>
       </>
