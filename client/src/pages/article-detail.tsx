@@ -25,6 +25,17 @@ import imgPregnancy from "@/assets/article-pregnancy.png";
 import imgPleasure from "@/assets/article-pleasure.png";
 import imgOrientation from "@/assets/article-orientation.png";
 
+// Micro Assets
+import imgMicroAbortionPills from "@/assets/article-micro-abortion-pills.png";
+import imgMicroClinic from "@/assets/article-micro-clinic.png";
+import imgMicroClock from "@/assets/article-micro-clock-72h.png";
+import imgMicroPronouns from "@/assets/article-micro-pronouns.png";
+import imgMicroUterus from "@/assets/article-micro-uterus.png";
+import imgMicroFetus1 from "@/assets/article-micro-fetus-1.png";
+import imgMicroAnatomy from "@/assets/article-micro-anatomy.png";
+import imgMicroTestKit from "@/assets/article-micro-test-kit.png";
+import imgMicroChat from "@/assets/article-micro-chat-bubbles.png";
+
 // Reusable Components for Articles
 const SectionTitle = ({ color, children }: { color: string, children: React.ReactNode }) => (
   <h3 className="text-lg font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
@@ -196,6 +207,7 @@ const articles: Record<string, any> = {
         
         <div className="space-y-4">
           <InfoCard title="药物流产 (The Abortion Pill)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
+            <img src={imgMicroAbortionPills} alt="Pills" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-pink-100" />
             <p className="mb-2">通常适用于怀孕早期（10-11周以内）。包含两步：</p>
             <ul className="list-disc pl-4 space-y-1 text-xs mb-2">
               <li><strong>米非司酮：</strong> 阻断孕酮，使妊娠停止发展。</li>
@@ -205,6 +217,7 @@ const articles: Record<string, any> = {
           </InfoCard>
 
           <InfoCard title="手术流产 (In-Clinic Abortion)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
+            <img src={imgMicroClinic} alt="Procedure" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-pink-100" />
             <p className="mb-2">由医生在诊所进行。常见的有“负压吸引术”。</p>
              <ul className="list-disc pl-4 space-y-1 text-xs mb-2">
               <li><strong>高效：</strong> 过程通常只需5-10分钟。</li>
@@ -250,9 +263,10 @@ const articles: Record<string, any> = {
           紧急避孕（Emergency Contraception）是在无保护性行为或避孕失败（如避孕套破裂、漏服避孕药）后，用于防止怀孕的方法。它不能终止已经发生的妊娠（它不是堕胎药）。
         </p>
         
-        <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5 text-center mb-6">
-          <h4 className="text-xl font-bold text-orange-600 mb-2">⏰ 越早越好</h4>
-          <p className="text-sm text-orange-800">虽然有些方法在5天内有效，但<span className="font-bold">24小时内</span>服用效果最好。</p>
+        <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5 text-center mb-6 relative overflow-hidden">
+          <div className="absolute right-2 top-2 opacity-20"><img src={imgMicroClock} className="w-16 h-16" /></div>
+          <h4 className="text-xl font-bold text-orange-600 mb-2 relative z-10">⏰ 越早越好</h4>
+          <p className="text-sm text-orange-800 relative z-10">虽然有些方法在5天内有效，但<span className="font-bold">24小时内</span>服用效果最好。</p>
         </div>
 
         <SectionTitle color="bg-orange-400">你的选择</SectionTitle>
@@ -298,6 +312,7 @@ const articles: Record<string, any> = {
         <SectionTitle color="bg-teal-400">词汇表：理解性别</SectionTitle>
         <div className="space-y-3">
           <InfoCard title="顺性别 (Cisgender)" colorClass="border-teal-100 bg-white text-teal-800">
+            <img src={imgMicroPronouns} alt="Pronouns" className="w-14 h-14 object-contain float-right ml-2 bg-teal-50/20 rounded-lg p-1" />
             <p>你的性别认同与出生时被指派的性别一致。例如，出生时被指派为女性，并且觉得自己是女性。</p>
           </InfoCard>
           
@@ -337,6 +352,7 @@ const articles: Record<string, any> = {
         <SectionTitle color="bg-green-400">常见健康问题</SectionTitle>
         <div className="space-y-4">
            <InfoCard title="尿路感染 (UTI)" colorClass="border-green-100 bg-green-50/30 text-green-800">
+            <img src={imgMicroTestKit} alt="Test Kit" className="w-14 h-14 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-green-100" />
             <p><strong>症状：</strong> 尿频、尿急、尿痛（烧灼感）。<br/><strong>原因：</strong> 细菌进入尿道（女性更常见）。<br/><strong>处理：</strong> 多喝水，及时就医使用抗生素。</p>
           </InfoCard>
            <InfoCard title="阴道酵母菌感染 (Yeast Infection)" colorClass="border-green-100 bg-green-50/30 text-green-800">
@@ -344,6 +360,7 @@ const articles: Record<string, any> = {
           </InfoCard>
 
           <InfoCard title="经前综合症 (PMS) & PMDD" colorClass="border-green-100 bg-green-50/30 text-green-800">
+            <img src={imgMicroUterus} alt="Uterus" className="w-14 h-14 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-green-100" />
             <p><strong>症状：</strong> 经期前的情绪波动、乳房胀痛、疲劳。PMDD 是更严重的版本，可能导致抑郁。<br/><strong>处理：</strong> 运动、饮食调整，严重时可咨询医生用药。</p>
           </InfoCard>
 
@@ -379,6 +396,7 @@ const articles: Record<string, any> = {
         
         <div className="space-y-4">
            <InfoCard title="第一孕期 (1-12周)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+            <img src={imgMicroFetus1} alt="Fetus" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-rose-100" />
             <p>这是宝宝器官形成的关键期。你可能会感到晨吐、极度疲劳和乳房胀痛。必须开始服用叶酸，并避免酒精和烟草。</p>
           </InfoCard>
 
@@ -417,6 +435,7 @@ const articles: Record<string, any> = {
         <SectionTitle color="bg-violet-400">了解你的身体</SectionTitle>
         <div className="space-y-4">
           <InfoCard title="阴蒂 (The Clitoris)" colorClass="border-violet-100 bg-violet-50/30 text-violet-800">
+            <img src={imgMicroAnatomy} alt="Anatomy" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-violet-100" />
             <p>这是一个专门为快乐而生的器官。它有成千上万个神经末梢。对于大多数女性来说，刺激阴蒂是达到高潮的关键，而不仅仅是阴道插入。</p>
           </InfoCard>
            <InfoCard title="自慰 (Masturbation)" colorClass="border-violet-100 bg-violet-50/30 text-violet-800">
@@ -528,6 +547,14 @@ const articles: Record<string, any> = {
           "定期检测：即使没有症状，每年也要体检一次。",
           "PrEP：如果你有高风险，可以服用 PrEP 药物预防 HIV。"
         ]} />
+        <InfoCard title="检测方式 (Testing)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+           <img src={imgMicroTestKit} alt="Testing" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-slate-100" />
+           <ul className="list-disc pl-4 space-y-1 text-xs">
+             <li><strong>尿液检测：</strong> 查淋病、衣原体。</li>
+             <li><strong>血液检测：</strong> 查HIV、梅毒、疱疹。</li>
+             <li><strong>拭子取样：</strong> 从咽喉、直肠或生殖器取样。</li>
+           </ul>
+        </InfoCard>
       </>
     )
   },
@@ -548,9 +575,10 @@ const articles: Record<string, any> = {
         <SectionTitle color="bg-pink-400">健康 vs 不健康</SectionTitle>
         
         <div className="grid grid-cols-1 gap-4">
-           <div className="bg-green-50/50 p-4 rounded-xl border border-green-100">
+           <div className="bg-green-50/50 p-4 rounded-xl border border-green-100 relative overflow-hidden">
+             <div className="absolute right-2 top-2 opacity-20"><img src={imgMicroChat} className="w-16 h-16" /></div>
              <h4 className="font-bold text-green-700 mb-2 flex items-center gap-2"><CheckCircle2 size={16}/> 健康的标志</h4>
-             <ul className="text-xs text-green-800 space-y-1 pl-5 list-disc">
+             <ul className="text-xs text-green-800 space-y-1 pl-5 list-disc relative z-10">
                <li>你们互相尊重对方的界限。</li>
                <li>你可以做真实的自己。</li>
                <li>即使吵架，也能公平沟通，不进行人身攻击。</li>
