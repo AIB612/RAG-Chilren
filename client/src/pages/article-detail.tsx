@@ -8,6 +8,10 @@ import { cn } from "@/lib/utils";
 
 // Assets
 import imgBirthControl from "@/assets/article-birth-control.png";
+import imgBcPill from "@/assets/article-bc-pill.png";
+import imgBcIud from "@/assets/article-bc-iud.png";
+import imgBcImplant from "@/assets/article-bc-implant.png";
+import imgBcCondom from "@/assets/article-bc-condom.png";
 import imgSTDs from "@/assets/article-stds.png";
 import imgRelationships from "@/assets/article-relationships.png";
 import imgAbortion from "@/assets/article-abortion.png";
@@ -80,8 +84,9 @@ const articles: Record<string, any> = {
         
         <SectionTitle color="bg-blue-400">常见的避孕方式对比</SectionTitle>
         
-        <div className="space-y-4">
+        <div className="space-y-6">
           <InfoCard title="皮下埋植剂 (The Implant)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <img src={imgBcImplant} alt="Implant" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
             <p>一种火柴棍大小的细管，由医生植入上臂皮下。释放孕激素来阻止排卵。</p>
             <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: &gt;99%</span>
@@ -90,6 +95,7 @@ const articles: Record<string, any> = {
           </InfoCard>
 
           <InfoCard title="宫内节育器 (IUD)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+             <img src={imgBcIud} alt="IUD" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
              <p>放置在子宫内的T形装置。分含铜（无激素）和含激素两种。</p>
              <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: &gt;99%</span>
@@ -98,6 +104,7 @@ const articles: Record<string, any> = {
           </InfoCard>
 
           <InfoCard title="短效避孕药 (The Pill)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <img src={imgBcPill} alt="Pill" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
             <p>每天口服一片。如果不漏服，效果极佳。有调节月经、改善痤疮等额外益处。</p>
             <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 91-99%</span>
@@ -106,6 +113,7 @@ const articles: Record<string, any> = {
           </InfoCard>
 
           <InfoCard title="避孕套 (Condoms)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <img src={imgBcCondom} alt="Condom" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
             <p>唯一能同时预防 STDs 的方法。无副作用，随买随用。</p>
              <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 85-98%</span>
