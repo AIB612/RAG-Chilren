@@ -11,7 +11,7 @@ import iconKnowledge from "@/assets/icon-knowledge-3d.png";
 const categories = [
   { id: "Abortion", title: "堕胎", subtitle: "人工流产", icon: Stethoscope, color: "from-red-400 to-pink-500" },
   { id: "Birth_Control", title: "避孕", subtitle: "生育控制", icon: Pill, color: "from-blue-400 to-cyan-500" },
-  { id: "Cancer", title: "癌症", subtitle: "预防与筛查", icon: ShieldAlert, color: "from-purple-400 to-indigo-500" },
+  // Removed Cancer as requested
   { id: "Emergency_Contraception", title: "紧急避孕", subtitle: "事后补救", icon: Pill, color: "from-orange-400 to-amber-500" },
   { id: "Gender_Identity", title: "性别认同", subtitle: "自我认知", icon: Users, color: "from-teal-400 to-emerald-500" },
   { id: "Health_and_Wellness", title: "健康与保健", subtitle: "身心福祉", icon: Heart, color: "from-green-400 to-lime-500" },
