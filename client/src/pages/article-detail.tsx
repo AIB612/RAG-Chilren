@@ -872,22 +872,6 @@ const articles: Record<string, any> = {
       </>
     )
   },
-
-
-        <SectionTitle color="bg-indigo-400">关于“出柜” (Coming Out)</SectionTitle>
-        <div className="bg-indigo-50 p-4 rounded-2xl border border-indigo-100">
-           <p className="text-sm text-indigo-800 leading-relaxed mb-2">
-             出柜是指告诉别人你的性取向。这是一个非常个人的过程。
-           </p>
-           <ul className="list-disc pl-4 space-y-1 text-xs text-indigo-700/80">
-             <li>你不需要一次性告诉所有人。</li>
-             <li>确保自己在安全的环境下进行。</li>
-             <li>如果没有准备好，不出柜也是完全可以的。</li>
-           </ul>
-        </div>
-      </>
-    )
-  },
   "STDs_HIV_Safer_Sex": {
     title: "性健康与 STDs",
     subtitle: "了解风险，安全去爱",
