@@ -1,7 +1,7 @@
 import { MobileLayout } from "@/components/mobile-layout";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Send, Sparkles, MoreHorizontal } from "lucide-react";
+import { Send, Sparkles, MoreHorizontal, Database, CloudLightning } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -11,16 +11,19 @@ import avatarXiaoBai from "@/assets/avatar-xiaobai.png";
 export default function Home() {
   const [messages, setMessages] = useState([
     { id: 1, sender: "bot", text: "你好呀！我是小白，你的私密健康小助手。✨" },
-    { id: 2, sender: "bot", text: "关于青春期、身体变化或者小秘密，都可以问我哦～ 我会保守秘密的！🤫" },
+    { id: 2, sender: "bot", text: "关于青春期、避孕、身体变化，或者任何小秘密，都可以问我哦～ 我会优先查找专业知识库回答你！📚" },
   ]);
   const [inputValue, setInputValue] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
+  const [searchSource, setSearchSource] = useState<"rag" | "ai" | null>(null);
+  
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [messages, isTyping, searchSource]);
 
   const handleSend = () => {
     if (!inputValue.trim()) return;
@@ -28,18 +31,43 @@ export default function Home() {
     const newMsg = { id: Date.now(), sender: "user", text: inputValue };
     setMessages(prev => [...prev, newMsg]);
     setInputValue("");
+    setIsTyping(true);
 
-    // Mock bot response
+    // Simulation of RAG + AI Logic
+    // Step 1: Searching Knowledge Base (RAG)
     setTimeout(() => {
-      const responses = [
-        "这是一个很好的问题！让我们一起探索一下...",
-        "摸摸头～这种感觉是正常的哦。",
-        "小白正在查找相关的健康知识...",
-        "记住，你的身体属于你自己，你有权说不！🛡️"
-      ];
-      const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-      setMessages(prev => [...prev, { id: Date.now() + 1, sender: "bot", text: randomResponse }]);
-    }, 1000);
+      setSearchSource("rag");
+      
+      // Step 2: Generating Response
+      setTimeout(() => {
+        setSearchSource(null);
+        setIsTyping(false);
+        
+        const responses = [
+          {
+            text: "根据【Planned Parenthood】的资料：避孕药的有效率可达99%，但必须每天按时服用。如果你经常忘记吃药，可能更适合宫内节育器(IUD)。需要我详细介绍IUD吗？",
+            source: "RAG: Birth Control Database"
+          },
+          {
+            text: "这也是很多人关心的问题。根据我们的知识库，这种情况属于正常生理现象，不需要过度担心。保持清洁干燥即可。🌟",
+            source: "RAG: Puberty Health"
+          },
+          {
+            text: "记住，在任何关系中，'知情同意' (Consent) 都是最重要的。只有当双方都清醒、自愿且热情地说'Yes'时，才是真正的同意。",
+            source: "RAG: Relationships & Consent"
+          }
+        ];
+        
+        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+        
+        setMessages(prev => [...prev, { 
+          id: Date.now() + 1, 
+          sender: "bot", 
+          text: randomResponse.text,
+          sourceTag: randomResponse.source
+        }]);
+      }, 1500); // Wait for "generation"
+    }, 800); // Wait for "searching"
   };
 
   return (
@@ -60,7 +88,7 @@ export default function Home() {
                 小白
                 <span className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold shadow-inner">Online</span>
               </h1>
-              <p className="text-xs text-muted-foreground font-medium">随时陪伴你的成长伙伴</p>
+              <p className="text-xs text-muted-foreground font-medium">由 RAG 知识库驱动</p>
             </div>
           </div>
           <Button variant="ghost" size="icon" className="text-muted-foreground hover:bg-white/50 rounded-full h-10 w-10">
@@ -92,20 +120,53 @@ export default function Home() {
                      </div>
                   )}
                   
-                  <div className={cn(
-                    "px-5 py-3.5 text-sm leading-relaxed relative group transition-all duration-300 shadow-sm",
-                    msg.sender === "user" 
-                      ? "bubble-right rounded-br-none bg-gradient-to-br from-pink-500 to-purple-600 border-none text-white font-medium" 
-                      : "bubble-left rounded-bl-none bg-white font-medium text-slate-700"
-                  )}>
-                    {msg.text}
-                    {/* Tiny 3D reflection effect overlay */}
-                    <div className="absolute inset-0 rounded-inherit bg-gradient-to-b from-white/10 to-transparent pointer-events-none opacity-50"></div>
+                  <div className="flex flex-col gap-1">
+                    <div className={cn(
+                      "px-5 py-3.5 text-sm leading-relaxed relative group transition-all duration-300 shadow-sm",
+                      msg.sender === "user" 
+                        ? "bubble-right rounded-br-none bg-gradient-to-br from-pink-500 to-purple-600 border-none text-white font-medium" 
+                        : "bubble-left rounded-bl-none bg-white font-medium text-slate-700"
+                    )}>
+                      {msg.text}
+                      {/* Tiny 3D reflection effect overlay */}
+                      <div className="absolute inset-0 rounded-inherit bg-gradient-to-b from-white/10 to-transparent pointer-events-none opacity-50"></div>
+                    </div>
+                    
+                    {/* Source Tag for Bot Messages */}
+                    {msg.sender === "bot" && msg.sourceTag && (
+                      <div className="flex items-center gap-1.5 ml-1 opacity-70">
+                         <Database size={10} className="text-purple-500" />
+                         <span className="text-[10px] text-purple-600 font-bold">{msg.sourceTag}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
+
+            {/* Simulated Logic Status Indicators */}
+            {searchSource === "rag" && (
+               <div className="flex justify-start w-full px-14 animate-in fade-in duration-300">
+                  <div className="flex items-center gap-2 text-xs text-purple-600 bg-purple-50/80 px-3 py-1.5 rounded-full border border-purple-100 shadow-sm">
+                     <Database size={12} className="animate-pulse" />
+                     <span>正在检索专业知识库...</span>
+                  </div>
+               </div>
+            )}
             
+            {/* Typing Indicator */}
+            {isTyping && !searchSource && (
+              <div className="flex justify-start w-full px-14 animate-in fade-in slide-in-from-bottom-2">
+                 <div className="bg-white border border-purple-50 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm w-fit">
+                   <div className="flex gap-1.5">
+                     <div className="w-2 h-2 bg-purple-300 rounded-full animate-bounce"></div>
+                     <div className="w-2 h-2 bg-purple-300 rounded-full animate-bounce delay-75"></div>
+                     <div className="w-2 h-2 bg-purple-300 rounded-full animate-bounce delay-150"></div>
+                   </div>
+                 </div>
+              </div>
+            )}
+
           </div>
         </ScrollArea>
 

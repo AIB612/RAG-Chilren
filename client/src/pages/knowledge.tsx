@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Search, ChevronRight, Heart, Pill, Stethoscope, Baby, Users, Smile, ShieldAlert } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { useLocation } from "wouter";
 
 // Assets
 import iconKnowledge from "@/assets/icon-knowledge-3d.png";
@@ -11,7 +12,6 @@ import iconKnowledge from "@/assets/icon-knowledge-3d.png";
 const categories = [
   { id: "Abortion", title: "堕胎", subtitle: "人工流产", icon: Stethoscope, color: "from-red-400 to-pink-500" },
   { id: "Birth_Control", title: "避孕", subtitle: "生育控制", icon: Pill, color: "from-blue-400 to-cyan-500" },
-  // Removed Cancer as requested
   { id: "Emergency_Contraception", title: "紧急避孕", subtitle: "事后补救", icon: Pill, color: "from-orange-400 to-amber-500" },
   { id: "Gender_Identity", title: "性别认同", subtitle: "自我认知", icon: Users, color: "from-teal-400 to-emerald-500" },
   { id: "Health_and_Wellness", title: "健康与保健", subtitle: "身心福祉", icon: Heart, color: "from-green-400 to-lime-500" },
@@ -23,6 +23,8 @@ const categories = [
 ];
 
 export default function Knowledge() {
+  const [_, setLocation] = useLocation();
+
   return (
     <MobileLayout>
       <div className="bg-[#F8F5FC] min-h-screen px-6 pt-12 pb-24">
@@ -54,6 +56,7 @@ export default function Knowledge() {
           {categories.map((cat) => (
             <div 
               key={cat.id} 
+              onClick={() => setLocation(`/learn/${cat.id}`)}
               className="group relative bg-white rounded-2xl p-4 flex items-center gap-4 card-3d cursor-pointer overflow-hidden"
             >
               {/* Icon Container */}
