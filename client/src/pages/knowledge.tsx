@@ -19,6 +19,8 @@ const categories = [
   { id: "Relationships", title: "情感关系", subtitle: "亲密关系", icon: Heart, color: "from-pink-400 to-rose-500" },
   { id: "Sex_and_Pleasure", title: "性与愉悦", subtitle: "探索美好", icon: Smile, color: "from-violet-400 to-purple-500" },
   { id: "Sexual_Orientation", title: "性取向", subtitle: "爱与被爱", icon: Users, color: "from-indigo-400 to-blue-500" },
+  { id: "Puberty", title: "青春期", subtitle: "成长的烦恼", icon: Users, color: "from-yellow-400 to-orange-500" },
+  { id: "Menstruation", title: "月经百科", subtitle: "周期与护理", icon: Pill, color: "from-pink-400 to-red-500" },
   { id: "STDs_HIV_Safer_Sex", title: "性健康", subtitle: "STD & HIV", icon: ShieldAlert, color: "from-slate-400 to-gray-500" },
 ];
 

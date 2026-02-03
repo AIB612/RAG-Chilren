@@ -765,24 +765,38 @@ const articles: Record<string, any> = {
   },
   "Sexual_Orientation": {
     title: "性取向 (Sexual Orientation)",
-    subtitle: "爱与吸引：探索多元光谱",
+    subtitle: "爱与吸引：深度解析多元光谱",
     image: imgOrientation,
     color: "from-indigo-400 to-blue-500",
     accentColor: "bg-indigo-500",
     lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
-    tags: ["LGBTQ+", "身份认同", "出柜指南", "多元光谱"],
+    tags: ["LGBTQ+", "金赛量表", "流动性", "盟友指南"],
     content: (
       <>
          <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
           性取向（Sexual Orientation）是指你在情感、浪漫或性方面被谁吸引。这是一种深刻的自我认同，而不是一种选择，更不是一种疾病。它是你的一部分，就像你的眼睛颜色或身高一样自然。
         </p>
 
-        <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 mb-6">
+        {/* 金赛量表 */}
+        <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-5 mb-6">
            <h4 className="font-bold text-indigo-700 mb-2 flex items-center gap-2">
-             <Info size={16} /> 光谱的概念 (The Spectrum)
+             <Info size={16} /> 金赛量表 (The Kinsey Scale)
            </h4>
-           <p className="text-xs text-indigo-800 leading-relaxed">
-             性取向不是非黑即白的，而是一个流动的光谱。有些人完全只喜欢同性或异性，而更多人处于中间地带。你的性取向在人生的不同阶段也可能会发生变化，这都是正常的。
+           <p className="text-sm text-indigo-800 leading-relaxed mb-4">
+             早在1948年，性学家阿尔弗雷德·金赛就提出：性取向不是非黑即白的，而是一个从0到6的光谱。
+           </p>
+           <div className="relative h-2 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full mb-8 mx-2">
+              <div className="absolute top-4 left-0 -translate-x-1/2 text-[10px] text-indigo-400 font-bold w-12 text-center">完全<br/>异性恋</div>
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 text-[10px] text-indigo-400 font-bold w-12 text-center">双性恋<br/>(均等)</div>
+              <div className="absolute top-4 right-0 translate-x-1/2 text-[10px] text-indigo-400 font-bold w-12 text-center">完全<br/>同性恋</div>
+              
+              {/* Dots */}
+              <div className="absolute top-1/2 left-0 w-3 h-3 bg-white border-2 border-indigo-400 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-white border-2 border-indigo-400 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute top-1/2 right-0 w-3 h-3 bg-white border-2 border-indigo-400 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+           </div>
+           <p className="text-xs text-indigo-600/80 italic text-center mt-6">
+             大部分人都落在0和6之间的某个位置，而不是极端的两端。
            </p>
         </div>
         
@@ -814,6 +828,7 @@ const articles: Record<string, any> = {
                <li>有些无性恋者完全没有性欲。</li>
                <li>有些可能会在建立深厚情感后产生性吸引（半性恋 Demisexual）。</li>
                <li>许多无性恋者仍然渴望浪漫关系和拥抱。</li>
+               <li><strong>浪漫取向 vs 性取向：</strong> 一个无性恋者可以是“异性浪漫倾向”(Heteroromantic)，即只想和异性谈恋爱但不想发生性关系。</li>
              </ul>
           </InfoCard>
           
@@ -823,22 +838,44 @@ const articles: Record<string, any> = {
         </div>
 
         <SectionTitle color="bg-indigo-400">区分三个概念</SectionTitle>
-        <div className="bg-indigo-900 text-white rounded-2xl p-5 mb-6 relative overflow-hidden">
+        <div className="bg-indigo-900 text-white rounded-2xl p-5 mb-6 relative overflow-hidden shadow-lg">
            <div className="relative z-10 space-y-4">
-             <div>
-               <h5 className="font-bold text-indigo-200 text-sm">🧠 性别认同 (Gender Identity)</h5>
-               <p className="text-xs opacity-90">你是谁？(Who you are)<br/>例如：男人、女人、非二元性别。</p>
+             <div className="flex gap-3">
+               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-xl">🧠</div>
+               <div>
+                 <h5 className="font-bold text-indigo-200 text-sm">性别认同 (Gender Identity)</h5>
+                 <p className="text-xs opacity-90">你是谁？(Who you are)<br/>例如：男人、女人、非二元性别。</p>
+               </div>
              </div>
-             <div>
-               <h5 className="font-bold text-indigo-200 text-sm">❤️ 性取向 (Sexual Orientation)</h5>
-               <p className="text-xs opacity-90">你爱谁？(Who you love)<br/>例如：同性恋、异性恋、双性恋。</p>
+             <div className="border-b border-white/10"></div>
+             <div className="flex gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-xl">❤️</div>
+               <div>
+                 <h5 className="font-bold text-indigo-200 text-sm">性取向 (Sexual Orientation)</h5>
+                 <p className="text-xs opacity-90">你爱谁？(Who you love)<br/>例如：同性恋、异性恋、双性恋。</p>
+               </div>
              </div>
-             <div>
-               <h5 className="font-bold text-indigo-200 text-sm">🧬 生理性别 (Biological Sex)</h5>
-               <p className="text-xs opacity-90">你的身体构造？(Your body)<br/>例如：男性、女性、间性人 (Intersex)。</p>
+             <div className="border-b border-white/10"></div>
+             <div className="flex gap-3">
+               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-xl">🧬</div>
+               <div>
+                 <h5 className="font-bold text-indigo-200 text-sm">生理性别 (Biological Sex)</h5>
+                 <p className="text-xs opacity-90">你的身体构造？(Your body)<br/>例如：男性、女性、间性人 (Intersex)。</p>
+               </div>
              </div>
            </div>
-           <div className="absolute right-0 top-0 w-32 h-32 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
+           <div className="absolute right-0 top-0 w-40 h-40 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
+           <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-pink-500 rounded-full blur-3xl opacity-20"></div>
+        </div>
+
+        <SectionTitle color="bg-indigo-400">流动性 (Fluidity)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+          <p className="text-sm text-muted-foreground mb-3">
+            性取向不仅是光谱，还是流动的。你可能在年轻时认为自己是异性恋，后来发现自己对同性也有感觉。
+          </p>
+          <div className="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+             <p className="text-xs text-indigo-800 font-medium">“昨天我喜欢穿裤子，今天我喜欢穿裙子，这并不意味着我在‘假装’，只是我的喜好在变化。” —— 性取向也是如此。</p>
+          </div>
         </div>
 
         <SectionTitle color="bg-indigo-400">关于“出柜” (Coming Out)</SectionTitle>
@@ -852,6 +889,16 @@ const articles: Record<string, any> = {
             "这是一个过程：出柜不是一次性的，而是一生中不断发生的过程（对新朋友、新同事等）。",
             "寻找社群：知道自己并不孤单非常重要。寻找线上的 LGBTQ+ 社区或支持小组。"
           ]} />
+        </div>
+
+        <SectionTitle color="bg-indigo-400">如何成为盟友 (Allyship)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">就算你是异性恋顺性别者，你也可以成为很好的支持者（盟友）：</p>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>不要假设：</strong> 不要默认每个人都是异性恋。在谈论伴侣时使用中性词（如“伴侣”而不是“男/女朋友”）。</li>
+             <li><strong>倾听：</strong> 当有人向你出柜时，倾听他们的感受，感谢他们的信任。不要说“我早就知道了”。</li>
+             <li><strong>制止歧视：</strong> 当听到恐同笑话或言论时，勇敢指出来。</li>
+           </ul>
         </div>
 
         <SectionTitle color="bg-indigo-400">常见误区 (Myth Busting)</SectionTitle>
@@ -934,6 +981,124 @@ const articles: Record<string, any> = {
              <li><strong>拭子取样：</strong> 从咽喉、直肠或生殖器取样。</li>
            </ul>
         </InfoCard>
+      </>
+    )
+  },
+  "Puberty": {
+    title: "青春期 (Puberty)",
+    subtitle: "成长的必经之路",
+    image: imgWellness, // Reusing wellness image for now
+    color: "from-yellow-400 to-orange-500",
+    accentColor: "bg-orange-500",
+    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
+    tags: ["身体变化", "情绪波动", "自我护理"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          青春期是从儿童向成年过渡的时期。这是一段充满变化、困惑但也非常精彩的旅程。每个人的青春期开始时间都不同，通常在 8-14 岁之间。
+        </p>
+
+        <SectionTitle color="bg-orange-400">身体的变化</SectionTitle>
+        <div className="space-y-4">
+          <InfoCard title="共同的变化" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+               <li><strong>身高突增：</strong> 你可能会突然发现裤子变短了。</li>
+               <li><strong>体毛生长：</strong> 腋下和私处开始长出毛发。</li>
+               <li><strong>皮肤变化：</strong> 皮肤变油，可能会长青春痘 (Acne)。这是正常的激素作用。</li>
+               <li><strong>体味：</strong> 汗腺开始活跃。这是开始使用除臭剂的好时机。</li>
+             </ul>
+          </InfoCard>
+
+          <InfoCard title="女生的变化" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+               <li><strong>乳房发育：</strong> 通常是最早的迹象之一。</li>
+               <li><strong>月经初潮：</strong> 通常在乳房发育后2年左右到来。</li>
+               <li><strong>体型变化：</strong> 臀部变宽，身体曲线变得明显。</li>
+               <li><strong>分泌物：</strong> 阴道开始有透明或白色的分泌物，这是健康的自洁功能。</li>
+             </ul>
+          </InfoCard>
+
+          <InfoCard title="男生的变化" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+               <li><strong>生殖器发育：</strong> 睾丸和阴茎变大。</li>
+               <li><strong>变声：</strong> 喉结突出，声音变得低沉（变声期可能会出现“破音”）。</li>
+               <li><strong>梦遗：</strong> 睡眠中出现射精现象，这是精子生产开始的标志。</li>
+             </ul>
+          </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-orange-400">情绪过山车</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+          <p className="text-sm text-muted-foreground mb-3">
+            你可能会感到情绪波动很大，前一秒开心，后一秒想哭。你会开始更加在意同龄人的看法，可能会对父母感到厌烦。
+          </p>
+          <div className="bg-orange-50 p-3 rounded-xl border border-orange-100">
+             <p className="text-xs text-orange-800 font-medium">💡 小贴士：这些情绪都是大脑正在“装修”的结果。给自己多一点耐心，这会过去的。</p>
+          </div>
+        </div>
+      </>
+    )
+  },
+  "Menstruation": {
+    title: "月经百科 (Period 101)",
+    subtitle: "拥抱你的周期",
+    image: imgMicroUterus, // Using uterus micro image temporarily
+    color: "from-pink-400 to-red-500",
+    accentColor: "bg-pink-500",
+    lightColor: "bg-pink-50 border-pink-100 text-pink-700",
+    tags: ["月经周期", "经期护理", "痛经", "卫生用品"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          月经（Period）是子宫内膜脱落并随血液排出体外的过程。它不是“脏血”，而是身体具备生育能力的标志。
+        </p>
+
+        <SectionTitle color="bg-pink-400">月经周期 (The Cycle)</SectionTitle>
+        <div className="bg-pink-50 border border-pink-100 rounded-2xl p-5 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-xs text-pink-800">
+             <li><strong>周期长度：</strong> 从这次月经第一天到下次月经第一天，通常为 21-35 天。</li>
+             <li><strong>经期长度：</strong> 出血通常持续 2-7 天。</li>
+             <li><strong>经血量：</strong> 整个经期流失的血量通常只有 2-3 汤匙（虽然看起来很多）。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-pink-400">经期卫生用品</SectionTitle>
+        <div className="space-y-4">
+          <InfoCard title="卫生巾 (Pads)" colorClass="border-pink-100 bg-white text-pink-800">
+            <p className="text-sm">贴在内裤上吸收经血。最常见、最容易上手。</p>
+            <p className="text-xs text-muted-foreground mt-1">建议：每 4-8 小时更换一次，避免细菌滋生。</p>
+          </InfoCard>
+
+          <InfoCard title="卫生棉条 (Tampons)" colorClass="border-pink-100 bg-white text-pink-800">
+            <p className="text-sm">放入阴道内吸收经血。适合运动和游泳。</p>
+            <p className="text-xs text-muted-foreground mt-1">注意：必须每 4-8 小时更换一次，以预防中毒性休克综合征 (TSS)。</p>
+          </InfoCard>
+
+          <InfoCard title="月经杯 (Menstrual Cups)" colorClass="border-pink-100 bg-white text-pink-800">
+            <p className="text-sm">硅胶制成的小杯子，放入阴道接住经血。可清洗重复使用，环保且经济。</p>
+            <p className="text-xs text-muted-foreground mt-1">建议：最长可放置 12 小时。</p>
+          </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-pink-400">痛经怎么办？</SectionTitle>
+        <ListSection color="text-pink-500" items={[
+          "热敷：暖宝宝或热水袋敷在小腹。",
+          "止痛药：布洛芬 (Ibuprofen) 对缓解经痛非常有效。",
+          "运动：轻度运动（如瑜伽、散步）可以促进血液循环缓解疼痛。",
+          "如果痛到无法下床或伴有呕吐，请务必看医生，这可能是子宫内膜异位症等问题的信号。"
+        ]} />
+        
+        <SectionTitle color="bg-pink-400">常见误区</SectionTitle>
+         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+          <FaqItem 
+            question="经期不能洗头/洗澡？" 
+            answer="假的。经期更要注意卫生，淋浴可以减少感染风险，热水还能缓解痛经。只是建议避免盆浴。" 
+          />
+          <FaqItem 
+            question="处女不能用棉条？" 
+            answer="假的。处女膜（处女瓣）有开口，棉条可以通过。只要使用正确，任何女生都可以使用棉条。" 
+          />
+        </div>
       </>
     )
   },
