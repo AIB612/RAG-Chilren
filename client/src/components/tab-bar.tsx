@@ -13,7 +13,7 @@ export function TabBar() {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border/40 pb-safe pt-2 px-6">
+    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-border pb-safe pt-2 px-6">
       <div className="flex justify-between items-center max-w-md mx-auto">
         {tabs.map((tab) => {
           const isActive = location === tab.href;
@@ -21,23 +21,21 @@ export function TabBar() {
             <Link key={tab.href} href={tab.href}>
               <div
                 className={cn(
-                  "flex flex-col items-center gap-1 p-2 transition-all duration-300",
-                  isActive ? "text-primary scale-110" : "text-muted-foreground hover:text-primary/70"
+                  "flex flex-col items-center gap-1.5 p-2 cursor-pointer group",
+                  isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
                 )}
               >
-                <div
-                  className={cn(
-                    "p-1.5 rounded-2xl transition-all duration-300",
-                    isActive ? "bg-primary/10" : "bg-transparent"
-                  )}
-                >
-                  <tab.icon
-                    size={24}
-                    strokeWidth={isActive ? 2.5 : 2}
-                    className={cn("transition-transform duration-300", isActive && "animate-bounce-subtle")}
-                  />
-                </div>
-                <span className="text-[10px] font-medium tracking-wide">{tab.label}</span>
+                <tab.icon
+                  size={24}
+                  strokeWidth={1.5}
+                  className={cn("transition-colors duration-200", isActive && "fill-current/10")}
+                />
+                <span className={cn(
+                  "text-[10px] font-medium tracking-wide transition-colors",
+                  isActive ? "text-primary" : "text-muted-foreground"
+                )}>
+                  {tab.label}
+                </span>
               </div>
             </Link>
           );
