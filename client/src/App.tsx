@@ -5,15 +5,17 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import Knowledge from "@/pages/knowledge";
+import Profile from "@/pages/profile";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      {/* For mockup purposes, other tabs will route to Home or 404 for now, 
-          but in a real app would be separate pages. 
-          Let's just let them fall through to 404 for this specific request or redirect to home if we wanted.
-      */}
+      <Route path="/learn" component={Knowledge} />
+      <Route path="/profile" component={Profile} />
+      {/* Quiz tab mapped to knowledge for now or add redirect */}
+      <Route path="/quiz" component={Knowledge} /> 
       <Route component={NotFound} />
     </Switch>
   );

@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Noto Sans SC", sans-serif;
+  --font-display: "Quicksand", "Noto Sans SC", sans-serif;
   --font-body: "Noto Sans SC", sans-serif;
 
   --color-background: hsl(var(--background));
@@ -30,67 +30,68 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+  
+  --shadow-3d: 0px 10px 20px rgba(168, 85, 247, 0.15), 0px 4px 6px rgba(168, 85, 247, 0.1);
+  --shadow-3d-hover: 0px 15px 30px rgba(168, 85, 247, 0.25), 0px 8px 10px rgba(168, 85, 247, 0.15);
+  --shadow-inner-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
 }
 
 :root {
-  /* Atmospheric Minimalist Palette */
-  /* Background: Clean White / Very subtle gray */
-  --background: 210 20% 98%;
-  /* Foreground: Strong Navy/Black for high contrast */
-  --foreground: 222 47% 11%;
+  /* Pink-Purple Micro-3D Palette (Dreamy & Soft) */
+  
+  /* Background: Very soft lilac/pink tinted white */
+  --background: 280 20% 97%; 
+  
+  /* Foreground: Soft Deep Purple/Slate */
+  --foreground: 270 20% 30%;
 
-  /* Primary: Corporate/Trustworthy Blue */
-  --primary: 221 83% 53%; 
-  --primary-foreground: 210 40% 98%;
+  /* Primary: Vibrant but Soft Purple/Pink Gradient base */
+  /* Main Purple */
+  --primary: 270 60% 65%; 
+  --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Neutral Cool Gray */
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222 47% 11.2%;
+  /* Secondary: Soft Pink */
+  --secondary: 320 70% 92%;
+  --secondary-foreground: 320 60% 40%;
 
-  /* Accent: Muted Coral or Teal for subtle highlights */
-  --accent: 170 60% 50%; /* Teal */
-  --accent-foreground: 0 0% 100%;
+  /* Accent: Bright Pop Pink/Magenta */
+  --accent: 310 80% 80%;
+  --accent-foreground: 310 90% 25%;
 
-  /* Muted: Subtle Gray */
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  /* Muted: Lavender Gray */
+  --muted: 270 20% 94%;
+  --muted-foreground: 270 10% 60%;
 
-  /* Card: Pure White */
+  /* Card: White with subtle purple tint */
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11.2%;
+  --card-foreground: 270 20% 30%;
 
-  /* Borders: Crisp and Light */
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
+  /* Borders: Very light purple */
+  --border: 270 20% 90%;
+  --input: 270 20% 90%;
   
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: 0 85% 85%;
+  --destructive-foreground: 0 60% 40%;
   
-  --ring: 221 83% 53%;
+  --ring: 270 60% 65%;
   
-  --radius: 0.5rem; /* Standard rounded corners, clean feel */
+  --radius: 1.25rem; /* Friendly rounded corners */
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 224.3 76.3% 48%;
+  /* Dark mode - Deep Space Purple */
+  --background: 270 30% 10%;
+  --foreground: 270 10% 90%;
+  --card: 270 25% 15%;
+  --card-foreground: 270 10% 90%;
+  --primary: 270 60% 65%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 30% 20%;
+  --secondary-foreground: 270 60% 90%;
+  --muted: 270 20% 20%;
+  --muted-foreground: 270 10% 60%;
+  --border: 270 20% 25%;
+  --input: 270 20% 25%;
 }
 
 @layer base {
@@ -98,29 +99,60 @@
     @apply border-border;
   }
   body {
-    @apply font-body bg-background text-foreground antialiased;
+    @apply font-body bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(320, 70%, 90%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(270, 70%, 90%, 0.3) 0px, transparent 50%);
+    background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight font-semibold;
+    @apply font-display tracking-normal font-bold;
   }
 }
 
-/* Custom Minimalist Utilities */
 @layer utilities {
-  .glass-minimal {
-    @apply bg-white/80 backdrop-blur-sm border-b border-border/50;
+  /* Micro-3D Effect Utilities */
+  .card-3d {
+    @apply bg-card border border-white/50 shadow-3d transition-all duration-300;
+    box-shadow: 
+      0 10px 15px -3px rgba(168, 85, 247, 0.05),
+      0 4px 6px -2px rgba(168, 85, 247, 0.05),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.8),
+      0 1px 0 0 rgba(230, 230, 250, 0.5); /* Bottom edge highlight */
   }
   
-  /* Remove the cute shadows, use standard discrete shadows */
-  .shadow-clean {
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  .card-3d:hover {
+    @apply -translate-y-1 shadow-3d-hover;
+  }
+
+  .btn-3d-primary {
+    background: linear-gradient(135deg, hsl(320, 80%, 70%) 0%, hsl(270, 70%, 65%) 100%);
+    box-shadow: 
+      0 4px 6px rgba(168, 85, 247, 0.25),
+      0 1px 0 rgba(255, 255, 255, 0.3) inset,
+      0 -2px 0 rgba(0, 0, 0, 0.1) inset;
+    @apply text-white border-none transition-all duration-200 active:scale-95 active:shadow-inner;
+  }
+
+  .btn-3d-secondary {
+    @apply bg-white text-primary border border-primary/20;
+    box-shadow: 
+      0 2px 4px rgba(0,0,0,0.05),
+      0 1px 0 rgba(255,255,255,0.8) inset;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600;
   }
   
-  .shadow-card-hover {
-    transition: all 0.3s ease;
+  /* Chat Bubble 3D */
+  .bubble-left {
+    @apply bg-white rounded-2xl rounded-tl-sm shadow-sm border border-purple-50 text-foreground/80;
+    box-shadow: 0 2px 5px rgba(168, 85, 247, 0.05);
   }
-  .shadow-card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  
+  .bubble-right {
+    @apply bg-gradient-to-br from-pink-400 to-purple-500 text-white rounded-2xl rounded-tr-sm shadow-md;
+    box-shadow: 0 4px 10px rgba(168, 85, 247, 0.2);
   }
 }

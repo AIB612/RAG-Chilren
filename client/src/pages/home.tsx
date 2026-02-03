@@ -1,132 +1,156 @@
 import { MobileLayout } from "@/components/mobile-layout";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Play, ArrowRight, Search, Shield } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Send, Sparkles, MoreHorizontal } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-// Import Minimalist assets
-import heroImage from "@/assets/hero-minimal.png";
-import iconBody from "@/assets/icon-body-flat.png";
-import iconGender from "@/assets/icon-gender-flat.png";
-import iconFamily from "@/assets/icon-family-flat.png";
+// Assets
+import avatarXiaoBai from "@/assets/avatar-xiaobai.png";
 
 export default function Home() {
+  const [messages, setMessages] = useState([
+    { id: 1, sender: "bot", text: "你好呀！我是小白，你的私密健康小助手。✨" },
+    { id: 2, sender: "bot", text: "关于青春期、身体变化或者小秘密，都可以问我哦～ 我会保守秘密的！🤫" },
+  ]);
+  const [inputValue, setInputValue] = useState("");
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  const handleSend = () => {
+    if (!inputValue.trim()) return;
+    
+    const newMsg = { id: Date.now(), sender: "user", text: inputValue };
+    setMessages(prev => [...prev, newMsg]);
+    setInputValue("");
+
+    // Mock bot response
+    setTimeout(() => {
+      const responses = [
+        "这是一个很好的问题！让我们一起探索一下...",
+        "摸摸头～这种感觉是正常的哦。",
+        "小白正在查找相关的健康知识...",
+        "记住，你的身体属于你自己，你有权说不！🛡️"
+      ];
+      const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+      setMessages(prev => [...prev, { id: Date.now() + 1, sender: "bot", text: randomResponse }]);
+    }, 1000);
+  };
+
   return (
     <MobileLayout>
-      {/* Header Section - Minimalist & Clean */}
-      <header className="pt-14 px-6 pb-2 bg-background">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-xl font-semibold tracking-tight text-foreground">小小卫士</h1>
-            <p className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Health & Safety Education</p>
-          </div>
-          <div className="w-8 h-8 rounded-full bg-secondary overflow-hidden">
-             <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="Profile" className="w-full h-full object-cover grayscale opacity-80" />
-          </div>
-        </div>
-
-        {/* Search - Flat & Functional */}
-        <div className="relative mb-6">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input 
-            className="pl-10 h-10 bg-secondary/50 border-none rounded-md text-sm placeholder:text-muted-foreground/60 focus-visible:ring-1 focus-visible:ring-primary/20" 
-            placeholder="搜索课程或知识点..." 
-          />
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <div className="px-6 space-y-10 pb-10">
+      <div className="flex flex-col h-[calc(100vh-80px)] bg-gradient-to-b from-purple-50/50 to-white">
         
-        {/* Hero Section - 2D Flat Style */}
-        <div className="group cursor-pointer">
-          <div className="relative aspect-[2/1] w-full overflow-hidden rounded-lg bg-blue-50/50 border border-blue-100/50 mb-4">
-            <img src={heroImage} alt="Hero" className="absolute right-0 top-0 h-full w-2/3 object-contain object-right-bottom p-4 opacity-90 mix-blend-multiply" />
-            <div className="absolute inset-0 p-6 flex flex-col justify-center items-start">
-              <Badge variant="outline" className="mb-3 rounded-sm border-primary/20 text-primary bg-primary/5 text-[10px] px-2 py-0.5 uppercase tracking-wider">
-                Daily Focus
-              </Badge>
-              <h2 className="text-2xl font-bold text-foreground leading-tight mb-1">
-                我的身体<br/>不仅属于我
-              </h2>
-              <p className="text-xs text-muted-foreground mb-0">了解界限，学会保护。</p>
+        {/* Header */}
+        <header className="px-6 py-4 flex items-center justify-between bg-white/50 backdrop-blur-md border-b border-white/60 sticky top-0 z-10">
+          <div className="flex items-center gap-3">
+            <div className="relative">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-200 to-purple-200 p-0.5 shadow-md overflow-hidden">
+                <img src={avatarXiaoBai} alt="小白" className="w-full h-full object-cover bg-white rounded-full" />
+              </div>
+              <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-white rounded-full"></div>
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-foreground flex items-center gap-1">
+                小白
+                <span className="text-[10px] bg-primary/10 text-primary px-1.5 py-0.5 rounded-full font-medium">Online</span>
+              </h1>
+              <p className="text-xs text-muted-foreground">随时陪伴你的成长伙伴</p>
             </div>
           </div>
-          <div className="flex items-center text-primary text-sm font-medium pl-1 group-hover:translate-x-1 transition-transform">
-            开始今日课程 <ArrowRight className="ml-2 h-4 w-4" />
+          <Button variant="ghost" size="icon" className="text-muted-foreground hover:bg-white/50">
+            <MoreHorizontal size={20} />
+          </Button>
+        </header>
+
+        {/* Chat Area */}
+        <ScrollArea className="flex-1 px-4 py-4" ref={scrollRef}>
+          <div className="space-y-6 pb-4">
+            <div className="flex justify-center my-4">
+              <span className="text-[10px] text-muted-foreground bg-white/60 px-3 py-1 rounded-full shadow-sm border border-white/50">
+                今天 14:30
+              </span>
+            </div>
+
+            {messages.map((msg) => (
+              <div
+                key={msg.id}
+                className={cn(
+                  "flex w-full",
+                  msg.sender === "user" ? "justify-end" : "justify-start"
+                )}
+              >
+                <div className={cn("flex max-w-[80%] gap-2", msg.sender === "user" ? "flex-row-reverse" : "flex-row")}>
+                  {msg.sender === "bot" && (
+                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-100 to-purple-100 p-0.5 shadow-sm overflow-hidden shrink-0 self-end mb-1">
+                       <img src={avatarXiaoBai} alt="Bot" className="w-full h-full object-cover bg-white rounded-full" />
+                     </div>
+                  )}
+                  
+                  <div className={cn(
+                    "px-4 py-3 text-sm leading-relaxed relative group transition-all duration-300",
+                    msg.sender === "user" 
+                      ? "bubble-right rounded-br-none" 
+                      : "bubble-left rounded-bl-none"
+                  )}>
+                    {msg.text}
+                    {/* Tiny 3D reflection effect overlay */}
+                    <div className="absolute inset-0 rounded-inherit bg-gradient-to-b from-white/10 to-transparent pointer-events-none opacity-50"></div>
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            {/* Typing indicator placeholder */}
+            {/* <div className="flex justify-start w-full animate-pulse">
+               <div className="bg-white border border-purple-50 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm">
+                 <div className="flex gap-1">
+                   <div className="w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce"></div>
+                   <div className="w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce delay-75"></div>
+                   <div className="w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce delay-150"></div>
+                 </div>
+               </div>
+            </div> */}
+          </div>
+        </ScrollArea>
+
+        {/* Input Area */}
+        <div className="p-4 bg-white/80 backdrop-blur-xl border-t border-white/50">
+          <div className="relative flex items-center gap-2">
+            <Button variant="ghost" size="icon" className="shrink-0 text-muted-foreground hover:bg-purple-50 hover:text-primary rounded-full">
+              <Sparkles size={20} />
+            </Button>
+            <div className="flex-1 relative">
+              <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleSend()}
+                placeholder="问问小白..."
+                className="w-full h-12 pl-4 pr-10 bg-white border-none rounded-full shadow-inner-highlight ring-1 ring-purple-100 focus:ring-2 focus:ring-primary/30 focus:outline-none transition-all placeholder:text-muted-foreground/50 text-foreground"
+              />
+            </div>
+            <Button 
+              onClick={handleSend}
+              className={cn(
+                "h-12 w-12 rounded-full shrink-0 transition-all duration-300 shadow-md flex items-center justify-center",
+                inputValue.trim() 
+                  ? "btn-3d-primary rotate-0 opacity-100" 
+                  : "bg-muted text-muted-foreground rotate-90 opacity-50 cursor-not-allowed"
+              )}
+              disabled={!inputValue.trim()}
+            >
+              <Send size={18} className="ml-0.5 mt-0.5" />
+            </Button>
           </div>
         </div>
-
-        {/* Categories - Grid System */}
-        <section>
-          <div className="flex justify-between items-baseline mb-6 border-b border-border/40 pb-2">
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-widest">Modules</h3>
-            <span className="text-xs text-muted-foreground hover:text-primary cursor-pointer transition-colors">View All</span>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-x-4 gap-y-6">
-            <CategoryItem 
-              title="认识身体" 
-              subtitle="Body Parts"
-              icon={iconBody} 
-            />
-            <CategoryItem 
-              title="性别认知" 
-              subtitle="Gender Identity"
-              icon={iconGender} 
-            />
-            <CategoryItem 
-              title="家庭关系" 
-              subtitle="Family Units"
-              icon={iconFamily} 
-            />
-            <CategoryItem 
-              title="自我保护" 
-              subtitle="Self Defense"
-              // Reuse icon or use lucide fallback if needed
-              icon={iconBody} 
-            />
-          </div>
-        </section>
-
-        {/* Featured Tip - Minimal Card */}
-        <section>
-          <div className="bg-slate-900 rounded-lg p-6 text-white relative overflow-hidden">
-             {/* Abstract circle decoration */}
-             <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
-             
-             <div className="relative z-10 flex gap-4 items-start">
-               <div className="p-2 bg-white/10 rounded-md shrink-0">
-                 <Shield className="h-5 w-5 text-emerald-400" />
-               </div>
-               <div>
-                 <h4 className="font-semibold text-sm mb-1 text-slate-100">隐私部位保护</h4>
-                 <p className="text-xs text-slate-400 leading-relaxed">
-                   背心和短裤覆盖的地方是隐私部位。除了爸爸妈妈帮你洗澡或医生检查，别人不可以看，也不可以摸。
-                 </p>
-               </div>
-             </div>
-          </div>
-        </section>
 
       </div>
     </MobileLayout>
-  );
-}
-
-function CategoryItem({ title, subtitle, icon }: { title: string, subtitle: string, icon: string }) {
-  return (
-    <div className="group cursor-pointer">
-      <div className="aspect-square bg-white border border-border rounded-lg mb-3 flex items-center justify-center p-8 transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-sm relative overflow-hidden">
-        <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors duration-300"></div>
-        <img src={icon} alt={title} className="w-full h-full object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
-      </div>
-      <div>
-        <h4 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">{title}</h4>
-        <p className="text-[10px] text-muted-foreground uppercase tracking-wide">{subtitle}</p>
-      </div>
-    </div>
   );
 }
