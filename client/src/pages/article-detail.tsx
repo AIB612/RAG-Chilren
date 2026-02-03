@@ -379,42 +379,353 @@ const articles: Record<string, any> = {
     )
   },
   "Pregnancy_Full": {
-    title: "怀孕全程",
-    subtitle: "生命的奇妙旅程",
+    title: "怀孕全程 (Pregnancy)",
+    subtitle: "生命的奇妙旅程：逐月详解",
     image: imgPregnancy,
     color: "from-rose-400 to-red-500",
     accentColor: "bg-rose-500",
     lightColor: "bg-rose-50 border-rose-100 text-rose-700",
-    tags: ["早孕", "三个阶段", "产检"],
+    tags: ["逐月指南", "胎儿发育", "身体变化", "产检"],
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          正常妊娠通常持续约 40 周。了解每个阶段的变化，可以帮助你更好地应对。
+          怀孕通常持续约 40 周（约 9-10 个月）。每一周，你和宝宝都在发生惊人的变化。这里是根据 Planned Parenthood 整理的逐月详细指南。
         </p>
         
-        <SectionTitle color="bg-rose-400">怀孕的三个阶段 (Trimesters)</SectionTitle>
-        
-        <div className="space-y-4">
-           <InfoCard title="第一孕期 (1-12周)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
-            <img src={imgMicroFetus1} alt="Fetus" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-rose-100" />
-            <p>这是宝宝器官形成的关键期。你可能会感到晨吐、极度疲劳和乳房胀痛。必须开始服用叶酸，并避免酒精和烟草。</p>
-          </InfoCard>
-
-          <InfoCard title="第二孕期 (13-26周)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
-            <p>通常被称为“蜜月期”，早孕反应消失，精力恢复。你会开始感觉到胎动。此时可以通过B超看到宝宝的性别。</p>
-          </InfoCard>
-
-          <InfoCard title="第三孕期 (27-40周)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
-            <p>宝宝迅速长大。你可能会感到身体沉重、背痛、尿频。这是为分娩做准备的时期，需要定期进行产检。</p>
-          </InfoCard>
+        <div className="bg-rose-50 border border-rose-100 rounded-2xl p-4 mb-6">
+           <h4 className="font-bold text-rose-700 mb-2 flex items-center gap-2">
+             <Info size={16} /> 孕期计算
+           </h4>
+           <p className="text-xs text-rose-800 leading-relaxed">
+             孕期是从你<span className="font-bold">最后一次月经的第一天</span>开始计算的，而不是受孕的那一天。所以当你“怀孕1个月”时，实际受孕可能才2周左右。
+           </p>
         </div>
 
-        <SectionTitle color="bg-rose-400">产前护理</SectionTitle>
-        <ListSection color="text-rose-500" items={[
-          "定期产检：监测宝宝的生长和你的健康（血压、血糖）。",
-          "健康饮食：均衡营养，摄入足够的钙和铁。",
-          "心理准备：参加分娩课程，了解分娩过程和止痛选择。"
-        ]} />
+        {/* 第一孕期 */}
+        <div className="relative pl-4 border-l-2 border-rose-200 space-y-8 mb-8">
+          <div className="absolute -left-[9px] -top-1 w-4 h-4 rounded-full bg-rose-400 ring-4 ring-white"></div>
+          
+          <div>
+            <h3 className="text-xl font-bold text-rose-600 mb-4">第一孕期 (Month 1-3)</h3>
+            <p className="text-sm text-muted-foreground mb-4">这是宝宝器官形成的关键期，也是你身体适应激素剧烈变化的时期。</p>
+
+            {/* Month 1 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-rose-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 1 个月 (1-4周)</h4>
+                <Badge variant="outline" className="text-rose-500 bg-rose-50 border-rose-200">胚胎期</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">受精卵着床。此时宝宝只是一个微小的细胞球（囊胚），大小像一粒罂粟籽。</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-rose-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground">如果你月经规律，你可能会发现<span className="text-rose-600 font-medium">月经没来</span>。可能会有轻微的着床出血（褐色斑点）。你可能会感到异常疲惫。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li>买验孕棒测试。</li>
+                     <li>开始服用含有<span className="text-rose-600">叶酸</span>的产前维生素。</li>
+                     <li>停止吸烟、饮酒，减少咖啡因摄入。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Month 2 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-rose-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 2 个月 (5-8周)</h4>
+                <Badge variant="outline" className="text-rose-500 bg-rose-50 border-rose-200">覆盆子大小</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">心脏开始跳动。神经管（大脑和脊髓的前身）形成。虽然还很小，但已经有了微小的手指和脚趾芽。</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-rose-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground"><span className="text-rose-600 font-medium">晨吐</span>（恶心）可能开始。乳房胀痛、乳晕变深。你需要频繁跑厕所（子宫压迫膀胱）。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li>预约第一次产检（通常在第8周左右）。</li>
+                     <li>多休息，应对疲劳。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Month 3 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-rose-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 3 个月 (9-12周)</h4>
+                <Badge variant="outline" className="text-rose-500 bg-rose-50 border-rose-200">李子大小</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">现在被称为“胎儿”。手指甲、脚趾甲形成。生殖器官开始发育（但B超还看不清）。宝宝可以握拳、张嘴。</p>
+                </div>
+                 <img src={imgMicroFetus1} className="w-12 h-12 object-contain bg-rose-50 rounded-lg p-1" />
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-rose-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground">恶心症状可能在月底开始缓解。你的小腹可能微微隆起，裤子开始变紧。激素可能导致情绪波动。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li>进行早期唐氏筛查（NT检查，11-13周）。</li>
+                     <li>可以听到胎心音了。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 第二孕期 */}
+        <div className="relative pl-4 border-l-2 border-orange-200 space-y-8 mb-8">
+          <div className="absolute -left-[9px] -top-1 w-4 h-4 rounded-full bg-orange-400 ring-4 ring-white"></div>
+          
+          <div>
+            <h3 className="text-xl font-bold text-orange-600 mb-4">第二孕期 (Month 4-6)</h3>
+            <p className="text-sm text-muted-foreground mb-4">通常被称为“蜜月期”。早孕反应消失，你感觉精力充沛，肚子开始显怀。</p>
+
+            {/* Month 4 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-orange-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 4 个月 (13-16周)</h4>
+                <Badge variant="outline" className="text-orange-500 bg-orange-50 border-orange-200">牛油果大小</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">骨骼开始硬化。宝宝开始练习吸吮和吞咽。如果在B超下运气好，可能看出性别。</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-orange-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground">食欲恢复！孕妇装开始成为必需品。你可能会感到烧心（胃酸倒流）。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li>唐氏筛查（中期）。</li>
+                     <li>开始侧睡（最好是左侧），有利于胎盘血流。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Month 5 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-orange-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 5 个月 (17-20周)</h4>
+                <Badge variant="outline" className="text-orange-500 bg-orange-50 border-orange-200">香蕉大小</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">头发、眉毛、睫毛开始生长。身上覆盖着一层白色的胎脂（Vernix）保护皮肤。</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-orange-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground"><span className="text-orange-600 font-bold">胎动！</span>（Quickening）你可能会第一次感觉到宝宝在动，像蝴蝶扇翅膀或小鱼游动。可能会出现腿抽筋。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li><span className="font-bold">大排畸检查</span>（20周B超）：详细检查宝宝的所有器官发育情况。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Month 6 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-orange-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 6 个月 (21-24周)</h4>
+                <Badge variant="outline" className="text-orange-500 bg-orange-50 border-orange-200">玉米大小</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">指纹形成。肺部开始发育表面活性物质（为呼吸做准备）。宝宝能听到外面的声音了——可以跟Ta说话了！</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-orange-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground">脚踝和脚可能会水肿。可能会感到假性宫缩（Braxton Hicks），肚子偶尔发紧但不痛。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li>妊娠期糖尿病筛查（喝糖水测试）。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 第三孕期 */}
+        <div className="relative pl-4 border-l-2 border-red-200 space-y-8 mb-8">
+          <div className="absolute -left-[9px] -top-1 w-4 h-4 rounded-full bg-red-500 ring-4 ring-white"></div>
+          
+          <div>
+            <h3 className="text-xl font-bold text-red-600 mb-4">第三孕期 (Month 7-9)</h3>
+            <p className="text-sm text-muted-foreground mb-4">最后冲刺！宝宝迅速长大，你的身体负担加重，为分娩做准备。</p>
+
+            {/* Month 7 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-red-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 7 个月 (25-28周)</h4>
+                <Badge variant="outline" className="text-red-500 bg-red-50 border-red-200">茄子大小</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">眼睑睁开，可以看到光。脂肪层开始堆积，皮肤变平滑。大脑快速发育。</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-red-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground">肚子越来越大，可能出现妊娠纹。睡觉翻身变得困难。背痛可能加剧。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li>如果血型是Rh阴性，注射抗D免疫球蛋白。</li>
+                     <li>接种百日咳疫苗 (Tdap)。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Month 8 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-red-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 8 个月 (29-32周)</h4>
+                <Badge variant="outline" className="text-red-500 bg-red-50 border-red-200">菠萝大小</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">骨骼完全硬化（除了头骨，为了通过产道）。宝宝开始练习呼吸运动。胎动变得有力（踢肋骨！）。</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-red-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground">呼吸短促（子宫顶到了横膈膜）。初乳（黄色的早期乳汁）可能开始渗出。尿频再次加重。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li>产检变为每两周一次。</li>
+                     <li>开始数胎动：每天花时间记录宝宝的活动。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Month 9 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-red-100 mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 9 个月 (33-36周)</h4>
+                <Badge variant="outline" className="text-red-500 bg-red-50 border-red-200">哈密瓜大小</Badge>
+              </div>
+              
+              <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
+                  <p className="text-xs text-muted-foreground">肺部接近成熟。宝宝通常会转为头朝下的姿势（入盆）。体重迅速增加。</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-3 border-t border-dashed border-red-100">
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
+                   <p className="text-xs text-muted-foreground">因为宝宝入盆，骨盆压力增大，但呼吸会顺畅一些。可能会有“筑巢本能”（疯狂打扫卫生）。</p>
+                </div>
+                <div>
+                   <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+                     <li>产检变为每周一次。</li>
+                     <li>B族链球菌 (GBS) 检查。</li>
+                     <li>准备好待产包。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Month 10 */}
+            <div className="bg-white rounded-2xl p-5 shadow-sm border border-red-100 mb-4">
+               <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-lg text-foreground">第 10 个月 (37-40+周)</h4>
+                <Badge variant="outline" className="text-red-500 bg-red-50 border-red-200">西瓜大小</Badge>
+              </div>
+              
+              <div className="space-y-3">
+                <p className="text-xs text-muted-foreground"><strong>37周算足月</strong>，宝宝随时可能出生。只有5%的宝宝会在预产期当天出生。</p>
+                
+                 <div className="bg-red-50 rounded-xl p-3 border border-red-100">
+                   <p className="text-sm font-bold text-red-800 mb-1">⚠️ 分娩征兆：何时去医院？</p>
+                   <ul className="list-disc pl-4 space-y-1 text-xs text-red-700">
+                     <li><strong>规律宫缩：</strong> 每5分钟一次，持续1分钟，持续1小时 (5-1-1规则)。</li>
+                     <li><strong>破水：</strong> 感到大量液体流出（哪怕没有阵痛也要去）。</li>
+                     <li><strong>见红：</strong> 粘液栓脱落，伴有血丝。</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <SectionTitle color="bg-rose-400">产后初期 (The 4th Trimester)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            分娩后的前3个月被称为“第四孕期”。你的身体需要时间恢复，宝宝需要适应子宫外的生活。
+          </p>
+          <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>恶露：</strong> 产后会有类似月经的出血，持续几周。</li>
+             <li><strong>情绪：</strong> “产后抑郁” (Baby Blues) 很常见，但如果持续超过2周或感到绝望，请立即就医。</li>
+             <li><strong>恢复：</strong> 如果是顺产，伤口需要几周愈合；如果是剖腹产，则是大型腹部手术，需要更长恢复期。</li>
+          </ul>
+        </div>
       </>
     )
   },
