@@ -12,6 +12,9 @@ import imgBcPill from "@/assets/article-bc-pill.png";
 import imgBcIud from "@/assets/article-bc-iud.png";
 import imgBcImplant from "@/assets/article-bc-implant.png";
 import imgBcCondom from "@/assets/article-bc-condom.png";
+import imgBcShot from "@/assets/article-bc-shot.png";
+import imgBcPatch from "@/assets/article-bc-patch.png";
+import imgBcRing from "@/assets/article-bc-ring.png";
 import imgSTDs from "@/assets/article-stds.png";
 import imgRelationships from "@/assets/article-relationships.png";
 import imgAbortion from "@/assets/article-abortion.png";
@@ -118,6 +121,33 @@ const articles: Record<string, any> = {
              <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 85-98%</span>
               <span className="px-2 py-1 bg-green-100 rounded text-green-600">防 STDs: 是</span>
+            </div>
+          </InfoCard>
+
+          <InfoCard title="避孕针 (The Shot)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <img src={imgBcShot} alt="Shot" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
+            <p>每3个月注射一次孕激素。私密性好，不用每天记着吃药。</p>
+             <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
+              <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 94-99%</span>
+              <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">频率: 每3个月</span>
+            </div>
+          </InfoCard>
+
+          <InfoCard title="避孕贴 (The Patch)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <img src={imgBcPatch} alt="Patch" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
+            <p>每周在皮肤上贴一片。释放激素通过皮肤进入血液。</p>
+             <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
+              <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 91-99%</span>
+              <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">频率: 每周</span>
+            </div>
+          </InfoCard>
+
+          <InfoCard title="阴道避孕环 (NuvaRing)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <img src={imgBcRing} alt="Ring" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
+            <p>柔软的透明环，自行放入阴道内。放置3周，取出1周（来月经）。</p>
+             <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
+              <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 91-99%</span>
+              <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">频率: 每月</span>
             </div>
           </InfoCard>
         </div>
@@ -312,6 +342,14 @@ const articles: Record<string, any> = {
            <InfoCard title="阴道酵母菌感染 (Yeast Infection)" colorClass="border-green-100 bg-green-50/30 text-green-800">
             <p><strong>症状：</strong> 阴道极度瘙痒、豆腐渣样分泌物。<br/><strong>原因：</strong> 阴道内菌群失调。<br/><strong>处理：</strong> 使用抗真菌药物（非处方药或处方药）。</p>
           </InfoCard>
+
+          <InfoCard title="经前综合症 (PMS) & PMDD" colorClass="border-green-100 bg-green-50/30 text-green-800">
+            <p><strong>症状：</strong> 经期前的情绪波动、乳房胀痛、疲劳。PMDD 是更严重的版本，可能导致抑郁。<br/><strong>处理：</strong> 运动、饮食调整，严重时可咨询医生用药。</p>
+          </InfoCard>
+
+          <InfoCard title="子宫内膜异位症 (Endometriosis)" colorClass="border-green-100 bg-green-50/30 text-green-800">
+            <p><strong>症状：</strong> 极度痛苦的痛经、性交痛、慢性盆腔痛。<br/><strong>注意：</strong> 严重的痛经是不正常的，不要忍受，请看医生。</p>
+          </InfoCard>
         </div>
 
         <SectionTitle color="bg-green-400">预防性保健</SectionTitle>
@@ -472,6 +510,16 @@ const articles: Record<string, any> = {
              <p className="text-xs mb-1"><strong>症状：</strong> 早期可能像流感。只有检测才能确认。</p>
              <p className="text-xs"><strong>治疗：</strong> 虽然无法根治，但在现代药物治疗下，感染者可以拥有正常寿命且不传染给他人 (U=U)。</p>
            </InfoCard>
+
+           <InfoCard title="梅毒 (Syphilis)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+             <p className="text-xs mb-1"><strong>症状：</strong> 早期为无痛溃疡（硬下疳），之后可能出现皮疹。如果不治疗，会严重损害心脏和大脑。</p>
+             <p className="text-xs"><strong>治疗：</strong> 早期使用青霉素可完全治愈。</p>
+           </InfoCard>
+
+           <InfoCard title="滴虫病 (Trichomoniasis)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+             <p className="text-xs mb-1"><strong>症状：</strong> 分泌物增多、异味、瘙痒。男性通常无症状。</p>
+             <p className="text-xs"><strong>治疗：</strong> 抗生素可治愈。</p>
+           </InfoCard>
         </div>
 
         <SectionTitle color="bg-slate-400">如何保护自己？</SectionTitle>
@@ -517,6 +565,8 @@ const articles: Record<string, any> = {
                <li>因为生气而羞辱、贬低或威胁你。</li>
                <li>强迫你进行你不想做的性行为。</li>
                <li>过度嫉妒，随时查岗。</li>
+               <li><strong>煤气灯效应 (Gaslighting)：</strong> 让你怀疑自己的记忆或理智（例如：“你疯了，我从来没说过那个”，“你太敏感了”）。</li>
+               <li><strong>爱情轰炸 (Love Bombing)：</strong> 刚开始过度热情、送礼，让你迅速产生依赖，随后开始控制。</li>
              </ul>
            </div>
         </div>
