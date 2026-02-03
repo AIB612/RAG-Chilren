@@ -764,31 +764,115 @@ const articles: Record<string, any> = {
     )
   },
   "Sexual_Orientation": {
-    title: "性取向",
-    subtitle: "爱与吸引",
+    title: "性取向 (Sexual Orientation)",
+    subtitle: "爱与吸引：探索多元光谱",
     image: imgOrientation,
     color: "from-indigo-400 to-blue-500",
     accentColor: "bg-indigo-500",
     lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
-    tags: ["LGBTQ+", "吸引力", "出柜"],
+    tags: ["LGBTQ+", "身份认同", "出柜指南", "多元光谱"],
     content: (
       <>
          <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          性取向（Sexual Orientation）是指你在情感、浪漫或性方面被谁吸引。它不是一种选择，也不是一种可以“治愈”的疾病。就像你的眼睛颜色一样，它是你的一部分。
+          性取向（Sexual Orientation）是指你在情感、浪漫或性方面被谁吸引。这是一种深刻的自我认同，而不是一种选择，更不是一种疾病。它是你的一部分，就像你的眼睛颜色或身高一样自然。
         </p>
-        
-        <SectionTitle color="bg-indigo-400">常见类别</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 space-y-3">
-          <p className="text-sm"><strong className="text-indigo-600">异性恋 (Straight):</strong> 被不同性别的人吸引。</p>
-          <div className="border-b border-gray-100"></div>
-          <p className="text-sm"><strong className="text-indigo-600">同性恋 (Gay/Lesbian):</strong> 被相同性别的人吸引。</p>
-          <div className="border-b border-gray-100"></div>
-          <p className="text-sm"><strong className="text-indigo-600">双性恋 (Bisexual):</strong> 被多种性别的人吸引。</p>
-          <div className="border-b border-gray-100"></div>
-          <p className="text-sm"><strong className="text-indigo-600">泛性恋 (Pansexual):</strong> 吸引力不受性别限制，爱的是“人”。</p>
-          <div className="border-b border-gray-100"></div>
-          <p className="text-sm"><strong className="text-indigo-600">无性恋 (Asexual):</strong> 很少或没有感受到性吸引力，但这不代表没有感情需求。</p>
+
+        <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 mb-6">
+           <h4 className="font-bold text-indigo-700 mb-2 flex items-center gap-2">
+             <Info size={16} /> 光谱的概念 (The Spectrum)
+           </h4>
+           <p className="text-xs text-indigo-800 leading-relaxed">
+             性取向不是非黑即白的，而是一个流动的光谱。有些人完全只喜欢同性或异性，而更多人处于中间地带。你的性取向在人生的不同阶段也可能会发生变化，这都是正常的。
+           </p>
         </div>
+        
+        <SectionTitle color="bg-indigo-400">常见类别详解</SectionTitle>
+        <div className="space-y-4">
+          <InfoCard title="异性恋 (Heterosexual / Straight)" colorClass="border-indigo-100 bg-white text-indigo-800">
+            <p className="text-sm">通常被称为“直人”。指在情感和性方面主要被不同性别的人吸引。</p>
+          </InfoCard>
+
+          <InfoCard title="同性恋 (Gay & Lesbian)" colorClass="border-indigo-100 bg-white text-indigo-800">
+             <p className="text-sm mb-2">指在情感和性方面主要被相同性别的人吸引。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+               <li><strong className="text-indigo-600">男同性恋 (Gay):</strong> 被男性吸引的男性。</li>
+               <li><strong className="text-indigo-600">女同性恋 (Lesbian):</strong> 被女性吸引的女性。</li>
+             </ul>
+          </InfoCard>
+
+          <InfoCard title="双性恋 (Bisexual)" colorClass="border-indigo-100 bg-white text-indigo-800">
+             <p className="text-sm">指被不止一种性别的人吸引。这并不意味着他们“贪心”或“困惑”。即使双性恋者目前处于一段异性关系中，他们的性取向依然是双性恋。</p>
+          </InfoCard>
+
+          <InfoCard title="泛性恋 (Pansexual)" colorClass="border-indigo-100 bg-white text-indigo-800">
+             <p className="text-sm">指吸引力不受性别限制。对于泛性恋者来说，他们爱的是“人”本身，对方的性别对他们的吸引力没有决定性影响。“Hearts not parts.”</p>
+          </InfoCard>
+
+          <InfoCard title="无性恋 (Asexual / Ace)" colorClass="border-indigo-100 bg-white text-indigo-800">
+             <p className="text-sm">指很少或没有感受到性吸引力。但这不代表没有感情需求。无性恋也是一个光谱：</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground mt-2">
+               <li>有些无性恋者完全没有性欲。</li>
+               <li>有些可能会在建立深厚情感后产生性吸引（半性恋 Demisexual）。</li>
+               <li>许多无性恋者仍然渴望浪漫关系和拥抱。</li>
+             </ul>
+          </InfoCard>
+          
+           <InfoCard title="酷儿 (Queer)" colorClass="border-indigo-100 bg-white text-indigo-800">
+             <p className="text-sm">原本是一个贬义词，但现在被广泛回收使用。它是一个包容性的术语，用来描述任何不符合主流“异性恋”或“顺性别”规范的人。如果你不想给自己贴上具体的标签，“酷儿”是一个很好的选择。</p>
+          </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-indigo-400">区分三个概念</SectionTitle>
+        <div className="bg-indigo-900 text-white rounded-2xl p-5 mb-6 relative overflow-hidden">
+           <div className="relative z-10 space-y-4">
+             <div>
+               <h5 className="font-bold text-indigo-200 text-sm">🧠 性别认同 (Gender Identity)</h5>
+               <p className="text-xs opacity-90">你是谁？(Who you are)<br/>例如：男人、女人、非二元性别。</p>
+             </div>
+             <div>
+               <h5 className="font-bold text-indigo-200 text-sm">❤️ 性取向 (Sexual Orientation)</h5>
+               <p className="text-xs opacity-90">你爱谁？(Who you love)<br/>例如：同性恋、异性恋、双性恋。</p>
+             </div>
+             <div>
+               <h5 className="font-bold text-indigo-200 text-sm">🧬 生理性别 (Biological Sex)</h5>
+               <p className="text-xs opacity-90">你的身体构造？(Your body)<br/>例如：男性、女性、间性人 (Intersex)。</p>
+             </div>
+           </div>
+           <div className="absolute right-0 top-0 w-32 h-32 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
+        </div>
+
+        <SectionTitle color="bg-indigo-400">关于“出柜” (Coming Out)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+          <p className="text-sm text-muted-foreground mb-4">
+            “出柜”是指向他人表明自己的性取向或性别认同的过程。这是一个非常个人化的决定。
+          </p>
+          <ListSection color="text-indigo-500" items={[
+            "安全第一：如果出柜会威胁到你的安全、住房或经济来源，请暂时等待。你的安全最重要。",
+            "没有时间表：你不需要在特定时间告诉任何人。你可以选择只告诉特定的朋友。",
+            "这是一个过程：出柜不是一次性的，而是一生中不断发生的过程（对新朋友、新同事等）。",
+            "寻找社群：知道自己并不孤单非常重要。寻找线上的 LGBTQ+ 社区或支持小组。"
+          ]} />
+        </div>
+
+        <SectionTitle color="bg-indigo-400">常见误区 (Myth Busting)</SectionTitle>
+         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+          <FaqItem 
+            question="性取向是选择出来的吗？" 
+            answer="不是。就像你不能选择你的身高一样，你也不能选择你被谁吸引。你可以选择是否通过行为来表达你的性取向，但内在的吸引力是自然存在的。" 
+          />
+          <FaqItem 
+            question="双性恋只是过渡阶段吗？" 
+            answer="不是。双性恋是一种独立且完整的性取向。很多双性恋者终生都保持这种取向。" 
+          />
+           <FaqItem 
+            question="治疗（扭转治疗）能改变性取向吗？" 
+            answer="绝对不能。所有主流医学和心理学组织都谴责“扭转治疗”。它不仅无效，而且极为有害，可能导致抑郁和自杀风险。你需要的是接纳，而不是治疗。" 
+          />
+        </div>
+      </>
+    )
+  },
+
 
         <SectionTitle color="bg-indigo-400">关于“出柜” (Coming Out)</SectionTitle>
         <div className="bg-indigo-50 p-4 rounded-2xl border border-indigo-100">
