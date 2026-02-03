@@ -342,14 +342,65 @@ const articles: Record<string, any> = {
     color: "from-green-400 to-lime-500",
     accentColor: "bg-green-500",
     lightColor: "bg-green-50 border-green-100 text-green-700",
-    tags: ["体检", "HPV疫苗", "常见感染"],
+    tags: ["青春期", "月经", "体检", "HPV疫苗"],
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          生殖健康是整体健康的重要组成部分。即使没有性生活，关注生殖系统的健康也是必要的。
+          生殖健康是整体健康的重要组成部分。了解从青春期开始的身体变化，到日常的护理和预防，是每个人对自己身体负责的表现。
         </p>
 
-        <SectionTitle color="bg-green-400">常见健康问题</SectionTitle>
+        <SectionTitle color="bg-green-400">青春期：成长的开始</SectionTitle>
+        <div className="bg-green-50 rounded-2xl p-5 mb-6 border border-green-100">
+           <h4 className="font-bold text-green-800 mb-3 flex items-center gap-2"><Baby size={16} /> 身体的变化</h4>
+           <div className="grid grid-cols-1 gap-4">
+              <div className="bg-white p-3 rounded-xl border border-green-100/50">
+                 <p className="text-xs font-bold text-green-700 mb-1">共同特征</p>
+                 <p className="text-xs text-muted-foreground">身高突增、体毛生长（腋下/私处）、皮肤变油（可能长痘）、体味出现。</p>
+              </div>
+              <div className="bg-white p-3 rounded-xl border border-green-100/50">
+                 <p className="text-xs font-bold text-green-700 mb-1">女生</p>
+                 <p className="text-xs text-muted-foreground">乳房发育、臀部变宽、分泌物出现、<span className="font-bold">月经初潮</span>。</p>
+              </div>
+              <div className="bg-white p-3 rounded-xl border border-green-100/50">
+                 <p className="text-xs font-bold text-green-700 mb-1">男生</p>
+                 <p className="text-xs text-muted-foreground">生殖器发育、变声（喉结突出）、梦遗。</p>
+              </div>
+           </div>
+        </div>
+
+        <SectionTitle color="bg-green-400">月经百科 (Period 101)</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="基础知识" colorClass="border-green-100 bg-green-50/30 text-green-800">
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>周期：</strong> 21-35天。从见红第一天算起。</li>
+               <li><strong>经期：</strong> 持续2-7天。</li>
+               <li><strong>经血：</strong> 整个周期仅流失2-3汤匙血量。</li>
+             </ul>
+           </InfoCard>
+
+           <InfoCard title="卫生用品选择" colorClass="border-green-100 bg-green-50/30 text-green-800">
+             <div className="space-y-2">
+               <div>
+                 <p className="text-xs font-bold">卫生巾 (Pads)</p>
+                 <p className="text-xs text-muted-foreground">最简单。每4-8小时更换。</p>
+               </div>
+               <div>
+                 <p className="text-xs font-bold">卫生棉条 (Tampons)</p>
+                 <p className="text-xs text-muted-foreground">置入阴道。无感、可游泳。必须每4-8小时更换以防TSS。</p>
+               </div>
+                <div>
+                 <p className="text-xs font-bold">月经杯 (Cups)</p>
+                 <p className="text-xs text-muted-foreground">硅胶小杯，环保可重复使用。可放置12小时。</p>
+               </div>
+             </div>
+           </InfoCard>
+           
+           <InfoCard title="痛经管理" colorClass="border-green-100 bg-green-50/30 text-green-800">
+             <p className="text-xs">热敷、布洛芬 (Ibuprofen) 止痛药、轻度运动。如果痛到无法生活，请就医（可能是子宫内膜异位症）。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-green-400">常见妇科健康问题</SectionTitle>
         <div className="space-y-4">
            <InfoCard title="尿路感染 (UTI)" colorClass="border-green-100 bg-green-50/30 text-green-800">
             <img src={imgMicroTestKit} alt="Test Kit" className="w-14 h-14 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-green-100" />
@@ -363,17 +414,13 @@ const articles: Record<string, any> = {
             <img src={imgMicroUterus} alt="Uterus" className="w-14 h-14 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-green-100" />
             <p><strong>症状：</strong> 经期前的情绪波动、乳房胀痛、疲劳。PMDD 是更严重的版本，可能导致抑郁。<br/><strong>处理：</strong> 运动、饮食调整，严重时可咨询医生用药。</p>
           </InfoCard>
-
-          <InfoCard title="子宫内膜异位症 (Endometriosis)" colorClass="border-green-100 bg-green-50/30 text-green-800">
-            <p><strong>症状：</strong> 极度痛苦的痛经、性交痛、慢性盆腔痛。<br/><strong>注意：</strong> 严重的痛经是不正常的，不要忍受，请看医生。</p>
-          </InfoCard>
         </div>
 
         <SectionTitle color="bg-green-400">预防性保健</SectionTitle>
         <ListSection color="text-green-500" items={[
           "HPV 疫苗：可以预防导致宫颈癌和尖锐湿疣的病毒。建议在开始性行为前接种，但之后接种也有益。",
           "宫颈癌筛查 (Pap Smear)：建议从21岁开始，定期检测宫颈细胞变化。",
-          "经期健康：记录月经周期。如果经痛严重影响生活，或者经量过大，请看医生，这可能是子宫内膜异位症等问题的迹象。"
+          "乳房自检：定期触摸检查乳房是否有肿块或异常变化。"
         ]} />
       </>
     )
@@ -981,124 +1028,6 @@ const articles: Record<string, any> = {
              <li><strong>拭子取样：</strong> 从咽喉、直肠或生殖器取样。</li>
            </ul>
         </InfoCard>
-      </>
-    )
-  },
-  "Puberty": {
-    title: "青春期 (Puberty)",
-    subtitle: "成长的必经之路",
-    image: imgWellness, // Reusing wellness image for now
-    color: "from-yellow-400 to-orange-500",
-    accentColor: "bg-orange-500",
-    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
-    tags: ["身体变化", "情绪波动", "自我护理"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          青春期是从儿童向成年过渡的时期。这是一段充满变化、困惑但也非常精彩的旅程。每个人的青春期开始时间都不同，通常在 8-14 岁之间。
-        </p>
-
-        <SectionTitle color="bg-orange-400">身体的变化</SectionTitle>
-        <div className="space-y-4">
-          <InfoCard title="共同的变化" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
-             <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-               <li><strong>身高突增：</strong> 你可能会突然发现裤子变短了。</li>
-               <li><strong>体毛生长：</strong> 腋下和私处开始长出毛发。</li>
-               <li><strong>皮肤变化：</strong> 皮肤变油，可能会长青春痘 (Acne)。这是正常的激素作用。</li>
-               <li><strong>体味：</strong> 汗腺开始活跃。这是开始使用除臭剂的好时机。</li>
-             </ul>
-          </InfoCard>
-
-          <InfoCard title="女生的变化" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
-             <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-               <li><strong>乳房发育：</strong> 通常是最早的迹象之一。</li>
-               <li><strong>月经初潮：</strong> 通常在乳房发育后2年左右到来。</li>
-               <li><strong>体型变化：</strong> 臀部变宽，身体曲线变得明显。</li>
-               <li><strong>分泌物：</strong> 阴道开始有透明或白色的分泌物，这是健康的自洁功能。</li>
-             </ul>
-          </InfoCard>
-
-          <InfoCard title="男生的变化" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
-             <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-               <li><strong>生殖器发育：</strong> 睾丸和阴茎变大。</li>
-               <li><strong>变声：</strong> 喉结突出，声音变得低沉（变声期可能会出现“破音”）。</li>
-               <li><strong>梦遗：</strong> 睡眠中出现射精现象，这是精子生产开始的标志。</li>
-             </ul>
-          </InfoCard>
-        </div>
-
-        <SectionTitle color="bg-orange-400">情绪过山车</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
-          <p className="text-sm text-muted-foreground mb-3">
-            你可能会感到情绪波动很大，前一秒开心，后一秒想哭。你会开始更加在意同龄人的看法，可能会对父母感到厌烦。
-          </p>
-          <div className="bg-orange-50 p-3 rounded-xl border border-orange-100">
-             <p className="text-xs text-orange-800 font-medium">💡 小贴士：这些情绪都是大脑正在“装修”的结果。给自己多一点耐心，这会过去的。</p>
-          </div>
-        </div>
-      </>
-    )
-  },
-  "Menstruation": {
-    title: "月经百科 (Period 101)",
-    subtitle: "拥抱你的周期",
-    image: imgMicroUterus, // Using uterus micro image temporarily
-    color: "from-pink-400 to-red-500",
-    accentColor: "bg-pink-500",
-    lightColor: "bg-pink-50 border-pink-100 text-pink-700",
-    tags: ["月经周期", "经期护理", "痛经", "卫生用品"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          月经（Period）是子宫内膜脱落并随血液排出体外的过程。它不是“脏血”，而是身体具备生育能力的标志。
-        </p>
-
-        <SectionTitle color="bg-pink-400">月经周期 (The Cycle)</SectionTitle>
-        <div className="bg-pink-50 border border-pink-100 rounded-2xl p-5 mb-6">
-           <ul className="list-disc pl-4 space-y-2 text-xs text-pink-800">
-             <li><strong>周期长度：</strong> 从这次月经第一天到下次月经第一天，通常为 21-35 天。</li>
-             <li><strong>经期长度：</strong> 出血通常持续 2-7 天。</li>
-             <li><strong>经血量：</strong> 整个经期流失的血量通常只有 2-3 汤匙（虽然看起来很多）。</li>
-           </ul>
-        </div>
-
-        <SectionTitle color="bg-pink-400">经期卫生用品</SectionTitle>
-        <div className="space-y-4">
-          <InfoCard title="卫生巾 (Pads)" colorClass="border-pink-100 bg-white text-pink-800">
-            <p className="text-sm">贴在内裤上吸收经血。最常见、最容易上手。</p>
-            <p className="text-xs text-muted-foreground mt-1">建议：每 4-8 小时更换一次，避免细菌滋生。</p>
-          </InfoCard>
-
-          <InfoCard title="卫生棉条 (Tampons)" colorClass="border-pink-100 bg-white text-pink-800">
-            <p className="text-sm">放入阴道内吸收经血。适合运动和游泳。</p>
-            <p className="text-xs text-muted-foreground mt-1">注意：必须每 4-8 小时更换一次，以预防中毒性休克综合征 (TSS)。</p>
-          </InfoCard>
-
-          <InfoCard title="月经杯 (Menstrual Cups)" colorClass="border-pink-100 bg-white text-pink-800">
-            <p className="text-sm">硅胶制成的小杯子，放入阴道接住经血。可清洗重复使用，环保且经济。</p>
-            <p className="text-xs text-muted-foreground mt-1">建议：最长可放置 12 小时。</p>
-          </InfoCard>
-        </div>
-
-        <SectionTitle color="bg-pink-400">痛经怎么办？</SectionTitle>
-        <ListSection color="text-pink-500" items={[
-          "热敷：暖宝宝或热水袋敷在小腹。",
-          "止痛药：布洛芬 (Ibuprofen) 对缓解经痛非常有效。",
-          "运动：轻度运动（如瑜伽、散步）可以促进血液循环缓解疼痛。",
-          "如果痛到无法下床或伴有呕吐，请务必看医生，这可能是子宫内膜异位症等问题的信号。"
-        ]} />
-        
-        <SectionTitle color="bg-pink-400">常见误区</SectionTitle>
-         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
-          <FaqItem 
-            question="经期不能洗头/洗澡？" 
-            answer="假的。经期更要注意卫生，淋浴可以减少感染风险，热水还能缓解痛经。只是建议避免盆浴。" 
-          />
-          <FaqItem 
-            question="处女不能用棉条？" 
-            answer="假的。处女膜（处女瓣）有开口，棉条可以通过。只要使用正确，任何女生都可以使用棉条。" 
-          />
-        </div>
       </>
     )
   },
