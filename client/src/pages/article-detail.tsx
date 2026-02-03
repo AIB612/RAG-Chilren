@@ -2,7 +2,7 @@ import { MobileLayout } from "@/components/mobile-layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChevronLeft, Share2, ThumbsUp, BookOpen, AlertCircle, Info, HelpCircle, CheckCircle2, Heart, XCircle } from "lucide-react";
+import { ChevronLeft, Share2, ThumbsUp, BookOpen, AlertCircle, Info, HelpCircle, CheckCircle2, Heart, XCircle, Baby } from "lucide-react";
 import { useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 
