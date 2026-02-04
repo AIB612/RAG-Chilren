@@ -1,0 +1,116 @@
+# Source: https://www.plannedparenthood.org/learn/pregnancy/pregnancy-tests
+
+# Pregnancy Tests
+
+## How do pregnancy tests work?
+
+Pregnancy tests are an easy and accurate way to find out if you’re pregnant — you just pee on a stick. They’re inexpensive and available at most drug and grocery stores.
+
+## How accurate are pregnancy tests?
+
+Pregnancy tests are super accurate when you use them correctly. The pregnancy tests you get at the drugstore work 99 out of 100 times. They’re just as accurate as a urine pregnancy test that you’d get at a doctor’s office.
+
+Pregnancy tests work by checking your urine (pee) for a hormone called human chorionic gonadotropin (HCG). Your body only makes this hormone if you’re pregnant. HCG is released when a fertilized egg attaches to the lining of your uterus — when pregnancy begins. If your pregnancy test results are positive, it means you're pregnant. If they’re negative, it means you’re not pregnant.
+
+Pregnancy tests are most accurate when you take them after you’ve already missed your period.
+
+A pregnancy test will be less accurate if it’s expired or if you don’t use it the right way. So always check the expiration date on the package, and carefully read the directions that come with your pregnancy test.
+
+## How soon can I take a pregnancy test?
+
+You can take a pregnancy test anytime after your period is late — that’s when they work the best. It’s a good idea to take a pregnancy test as soon as possible if you miss your period or think you might be pregnant.
+
+The earlier you know you’re pregnant, the sooner you can start thinking about your [options](/learn/pregnancy/pregnancy-options) and get whatever care you need to stay healthy.
+
+Many pregnancy tests say they work a few days before a missed period, but the results are usually less accurate then. Read the label on your pregnancy test to find out when to take a pregnancy test and how accurate it’ll be.
+
+Sometimes a pregnancy test is able to find pregnancy hormones in your urine as early as 10 days after unprotected sex. But these results aren’t super reliable, and you may get a false positive or false negative test result.
+
+If your periods are very irregular, or you don’t get periods at all for one reason or another, your best bet for accurate results is to take a pregnancy test 3 weeks after sex.
+
+## Where can I get a pregnancy test?
+
+You can buy a pregnancy test at your local pharmacy, drugstore, grocery store, and some convenience or dollar stores. Pregnancy tests are usually inexpensive. They can cost anywhere from $1-15 dollars. Sometimes you can get a free pregnancy test at certain health centers.
+
+You can also get a pregnancy test from your nurse or doctor, community clinic, or local [Planned Parenthood Health Center](https://www.plannedparenthood.org/health-center). Most health centers use the same urine pregnancy tests that you can buy in stores. Sometimes they use a blood test to test for pregnancy, but that’s usually only under special circumstances.
+
+But be careful when looking for a reliable health center, because there are fake clinics out there called [Crisis Pregnancy Centers](https://www.plannedparenthood.org/blog/what-are-crisis-pregnancy-centers). Crisis Pregnancy Centers give free pregnancy tests and claim to offer information and help. But they’re run by people who may not be medical professionals, and don’t believe in giving you honest facts about pregnancy and all of your [options](/learn/pregnancy/pregnancy-options). Crisis pregnancy centers are often located very close to Planned Parenthood health centers or other real medical centers, and have similar names — they do this to confuse people and trick them into visiting their center instead.
+
+Your nearest [Planned Parenthood health center](https://www.plannedparenthood.org/health-center) can help you find a safe place to get a pregnancy test in your area.
+
+## What should I do if my pregnancy test is positive?
+
+If you take a pregnancy test after you miss your period and the result is positive, that means you’re pregnant. You can always take another test to be sure, if you want.
+
+You may want to go to a nurse or doctor, family planning clinic, or local [Planned Parenthood Health Center](https://www.plannedparenthood.org/health-center) to get a follow-up test. They’ll talk with you about your [pregnancy options](/learn/pregnancy/pregnancy-options), and help get you the care you need. Be careful not to visit a Crisis Pregnancy Center, because they might not give you real medical care or truthful information about your pregnancy and all of your options.
+
+## More questions from patients:
+
+[What's a false positive pregnancy test?](#)
+
+A false positive pregnancy test is when you get a positive result from a home pregnancy test but you’re not really pregnant.
+
+A false positive result means that the pregnancy test detected the hormone hCG in your pee. For this to happen, either the test didn’t work right or you had hCG in your body for another reason. These could include:
+
+* taking the test too soon after taking fertility drugs that contain the hormone hCG
+* having an [ectopic pregnancy](https://www.plannedparenthood.org/learn/pregnancy/ectopic-pregnancy) or [miscarriage](https://www.plannedparenthood.org/learn/pregnancy/miscarriage)
+
+If you have a positive pregnancy test, visit your doctor, midwife, or [local Planned Parenthood health center](https://www.plannedparenthood.org/health-center). They can determine if you’re really pregnant and help you with next steps.
+
+[Previous
+
+How Pregnancy Happens](/learn/pregnancy/how-pregnancy-happens)
+[Next
+Month by Month](/learn/pregnancy/pregnancy-month-by-month)
+
+Was this page helpful?
+
+* Yes
+* No
+
+Help us improve - how could this information be more helpful?
+
+How did this information help you?
+
+Please answer below.
+
+Are you human? (Sorry, we have to ask!)
+
+Please don't check this box if you are a human.
+
+Send Now
+
+No Thanks
+
+You’re the best! Thanks for your feedback.
+
+Thanks for your feedback.
+
+### Beep boop.
+
+Our chat bot Roo can answer your questions about your sexual health. Roo is free and confidential. You can also visit our blog to read answers to common questions. Roo is not a human and can only answer certain questions. Always talk to your nurse or doctor about your health concerns.
+
+[Chat Now](https://roo.plannedparenthood.org/unifiedonboarding/intro)
+
+## More On Pregnancy
+
+* [Considering Pregnancy](/learn/pregnancy/considering-pregnancy)
+* [Pre-Pregnancy Health and Planning](/learn/pregnancy/pre-pregnancy-health)
+* [How Pregnancy Happens](/learn/pregnancy/how-pregnancy-happens)
+* Pregnancy Tests
+* [Month by Month](/learn/pregnancy/pregnancy-month-by-month)
+* [Prenatal Care](/learn/pregnancy/prenatal-care)
+* [Infertility Signs, Symptoms, and Causes](/learn/pregnancy/infertility)
+* [Fertility Treatments](/learn/pregnancy/fertility-treatments)
+* [Ectopic Pregnancy](/learn/pregnancy/ectopic-pregnancy)
+* [Miscarriage](/learn/pregnancy/miscarriage)
+* [Pregnancy Options](/learn/pregnancy/pregnancy-options)
+* [Considering Parenthood](/learn/pregnancy/considering-parenthood)
+* [Considering Adoption](/learn/pregnancy/considering-adoption)
+* [Zika Virus](/learn/pregnancy/zika)
+* [Postpartum Care](/learn/pregnancy/postpartum-care)
+* [Postpartum Depression](/learn/pregnancy/postpartum-depression)
+* [High Blood Pressure in Pregnancy](/learn/pregnancy/high-blood-pressure-pregnancy)
+* [Gestational Diabetes](/learn/pregnancy/gestational-diabetes)
+* [Feeding Your Newborn](/learn/pregnancy/feeding-your-newborn)
+* [Pregnancy Symptoms](/learn/pregnancy/pregnancy-symptoms)

@@ -2774,6 +2774,217 @@ const articles: Record<string, any> = {
       </>
     )
   },
+
+  "Gender_Identity": {
+    title: "性别认同 (Gender Identity)",
+    subtitle: "做真实的自己",
+    image: imgGenderIdentity,
+    color: "from-purple-400 to-indigo-500",
+    accentColor: "bg-purple-500",
+    lightColor: "bg-purple-50 border-purple-100 text-purple-700",
+    tags: ["Transgender", "Nonbinary", "支持与包容"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          性别认同是你对自己是谁的重要认知。了解性别认同有助于你理解自己和周围的人。
+        </p>
+
+        <SectionTitle color="bg-purple-400">跨性别与非二元性别</SectionTitle>
+        <div className="space-y-4">
+          <InfoCard title="跨性别 (Transgender)" colorClass="border-purple-100 bg-purple-50/30 text-purple-800">
+            <p>性别不仅仅是男性和女性。当一个人的性别认同与出生时被分配的性别不一致时，他们可能认定自己为跨性别者。</p>
+          </InfoCard>
+          <InfoCard title="间性人 (Intersex)" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
+            <p>间性人是一个统称，用来描述那些身体特征不符合严格的男性/女性二元划分的人。</p>
+          </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-purple-400">如何支持？</SectionTitle>
+        <ListSection items={[
+           "尊重他们的名字和代词 (Pronouns)",
+           "不假设别人的性别",
+           "倾听他们的经历",
+           "保护他们的隐私"
+        ]} color="text-purple-500" />
+      </>
+    )
+  },
+
+  "Menstruation": {
+    title: "月经 (Menstruation)",
+    subtitle: "了解你的生理周期",
+    image: imgWellness,
+    color: "from-rose-400 to-red-500",
+    accentColor: "bg-red-500",
+    lightColor: "bg-red-50 border-red-100 text-red-700",
+    tags: ["PMS", "生理期", "排卵"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          月经（Period）是子宫内膜脱落并随血液排出体外的过程。通常每个月发生一次。
+        </p>
+        
+        <SectionTitle color="bg-red-400">月经周期是怎样的？</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="1. 卵泡生长" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p>激素让卵巢中的卵子成熟，同时子宫内膜变厚，为可能的怀孕做准备。</p>
+           </InfoCard>
+           <InfoCard title="2. 排卵 (Ovulation)" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p>成熟的卵子从卵巢释放，进入输卵管。这是最容易受孕的时候。</p>
+           </InfoCard>
+           <InfoCard title="3. 月经来潮" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p>如果没有怀孕，子宫内膜剥落并排出，这就是月经。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-red-400">常见问题</SectionTitle>
+        <FaqItem question="什么时候开始有月经？" answer="大多数人在 12 到 14 岁之间开始，但也可能更早或更晚。" />
+        <FaqItem question="跨性别男性会有月经吗？" answer="是的。并不是所有有月经的人都是女性。许多跨性别男性和非二元性别者也会有月经。" />
+      </>
+    )
+  },
+
+  "Health_and_Wellness": {
+    title: "健康与保健 (Health & Wellness)",
+    subtitle: "预防胜于治疗",
+    image: imgWellness,
+    color: "from-green-400 to-emerald-500",
+    accentColor: "bg-green-500",
+    lightColor: "bg-green-50 border-green-100 text-green-700",
+    tags: ["体检", "预防", "自我护理"],
+    content: (
+      <>
+         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           照顾好自己的性健康和生殖健康是整体健康的重要组成部分。这意味着定期检查和了解自己的身体。
+         </p>
+         <SectionTitle color="bg-green-400">健康检查 (Wellness Exam)</SectionTitle>
+         <InfoCard title="什么是健康检查？" colorClass="border-green-100 bg-green-50/30 text-green-800">
+           <p>这是一年一次的全面检查，关注你的生殖健康。可能包括乳房检查、盆腔检查、巴氏涂片等。</p>
+         </InfoCard>
+         <ListSection title="为什么需要检查？" items={[
+           "及早发现潜在健康问题",
+           "进行性病 (STD) 筛查",
+           "获得避孕咨询",
+           "讨论月经或更年期问题"
+         ]} color="text-green-500" />
+      </>
+    )
+  },
+
+  "Anatomy": {
+    title: "生殖解剖学 (Anatomy)",
+    subtitle: "了解身体构造",
+    image: imgMicroAnatomy,
+    color: "from-blue-400 to-indigo-500",
+    accentColor: "bg-indigo-500",
+    lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
+    tags: ["身体", "器官", "教育"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          生殖和性解剖结构包括你的生殖器和内部生殖器官。每个人的身体构造都是独一无二的。
+        </p>
+        <SectionTitle color="bg-indigo-400">身体的性部位</SectionTitle>
+        <InfoCard title="不仅仅是生殖器" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
+          <p>虽然阴茎、阴道等是主要的性器官，但大脑其实是你最重要的性器官——它控制着性反应。皮肤也是一个巨大的性器官，充满了敏感神经。</p>
+        </InfoCard>
+        <InfoCard title="多样性" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
+           <p>大多数人有男性或女性的生殖器官，但也有间性人 (Intersex)，他们的身体特征不完全符合二元划分。</p>
+        </InfoCard>
+      </>
+    )
+  },
+
+  "UTIs": {
+    title: "尿路感染 (UTIs)",
+    subtitle: "症状与治疗",
+    image: imgWellness,
+    color: "from-yellow-400 to-orange-500",
+    accentColor: "bg-orange-500",
+    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
+    tags: ["感染", "疼痛", "治疗"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          尿路感染 (UTI) 是泌尿系统（包括膀胱和尿道）的感染。任何人都可能得 UTI，但在女性中更为常见。
+        </p>
+        <SectionTitle color="bg-orange-400">常见症状</SectionTitle>
+        <ListSection items={[
+          "尿频、尿急",
+          "排尿时有灼烧感或疼痛",
+          "尿液浑浊或有异味",
+          "下腹部或背部疼痛"
+        ]} color="text-orange-500" />
+        
+        <InfoCard title="如何预防？" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+           <ul className="list-disc pl-4 space-y-1 text-sm">
+             <li>多喝水</li>
+             <li>性行为后排尿</li>
+             <li>从前向后擦拭</li>
+             <li>避免使用有刺激性的卫生用品</li>
+           </ul>
+        </InfoCard>
+      </>
+    )
+  },
+
+  "Vaginitis": {
+    title: "阴道炎 (Vaginitis)",
+    subtitle: "瘙痒与分泌物异常",
+    image: imgWellness,
+    color: "from-pink-400 to-rose-500",
+    accentColor: "bg-rose-500",
+    lightColor: "bg-rose-50 border-rose-100 text-rose-700",
+    tags: ["霉菌", "BV", "滴虫"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          阴道炎是阴道或外阴的炎症。它非常常见，通常很容易治疗。
+        </p>
+        <SectionTitle color="bg-rose-400">主要类型</SectionTitle>
+        <div className="space-y-4">
+          <InfoCard title="霉菌性阴道炎 (Yeast Infection)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+            <p>由真菌过度生长引起。症状包括瘙痒、灼烧感，以及像豆腐渣一样的白色分泌物。</p>
+          </InfoCard>
+          <InfoCard title="细菌性阴道病 (BV)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <p>阴道内细菌失衡引起。分泌物可能呈灰白色、有鱼腥味。</p>
+          </InfoCard>
+          <InfoCard title="滴虫病 (Trichomoniasis)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <p>一种性传播感染。分泌物可能呈黄绿色、有泡沫。</p>
+          </InfoCard>
+        </div>
+      </>
+    )
+  },
+
+  "Menopause": {
+    title: "更年期 (Menopause)",
+    subtitle: "生命的自然阶段",
+    image: imgWellness,
+    color: "from-purple-400 to-fuchsia-500",
+    accentColor: "bg-fuchsia-500",
+    lightColor: "bg-fuchsia-50 border-fuchsia-100 text-fuchsia-700",
+    tags: ["绝经", "潮热", "激素"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          更年期是指月经永久停止的时候。这通常发生在 45 到 55 岁之间。
+        </p>
+        <SectionTitle color="bg-fuchsia-400">围绝经期 (Perimenopause)</SectionTitle>
+        <p className="mb-4 text-sm text-muted-foreground">
+          这是通往更年期的过渡阶段。你的激素水平开始波动，月经可能变得不规律。
+        </p>
+        <SectionTitle color="bg-fuchsia-400">常见症状</SectionTitle>
+        <ListSection items={[
+          "月经不规律",
+          "潮热 (Hot flashes)",
+          "睡眠问题",
+          "情绪波动",
+          "阴道干涩"
+        ]} color="text-fuchsia-500" />
+      </>
+    )
+  },
 };
 
 export default function ArticleDetail({ params }: { params: { id: string } }) {
