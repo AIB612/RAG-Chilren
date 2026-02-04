@@ -303,6 +303,98 @@ const articles: Record<string, any> = {
     )
   },
 
+  "Adoption": {
+    title: "领养 (Adoption)",
+    subtitle: "充满爱的选择",
+    image: imgRelationships,
+    color: "from-amber-400 to-orange-500",
+    accentColor: "bg-orange-500",
+    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
+    tags: ["领养", "选择", "权利"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          领养是指将父母的权利和责任从亲生父母永久且合法地转移给养父母。这是一个复杂且影响终身的决定，但也是许多意外怀孕者的选择之一。
+        </p>
+        
+        <SectionTitle color="bg-orange-400">主要类型</SectionTitle>
+        <div className="space-y-4">
+          <InfoCard title="机构领养 (Agency Adoption)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+            <p>通过有执照的领养机构进行。机构负责筛选养父母，并为您提供咨询和支持。</p>
+          </InfoCard>
+          <InfoCard title="独立领养 (Independent Adoption)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <p>直接通过律师与养父母达成协议。您通常有更多机会直接选择和了解养父母。</p>
+          </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-orange-400">开放式 vs 封闭式</SectionTitle>
+        <ListSection items={[
+           "开放式领养 (Open): 您可以与孩子和养父母保持联系（电话、见面等）。",
+           "半开放式 (Semi-Open): 通过中介机构交换照片和信件，不直接联系。",
+           "封闭式领养 (Closed): 双方没有任何联系或信息交换。"
+        ]} color="text-orange-500" />
+        
+        <SectionTitle color="bg-orange-400">您的权利</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-sm text-muted-foreground">
+             <li>您有权在不受压力、威胁或误导的情况下做出决定。</li>
+             <li>您有权在签署文件前获得独立的法律建议。</li>
+             <li>在孩子出生前签署的任何领养同意书通常都是无效的。您必须在孩子出生后才做最终决定。</li>
+             <li>您有权在医院抱着、喂养您的宝宝。</li>
+           </ul>
+        </div>
+      </>
+    )
+  },
+
+  "Pregnancy_Full": {
+    title: "怀孕全程 (Pregnancy)",
+    subtitle: "从受孕到分娩",
+    image: imgPregnancy,
+    color: "from-rose-400 to-red-500",
+    accentColor: "bg-red-500",
+    lightColor: "bg-red-50 border-red-100 text-red-700",
+    tags: ["怀孕", "分娩", "健康"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          怀孕是一个神奇的过程，从受精卵着床开始，持续约 40 周。了解怀孕的过程和可能遇到的问题，有助于您度过一个健康的孕期。
+        </p>
+
+        <SectionTitle color="bg-red-400">受孕过程</SectionTitle>
+        <InfoCard title="精子遇上卵子" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+           <p>在排卵期，卵子从卵巢排出。如果此时有精子进入，它们可能会在输卵管相遇并受精。受精卵随后移动到子宫并着床，通过释放激素停止月经，标志着怀孕的开始。</p>
+        </InfoCard>
+
+        <SectionTitle color="bg-red-400">常见并发症</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="宫外孕 (Ectopic Pregnancy)" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p>受精卵在子宫外（通常是输卵管）着床。这非常危险，不能继续妊娠，需要立即医疗干预。</p>
+           </InfoCard>
+           <InfoCard title="妊娠期糖尿病" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p>怀孕期间出现的糖尿病。通常在分娩后消失，但需要通过饮食或药物控制，以确保母婴健康。</p>
+           </InfoCard>
+           <InfoCard title="妊娠期高血压" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p>包括先兆子痫等。需要密切监测，因为它可能严重影响母亲和胎儿的健康。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-red-400">喂养宝宝</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+          <h4 className="font-bold text-sm mb-2">母乳 vs 配方奶</h4>
+          <p className="text-sm text-muted-foreground mb-3">这完全是个人选择。</p>
+          <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>母乳喂养：</strong> 提供天然抗体，降低婴儿患病风险，对母亲也有健康益处。但可能需要时间和练习。</li>
+             <li><strong>配方奶：</strong> 营养均衡，方便其他家庭成员参与喂养。</li>
+          </ul>
+        </div>
+        
+        <SectionTitle color="bg-red-400">生育治疗</SectionTitle>
+        <p className="text-sm text-muted-foreground mb-4">如果您难以受孕，有许多辅助生殖技术 (ART) 可以帮助您，如宫腔内人工授精 (IUI) 和 体外受精 (IVF)。</p>
+      </>
+    )
+  },
+
   "Abortion": {
     title: "堕胎 (Abortion)",
     subtitle: "安全、合法的医疗程序",
