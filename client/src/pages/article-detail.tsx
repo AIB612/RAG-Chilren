@@ -354,43 +354,189 @@ const articles: Record<string, any> = {
     color: "from-rose-400 to-red-500",
     accentColor: "bg-red-500",
     lightColor: "bg-red-50 border-red-100 text-red-700",
-    tags: ["怀孕", "分娩", "健康"],
+    tags: ["怀孕", "分娩", "健康", "产检"],
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          怀孕是一个神奇的过程，从受精卵着床开始，持续约 40 周。了解怀孕的过程和可能遇到的问题，有助于您度过一个健康的孕期。
+          怀孕是一个神奇的过程，从受精卵着床开始，持续约 40 周。了解怀孕的过程、症状和可能遇到的问题，有助于您度过一个健康的孕期。
         </p>
 
-        <SectionTitle color="bg-red-400">受孕过程</SectionTitle>
-        <InfoCard title="精子遇上卵子" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
-           <p>在排卵期，卵子从卵巢排出。如果此时有精子进入，它们可能会在输卵管相遇并受精。受精卵随后移动到子宫并着床，通过释放激素停止月经，标志着怀孕的开始。</p>
-        </InfoCard>
+        <SectionTitle color="bg-red-400">早期迹象与症状</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">最明显的迹象是<strong>月经推迟</strong>。其他常见症状包括：</p>
+           <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>乳房胀痛</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>疲劳嗜睡</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>恶心/孕吐</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>尿频</li>
+           </ul>
+           <div className="mt-4 pt-3 border-t border-red-100">
+             <p className="text-xs text-red-600 font-medium">注意：唯一确定怀孕的方法是进行<strong>验孕测试</strong>。</p>
+           </div>
+        </div>
 
-        <SectionTitle color="bg-red-400">常见并发症</SectionTitle>
+        <SectionTitle color="bg-red-400">孕期阶段 (Trimesters)</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="第一孕期 (1-13周)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <p>受精卵着床并迅速发育成胚胎。宝宝的主要器官开始形成。这是流产风险最高的时期。</p>
+           </InfoCard>
+           <InfoCard title="第二孕期 (14-26周)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <p>通常被认为是最舒适的阶段。孕吐减轻，精力恢复。您可以感觉到胎动，通过B超可能看出宝宝性别。</p>
+           </InfoCard>
+           <InfoCard title="第三孕期 (27周-分娩)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <p>宝宝迅速长大，您的身体负担加重。可能会出现背痛、水肿等不适。需要为分娩做好准备。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-red-400">产前护理 (Prenatal Care)</SectionTitle>
+        <p className="text-sm text-muted-foreground mb-4">定期产检对母婴健康至关重要。医生会监测宝宝发育，并筛查潜在问题。</p>
+        <ListSection items={[
+           "早期 (1-32周): 每 4-6 周检查一次",
+           "中期 (32-37周): 每 2-3 周检查一次",
+           "晚期 (37周后): 每周检查一次"
+        ]} color="text-red-500" />
+
+        <SectionTitle color="bg-red-400">常见并发症与风险</SectionTitle>
         <div className="space-y-4">
            <InfoCard title="宫外孕 (Ectopic Pregnancy)" colorClass="border-red-100 bg-red-50/30 text-red-800">
-             <p>受精卵在子宫外（通常是输卵管）着床。这非常危险，不能继续妊娠，需要立即医疗干预。</p>
+             <p>受精卵在子宫外着床（通常在输卵管）。这非常危险，需要立即医疗干预。</p>
            </InfoCard>
-           <InfoCard title="妊娠期糖尿病" colorClass="border-red-100 bg-red-50/30 text-red-800">
-             <p>怀孕期间出现的糖尿病。通常在分娩后消失，但需要通过饮食或药物控制，以确保母婴健康。</p>
+           <InfoCard title="寨卡病毒 (Zika Virus)" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p>通过蚊子传播或性传播。孕妇感染可能导致新生儿小头症。建议孕期避免前往疫区，并使用避孕套预防性传播。</p>
            </InfoCard>
-           <InfoCard title="妊娠期高血压" colorClass="border-red-100 bg-red-50/30 text-red-800">
-             <p>包括先兆子痫等。需要密切监测，因为它可能严重影响母亲和胎儿的健康。</p>
+           <InfoCard title="妊娠期糖尿病/高血压" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p>孕期特有的健康问题，通常分娩后恢复，但需密切监测和控制。</p>
+           </InfoCard>
+        </div>
+      </>
+    )
+  },
+
+  "Infertility": {
+    title: "不孕不育 (Infertility)",
+    subtitle: "原因、诊断与治疗",
+    image: imgRelationships,
+    color: "from-purple-400 to-indigo-500",
+    accentColor: "bg-indigo-500",
+    lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
+    tags: ["生育", "治疗", "健康"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          不孕症通常指在未采取避孕措施的情况下，尝试一年（35岁以上为6个月）仍未怀孕。这是一个常见问题，可能由多种因素引起，不分性别。
+        </p>
+
+        <SectionTitle color="bg-indigo-400">常见原因</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-sm text-muted-foreground">
+             <li><strong>排卵问题：</strong> 荷尔蒙失调导致卵子无法正常排出。</li>
+             <li><strong>精子问题：</strong> 精子数量少、活力低或形态异常。</li>
+             <li><strong>输卵管阻塞：</strong> 防止精卵相遇。</li>
+             <li><strong>子宫问题：</strong> 如子宫肌瘤、内膜异位症。</li>
+             <li><strong>生活方式：</strong> 吸烟、酗酒、体重过重或过轻、年龄增长（尤其是35岁以上女性）。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-indigo-400">治疗方案</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="药物治疗" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
+             <p>使用药物调节荷尔蒙，促进排卵。</p>
+           </InfoCard>
+           <InfoCard title="宫腔内人工授精 (IUI)" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
+             <p>在排卵期，将处理过的精子直接注入子宫内。</p>
+           </InfoCard>
+           <InfoCard title="体外受精 (IVF)" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
+             <p>试管婴儿。在实验室中让精卵结合受精，然后将胚胎移植回子宫。</p>
+           </InfoCard>
+        </div>
+      </>
+    )
+  },
+
+  "Miscarriage": {
+    title: "流产 (Miscarriage)",
+    subtitle: "自然流产的理解与应对",
+    image: imgWellness,
+    color: "from-slate-400 to-gray-500",
+    accentColor: "bg-slate-500",
+    lightColor: "bg-slate-50 border-slate-100 text-slate-700",
+    tags: ["流产", "恢复", "支持"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          流产是指妊娠20周前的自然终止。这非常普遍（约10-20%的妊娠），通常不是孕妇做错了什么导致的。
+        </p>
+
+        <SectionTitle color="bg-slate-400">为什么会发生？</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">大多数流产是因为<strong>染色体异常</strong>，这是随机发生的，无法预防。其他原因可能包括严重感染或激素问题。</p>
+           <p className="text-sm text-slate-600 font-medium">注意：运动、工作、性生活或轻微跌倒通常<strong>不会</strong>导致流产。</p>
+        </div>
+
+        <SectionTitle color="bg-slate-400">流产类型</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="先兆流产" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+             <p>出现出血，但宫颈未开，妊娠可能继续。</p>
+           </InfoCard>
+           <InfoCard title="难免流产" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+             <p>出血加重，宫颈扩张，妊娠无法继续。</p>
+           </InfoCard>
+           <InfoCard title="稽留流产 (Missed Miscarriage)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+             <p>胚胎停止发育，但未立即排出体外。可能没有明显症状。</p>
            </InfoCard>
         </div>
 
-        <SectionTitle color="bg-red-400">喂养宝宝</SectionTitle>
+        <SectionTitle color="bg-slate-400">治疗与恢复</SectionTitle>
+        <ListSection items={[
+           "期待疗法：等待组织自然排出（可能需要数周）。",
+           "药物治疗：使用米索前列醇等药物加速排出。",
+           "手术治疗：清宫术，快速清除组织。",
+           "心理支持：悲伤是正常的，请给自己时间疗愈，并寻求亲友或专业支持。"
+        ]} color="text-slate-500" />
+      </>
+    )
+  },
+
+  "Postpartum": {
+    title: "产后护理 (Postpartum)",
+    subtitle: "身心恢复指南",
+    image: imgPregnancy,
+    color: "from-pink-400 to-rose-500",
+    accentColor: "bg-pink-500",
+    lightColor: "bg-pink-50 border-pink-100 text-pink-700",
+    tags: ["产后", "抑郁", "恢复"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          产后（分娩后）是身体和情绪恢复的关键时期。定期进行产后检查，关注身心变化，与照顾宝宝一样重要。
+        </p>
+
+        <SectionTitle color="bg-pink-400">产后抑郁 vs 婴儿蓝 (Baby Blues)</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="婴儿蓝 (Baby Blues)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+             <p><strong>非常常见。</strong>表现为情绪波动、哭泣、焦虑。通常在产后2-3天开始，持续几天到两周内自然消失。</p>
+           </InfoCard>
+           <InfoCard title="产后抑郁 (Postpartum Depression)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
+             <p><strong>需要治疗。</strong>症状更强烈（绝望、无法照顾宝宝、想伤害自己），持续时间更长。如果症状持续超过2周，请立即就医。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-pink-400">警示信号</SectionTitle>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
-          <h4 className="font-bold text-sm mb-2">母乳 vs 配方奶</h4>
-          <p className="text-sm text-muted-foreground mb-3">这完全是个人选择。</p>
-          <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
-             <li><strong>母乳喂养：</strong> 提供天然抗体，降低婴儿患病风险，对母亲也有健康益处。但可能需要时间和练习。</li>
-             <li><strong>配方奶：</strong> 营养均衡，方便其他家庭成员参与喂养。</li>
-          </ul>
+           <p className="text-sm text-muted-foreground mb-3">如果出现以下情况，请立即就医：</p>
+           <ul className="grid grid-cols-1 gap-2 text-sm text-muted-foreground">
+             <li className="flex items-center gap-2"><AlertCircle size={14} className="text-red-500"/> 无法控制的出血</li>
+             <li className="flex items-center gap-2"><AlertCircle size={14} className="text-red-500"/> 发烧超过 38°C</li>
+             <li className="flex items-center gap-2"><AlertCircle size={14} className="text-red-500"/> 严重的头痛或视力改变</li>
+             <li className="flex items-center gap-2"><AlertCircle size={14} className="text-red-500"/> 胸痛或呼吸困难</li>
+             <li className="flex items-center gap-2"><AlertCircle size={14} className="text-red-500"/> 腿部红肿疼痛（血栓迹象）</li>
+           </ul>
         </div>
         
-        <SectionTitle color="bg-red-400">生育治疗</SectionTitle>
-        <p className="text-sm text-muted-foreground mb-4">如果您难以受孕，有许多辅助生殖技术 (ART) 可以帮助您，如宫腔内人工授精 (IUI) 和 体外受精 (IVF)。</p>
+        <SectionTitle color="bg-pink-400">自我倡导</SectionTitle>
+        <p className="text-sm text-muted-foreground">
+           您最了解自己的身体。如果您感觉不对劲，不要被忽视，坚持寻求帮助。这是您的权利。
+        </p>
       </>
     )
   },

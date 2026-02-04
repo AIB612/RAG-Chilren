@@ -12,6 +12,7 @@ import iconKnowledge from "@/assets/icon-knowledge-3d.png";
 const categories = [
   { id: "Abortion", title: "堕胎", subtitle: "人工流产", icon: Stethoscope, color: "from-red-400 to-pink-500" },
   { id: "Adoption", title: "领养", subtitle: "爱与选择", icon: Users, color: "from-amber-400 to-orange-500" },
+  { id: "Considering_Parenthood", title: "为人父母", subtitle: "抚养决定", icon: Baby, color: "from-teal-400 to-cyan-500" },
   { id: "Birth_Control", title: "避孕", subtitle: "生育控制", icon: Pill, color: "from-blue-400 to-cyan-500" },
   { id: "Emergency_Contraception", title: "紧急避孕", subtitle: "事后补救", icon: Pill, color: "from-orange-400 to-amber-500" },
   { id: "Gender_Identity", title: "性别认同", subtitle: "自我认知", icon: Users, color: "from-teal-400 to-emerald-500" },
@@ -22,6 +23,9 @@ const categories = [
   { id: "Vaginitis", title: "阴道炎", subtitle: "常见炎症", icon: ShieldAlert, color: "from-pink-400 to-rose-500" },
   { id: "Menopause", title: "更年期", subtitle: "自然阶段", icon: Users, color: "from-purple-400 to-fuchsia-500" },
   { id: "Pregnancy_Full", title: "怀孕全程", subtitle: "完整孕期", icon: Baby, color: "from-rose-400 to-red-500" },
+  { id: "Infertility", title: "不孕不育", subtitle: "原因与治疗", icon: Stethoscope, color: "from-purple-400 to-indigo-500" },
+  { id: "Miscarriage", title: "流产", subtitle: "理解与应对", icon: Heart, color: "from-slate-400 to-gray-500" },
+  { id: "Postpartum", title: "产后护理", subtitle: "恢复与抑郁", icon: Baby, color: "from-pink-400 to-rose-500" },
   { id: "Relationships", title: "情感关系", subtitle: "亲密关系", icon: Heart, color: "from-pink-400 to-rose-500" },
   { id: "Sex_and_Pleasure", title: "性与愉悦", subtitle: "探索美好", icon: Smile, color: "from-violet-400 to-purple-500" },
   { id: "Sexual_Orientation", title: "性取向", subtitle: "爱与被爱", icon: Users, color: "from-indigo-400 to-blue-500" },
