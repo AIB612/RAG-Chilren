@@ -1662,6 +1662,65 @@ const articles: Record<string, any> = {
              <li><strong>恢复：</strong> 如果是顺产，伤口需要几周愈合；如果是剖腹产，则是大型腹部手术，需要更长恢复期，避免提重物。</li>
           </ul>
         </div>
+
+        <SectionTitle color="bg-rose-400">备孕指南 (Pre-Pregnancy)</SectionTitle>
+        <div className="space-y-4 mb-6">
+           <InfoCard title="提高受孕几率" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <p className="mb-2">了解你的排卵期是关键。排卵通常发生在下次月经前14天左右。在排卵前5天到排卵日当天进行性生活，受孕几率最高。</p>
+             <p className="text-xs text-rose-600">建议：开始服用产前维生素，特别是<strong>叶酸 (Folic Acid)</strong>，它能有效预防神经管缺陷。</p>
+           </InfoCard>
+           <InfoCard title="生活方式调整" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>饮食：</strong> 多吃水果、蔬菜、全谷物和蛋白质。避免生食和高汞鱼类。</li>
+               <li><strong>戒烟戒酒：</strong> 烟酒会严重影响胎儿发育，增加流产风险。</li>
+               <li><strong>运动：</strong> 适度运动（如散步、瑜伽）有益健康。</li>
+             </ul>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-rose-400">产前检查与测试</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-sm text-muted-foreground">
+             <li><strong>首次产检：</strong> 通常最详细，包括病史、全身体检、血液和尿液检查。</li>
+             <li><strong>超声波 (Ultrasound)：</strong> 通过声波查看胎儿发育、确定预产期。安全无痛。</li>
+             <li><strong>绒毛取样 (CVS)：</strong> 10-13周进行，检测遗传异常。有极小流产风险。</li>
+             <li><strong>羊水穿刺 (Amniocentesis)：</strong> 15-20周进行，检测唐氏综合症等。有极小流产风险。</li>
+             <li><strong>无创DNA检测 (NIPT)：</strong> 通过抽取母体血液检测胎儿染色体异常，无流产风险。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-rose-400">警惕并发症</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">如果出现以下症状，请立即就医：</p>
+           <ul className="grid grid-cols-1 gap-2 text-sm text-muted-foreground">
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>剧烈或持续的头痛</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>视力模糊或出现重影</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>面部或手脚突然严重肿胀</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>阴道出血或羊水破裂</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>24周后胎动明显减少或停止</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-teal-400">如果你面临意外怀孕</SectionTitle>
+        <div className="space-y-4 mb-6">
+           <InfoCard title="选择 1: 抚养 (Parenting)" colorClass="border-teal-100 bg-teal-50/30 text-teal-800">
+             <p className="text-sm">这就意味着成为父母。这是一个重大的终身承诺，需要考虑经济、时间和情感准备。</p>
+           </InfoCard>
+           <InfoCard title="选择 2: 堕胎 (Abortion)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
+             <p className="text-sm">终止妊娠的医疗程序。安全且合法（具体法律因地区而异）。分为药物流产和手术流产。</p>
+           </InfoCard>
+           <InfoCard title="选择 3: 领养 (Adoption)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <p className="text-sm">生下孩子，但将抚养权移交给他人。分为开放式（保持联系）和封闭式。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-rose-400">孕期常见问题</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+           <FaqItem question="早孕迹象？" answer="停经、乳房胀痛、恶心（晨吐）、疲劳。可以使用验孕棒确认。" />
+           <FaqItem question="流产 (Miscarriage)？" answer="指怀孕20周前自然终止。非常常见（约10-20%的已知妊娠）。通常不是因为你做错了什么。" />
+           <FaqItem question="宫外孕 (Ectopic Pregnancy)？" answer="受精卵在子宫外（通常是输卵管）着床。需要紧急医疗处理。症状包括剧烈腹痛和阴道出血。" />
+           <FaqItem question="妊娠糖尿病？" answer="怀孕期间出现的糖尿病。通过糖筛检查发现。可通过饮食和运动控制，必要时使用胰岛素。" />
+        </div>
       </>
     )
   },
