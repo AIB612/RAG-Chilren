@@ -419,64 +419,69 @@ const articles: Record<string, any> = {
 
   "Pregnancy_Full": {
     title: "怀孕全程 (Pregnancy)",
-    subtitle: "从受孕到分娩",
+    subtitle: "从备孕、发育到分娩",
     image: imgPregnancy,
     color: "from-rose-400 to-red-500",
     accentColor: "bg-red-500",
     lightColor: "bg-red-50 border-red-100 text-red-700",
-    tags: ["怀孕", "分娩", "健康", "产检"],
+    tags: ["备孕", "孕期发展", "产检", "分娩"],
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          怀孕是一个神奇的过程，从受精卵着床开始，持续约 40 周。了解怀孕的过程、症状和可能遇到的问题，有助于您度过一个健康的孕期。
+          怀孕是一个神奇的过程。无论您是正在备孕，还是已经怀孕，了解每个阶段的变化和注意事项，都能帮助您和宝宝保持健康。
         </p>
 
-        <SectionTitle color="bg-red-400">早期迹象与症状</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
-           <p className="text-sm text-muted-foreground mb-3">最明显的迹象是<strong>月经推迟</strong>。其他常见症状包括：</p>
-           <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
-             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>乳房胀痛</li>
-             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>疲劳嗜睡</li>
-             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>恶心/孕吐</li>
-             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>尿频</li>
-           </ul>
-           <div className="mt-4 pt-3 border-t border-red-100">
-             <p className="text-xs text-red-600 font-medium">注意：唯一确定怀孕的方法是进行<strong>验孕测试</strong>。</p>
-           </div>
-        </div>
-
-        <SectionTitle color="bg-red-400">孕期阶段 (Trimesters)</SectionTitle>
+        <SectionTitle color="bg-red-400">备孕指南 (Pre-Pregnancy)</SectionTitle>
         <div className="space-y-4">
-           <InfoCard title="第一孕期 (1-13周)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
-             <p>受精卵着床并迅速发育成胚胎。宝宝的主要器官开始形成。这是流产风险最高的时期。</p>
+           <InfoCard title="提高受孕几率" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <p className="mb-2">了解您的排卵期是关键。排卵通常发生在下次月经前14天左右。在排卵前5天到排卵日当天进行性生活，受孕几率最高。</p>
+             <p className="text-xs text-rose-600">建议：开始服用产前维生素，特别是<strong>叶酸 (Folic Acid)</strong>，它能有效预防神经管缺陷。</p>
            </InfoCard>
-           <InfoCard title="第二孕期 (14-26周)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
-             <p>通常被认为是最舒适的阶段。孕吐减轻，精力恢复。您可以感觉到胎动，通过B超可能看出宝宝性别。</p>
-           </InfoCard>
-           <InfoCard title="第三孕期 (27周-分娩)" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
-             <p>宝宝迅速长大，您的身体负担加重。可能会出现背痛、水肿等不适。需要为分娩做好准备。</p>
+           <InfoCard title="生活方式调整" colorClass="border-rose-100 bg-rose-50/30 text-rose-800">
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>饮食：</strong> 多吃水果、蔬菜、全谷物和蛋白质。避免生食和高汞鱼类。</li>
+               <li><strong>戒烟戒酒：</strong> 烟酒会严重影响胎儿发育，增加流产风险。</li>
+               <li><strong>运动：</strong> 适度运动（如散步、瑜伽）有益健康。</li>
+             </ul>
            </InfoCard>
         </div>
 
-        <SectionTitle color="bg-red-400">产前护理 (Prenatal Care)</SectionTitle>
-        <p className="text-sm text-muted-foreground mb-4">定期产检对母婴健康至关重要。医生会监测宝宝发育，并筛查潜在问题。</p>
+        <SectionTitle color="bg-red-400">孕期逐月发展</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="第一孕期 (Month 1-3)" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p><strong>第2个月：</strong> 胚胎开始形成，心脏开始跳动。手臂和腿部出现芽状突起。</p>
+             <p><strong>第3个月：</strong> 胚胎发育成胎儿。手指脚趾形成，生殖器官开始发育。</p>
+             <div className="mt-2 text-xs font-semibold text-red-600">这是流产风险最高的时期，也是早孕反应（恶心、疲劳）最重的时期。</div>
+           </InfoCard>
+           <InfoCard title="第二孕期 (Month 4-6)" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p><strong>第4个月：</strong> 指纹形成，性别可能通过B超辨认。</p>
+             <p><strong>第5个月：</strong> 胎儿长出头发，您可能会第一次感觉到胎动 (Quickening)。</p>
+             <p><strong>第6个月：</strong> 胎儿开始有味觉，眉毛睫毛长出。可能会出现假性宫缩。</p>
+           </InfoCard>
+           <InfoCard title="第三孕期 (Month 7-10)" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p><strong>第7-8个月：</strong> 胎儿迅速增重，肺部逐渐成熟。您可能会感到背痛、呼吸急促。</p>
+             <p><strong>第9-10个月：</strong> 胎儿调整位置，头部向下进入骨盆。宫颈开始扩张，准备分娩。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-red-400">产前检查与测试</SectionTitle>
         <ListSection items={[
-           "早期 (1-32周): 每 4-6 周检查一次",
-           "中期 (32-37周): 每 2-3 周检查一次",
-           "晚期 (37周后): 每周检查一次"
+           "首次产检：通常最详细，包括病史、全身体检、血液和尿液检查。",
+           "超声波 (Ultrasound)：通过声波查看胎儿发育、确定预产期。安全无痛。",
+           "绒毛取样 (CVS)：10-13周进行，检测遗传异常。有极小流产风险。",
+           "羊水穿刺 (Amniocentesis)：15-20周进行，检测唐氏综合症等。有极小流产风险。"
         ]} color="text-red-500" />
 
-        <SectionTitle color="bg-red-400">常见并发症与风险</SectionTitle>
-        <div className="space-y-4">
-           <InfoCard title="宫外孕 (Ectopic Pregnancy)" colorClass="border-red-100 bg-red-50/30 text-red-800">
-             <p>受精卵在子宫外着床（通常在输卵管）。这非常危险，需要立即医疗干预。</p>
-           </InfoCard>
-           <InfoCard title="寨卡病毒 (Zika Virus)" colorClass="border-red-100 bg-red-50/30 text-red-800">
-             <p>通过蚊子传播或性传播。孕妇感染可能导致新生儿小头症。建议孕期避免前往疫区，并使用避孕套预防性传播。</p>
-           </InfoCard>
-           <InfoCard title="妊娠期糖尿病/高血压" colorClass="border-red-100 bg-red-50/30 text-red-800">
-             <p>孕期特有的健康问题，通常分娩后恢复，但需密切监测和控制。</p>
-           </InfoCard>
+        <SectionTitle color="bg-red-400">警惕并发症</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">如果出现以下症状，请立即就医：</p>
+           <ul className="grid grid-cols-1 gap-2 text-sm text-muted-foreground">
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>剧烈或持续的头痛</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>视力模糊或出现重影</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>面部或手脚突然严重肿胀</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>阴道出血或羊水破裂</li>
+             <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>24周后胎动明显减少或停止</li>
+           </ul>
         </div>
       </>
     )
