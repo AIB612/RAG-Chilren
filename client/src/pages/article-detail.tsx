@@ -2167,8 +2167,520 @@ const articles: Record<string, any> = {
         </div>
       </>
     )
-  }
-};
+  },
+
+  "BC_IUD_Disadvantages": {
+    title: "Disadvantages of IUDs",
+    subtitle: "Side Effects & Risks",
+    image: imgBcIud,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["Pain", "Side Effects", "Risks"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          Some people have side effects that bother them after getting an IUD, but these usually go away after a few months. Rarely, the side effects can be serious.
+        </p>
+        <SectionTitle color="bg-blue-400">Side Effects</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">
+             Hormonal IUDs and copper (non-hormonal) IUDs have different side effects. Your side effects will probably ease up after about 3–6 months.
+           </p>
+           <ListSection items={[
+             "Pain when the IUD is put in (cramping)",
+             "Spotting between periods",
+             "Irregular periods",
+             "Heavier periods and worse cramps (Copper IUD)",
+             "Lighter periods or no periods at all (Hormonal IUD)"
+           ]} />
+        </div>
+
+        <SectionTitle color="bg-blue-400">Risks (Rare)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <InfoCard title="Slipping Out" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p className="text-xs">There's a small chance your IUD could slip out of place. It can happen any time, but it's more common during the first 3 months.</p>
+           </InfoCard>
+           <InfoCard title="Infection" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p className="text-xs">Bacteria can get into your uterus when the IUD is put in and cause an infection.</p>
+           </InfoCard>
+        </div>
+      </>
+    )
+  },
+
+  "BC_Shot_Disadvantages": {
+    title: "Disadvantages of the Shot",
+    subtitle: "Depo-Provera Side Effects",
+    image: imgBcShot,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["Side Effects", "Bone Density", "Return to Fertility"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          The birth control shot is safe and convenient, but there are some disadvantages and side effects to consider.
+        </p>
+        
+        <SectionTitle color="bg-blue-400">Key Disadvantages</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="Need for Regular Injections" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+             <p className="text-xs">You have to get an injection every 3 months. If you’re late, you could get pregnant.</p>
+           </InfoCard>
+           
+           <InfoCard title="Return to Fertility" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <p className="text-xs">It may take up to 10 months after stopping the shot to get pregnant. If you want to get pregnant soon after stopping birth control, this might not be the method for you.</p>
+           </InfoCard>
+           
+           <InfoCard title="Bone Density" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p className="text-xs">Using the shot for a long time may cause temporary bone thinning. It usually goes back to normal after you stop using it.</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-blue-400">Common Side Effects</SectionTitle>
+        <ListSection items={[
+             "Changes in your period (bleeding more, spotting, or no period)",
+             "Nausea",
+             "Weight gain",
+             "Headaches",
+             "Sore breasts",
+             "Depression"
+        ]} />
+      </>
+    )
+  },
+
+  "BC_Pill_Disadvantages": {
+    title: "Disadvantages of the Pill",
+    subtitle: "Side Effects & Routine",
+    image: imgBcPill,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["Daily Routine", "Side Effects", "Risks"],
+    content: (
+      <>
+         <SectionTitle color="bg-blue-400">The Daily Routine</SectionTitle>
+         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+            <p className="text-sm text-muted-foreground">
+              You have to take the pill every day. Remembering to take a pill every day can be hard. If you have a busy life, you might miss a pill, which increases the risk of pregnancy.
+            </p>
+         </div>
+
+         <SectionTitle color="bg-blue-400">Side Effects</SectionTitle>
+         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+            <ListSection items={[
+              "Spotting or bleeding between periods",
+              "Sore breasts",
+              "Nausea",
+              "Headaches",
+              "Changes in sex drive"
+            ]} />
+            <p className="text-xs text-muted-foreground mt-2">These usually go away after 2-3 months.</p>
+         </div>
+      </>
+    )
+  },
+
+  "BC_Pill_Missed_Detail": {
+    title: "Missed a Pill?",
+    subtitle: "What to do next",
+    image: imgBcPill,
+    color: "from-red-400 to-orange-500",
+    accentColor: "bg-red-500",
+    lightColor: "bg-red-50 border-red-100 text-red-700",
+    tags: ["Emergency", "Mistake", "Instructions"],
+    content: (
+      <>
+         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           Knowing what to do when you miss a birth control pill is important. It depends on how many you missed.
+         </p>
+         
+         <InfoCard title="Missed 1 Pill?" colorClass="border-yellow-100 bg-yellow-50/30 text-yellow-800">
+            <p className="text-sm font-bold mb-1">Take it as soon as possible.</p>
+            <p className="text-xs">Take your next pill when you normally would. This might mean taking 2 pills in 1 day. You don't need backup birth control.</p>
+         </InfoCard>
+
+         <InfoCard title="Missed 2 or more Pills?" colorClass="border-red-100 bg-red-50/30 text-red-800">
+            <p className="text-sm font-bold mb-1">Take the most recent missed pill ASAP.</p>
+            <p className="text-xs mb-2">Continue taking remaining pills daily. <strong className="text-red-600">Use condoms for the next 7 days.</strong></p>
+            <p className="text-xs">If you missed pills in the first week of the pack and had sex, you might need emergency contraception.</p>
+         </InfoCard>
+      </>
+    )
+  },
+
+  "BC_Ring_Mistakes": {
+    title: "Ring Mistakes",
+    subtitle: "NuvaRing & Annovera",
+    image: imgBcRing,
+    color: "from-purple-400 to-pink-500",
+    accentColor: "bg-purple-500",
+    lightColor: "bg-purple-50 border-purple-100 text-purple-700",
+    tags: ["Mistake", "Out too long", "Forgot to change"],
+    content: (
+      <>
+        <SectionTitle color="bg-purple-400">Ring Out Too Long?</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <h5 className="font-bold text-sm mb-2">NuvaRing / Annovera</h5>
+           <p className="text-sm text-muted-foreground mb-2">
+             If the ring has been out of the vagina for <strong className="text-foreground">more than 2 hours</strong> (Annovera) or <strong className="text-foreground">more than 3 hours</strong> (NuvaRing):
+           </p>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li>Wash the ring and put it back in ASAP.</li>
+             <li>Use backup birth control (condoms) for 7 days.</li>
+             <li>If you had sex in the last 5 days, consider emergency contraception.</li>
+           </ul>
+        </div>
+      </>
+    )
+  },
+
+  "BC_Patch_Mistakes": {
+    title: "Patch Mistakes",
+    subtitle: "Loose or Fell Off?",
+    image: imgBcPatch,
+    color: "from-blue-400 to-indigo-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["Mistake", "Fell Off", "Loose"],
+    content: (
+      <>
+        <SectionTitle color="bg-blue-400">Patch Fell Off?</SectionTitle>
+        
+        <InfoCard title="Less than 24 hours" colorClass="border-yellow-100 bg-yellow-50/30 text-yellow-800">
+           <p className="text-xs">Try to stick it back on. If it doesn't stick, put on a new one. No backup needed.</p>
+        </InfoCard>
+        
+        <InfoCard title="More than 24 hours" colorClass="border-red-100 bg-red-50/30 text-red-800">
+           <p className="text-xs">Put on a new patch ASAP. This is your new "Patch Change Day". <strong className="text-red-600">Use condoms for 7 days.</strong></p>
+        </InfoCard>
+      </>
+    )
+  },
+
+  "BC_InternalCondom_Disadvantages": {
+    title: "Internal Condom Disadvantages",
+    subtitle: "Pros and Cons",
+    image: imgBcCondom,
+    color: "from-purple-400 to-pink-500",
+    accentColor: "bg-purple-500",
+    lightColor: "bg-purple-50 border-purple-100 text-purple-700",
+    tags: ["Usage", "Disadvantages"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          Internal condoms may take a bit of practice to get used to.
+        </p>
+        <ListSection items={[
+          "You have to use one every time you have sex.",
+          "It can take some getting used to (insertion process).",
+          "It might slip into the vagina or anus during sex.",
+          "The outer ring might hang out and be visible."
+        ]} />
+      </>
+    )
+  },
+
+  "BC_Withdrawal_Detail": {
+    title: "Withdrawal (Pull Out)",
+    subtitle: "High Risk, No Cost",
+    image: imgBirthControl,
+    color: "from-orange-400 to-red-500",
+    accentColor: "bg-orange-500",
+    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
+    tags: ["High Failure Rate", "Free", "No Protection"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          Pulling out (withdrawal) is pulling the penis out of the vagina before ejaculation. It is not as effective as other methods.
+        </p>
+        
+        <SectionTitle color="bg-orange-400">Why it fails</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ListSection items={[
+             "Hard to pull out in time (requires great self-control)",
+             "Pre-cum can contain sperm",
+             "Sperm on outer genitals can still swim inside"
+           ]} icon={AlertCircle} color="text-red-500" />
+        </div>
+
+        <InfoCard title="Effectiveness" colorClass="border-red-100 bg-red-50/30 text-red-800">
+           <p className="text-xs font-bold">78% Effective</p>
+           <p className="text-xs mt-1">That means about 1 in 5 people who use withdrawal will get pregnant each year.</p>
+        </InfoCard>
+        
+        <InfoCard title="No STD Protection" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+           <p className="text-xs">Withdrawal does not protect against STDs.</p>
+        </InfoCard>
+      </>
+    )
+  },
+
+  "BC_TubalLigation_Expectations": {
+    title: "Tubal Ligation Expectations",
+    subtitle: "What to expect",
+    image: imgBirthControl,
+    color: "from-slate-400 to-gray-500",
+    accentColor: "bg-slate-500",
+    lightColor: "bg-slate-50 border-slate-100 text-slate-700",
+    tags: ["Surgery", "Recovery", "Permanent"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          Tubal ligation is a surgical procedure to block fallopian tubes.
+        </p>
+        <SectionTitle color="bg-slate-400">The Procedure</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-2">
+             You'll get general anesthesia. The doctor makes small cuts in your belly and closes off the tubes.
+           </p>
+        </div>
+        
+        <SectionTitle color="bg-slate-400">Recovery</SectionTitle>
+        <ListSection items={[
+          "Most people recover within a couple of days.",
+          "Avoid lifting heavy things for a week.",
+          "You may have some pain, cramps, or shoulder pain (from gas) after surgery."
+        ]} />
+      </>
+    )
+  },
+
+  "BC_Vasectomy_Expectations": {
+    title: "Vasectomy Expectations",
+    subtitle: "Surgery & Recovery",
+    image: imgBirthControl,
+    color: "from-slate-400 to-gray-500",
+    accentColor: "bg-slate-500",
+    lightColor: "bg-slate-50 border-slate-100 text-slate-700",
+    tags: ["Simple Surgery", "Quick Recovery"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          A vasectomy is a quick, easy surgical procedure. You can go home right after.
+        </p>
+        
+        <SectionTitle color="bg-slate-400">Does it hurt?</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground">
+             Probably not much. You get local anesthesia. You might feel some discomfort, but not terrible pain.
+           </p>
+        </div>
+
+        <SectionTitle color="bg-slate-400">After the procedure</SectionTitle>
+        <ListSection items={[
+          "Rest for a couple of days.",
+          "Ice your genitals to help with swelling.",
+          "Wear snug underwear for support.",
+          "Wait 1 week before sex or exercise."
+        ]} />
+
+        <InfoCard title="Important" colorClass="border-yellow-100 bg-yellow-50/30 text-yellow-800">
+           <p className="text-xs">You are NOT sterile immediately. You must wait about 2 months and get a semen test to confirm the sperm are gone.</p>
+        </InfoCard>
+      </>
+    )
+  },
+  
+  "BC_Implant_Insertion": {
+    title: "Implant Insertion",
+    subtitle: "What happens?",
+    image: imgBcImplant,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["Procedure", "Quick", "Numbing"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          Putting the implant in only takes a few minutes.
+        </p>
+        <ListSection items={[
+          "Doctor gives you a numbing shot (might feel a pinch).",
+          "They use a special tool to slide the implant under skin.",
+          "You shouldn't feel pain during insertion.",
+          "Your arm might be sore or bruised for a few days."
+        ]} />
+      </>
+    )
+  },
+
+  "BC_Implant_Removal": {
+    title: "Implant Removal",
+    subtitle: "Taking it out",
+    image: imgBcImplant,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["Removal", "Replacement"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           Nexplanon removal is usually fast and easy.
+        </p>
+        <ListSection items={[
+           "Numbing shot is given.",
+           "Small cut is made to reach the implant.",
+           "Implant is pulled out.",
+           "You can get a new one put in at the same time if you want."
+        ]} />
+        <p className="text-xs text-muted-foreground mt-4">
+           You can get pregnant right away after removal.
+        </p>
+      </>
+    )
+  },
+
+  "BC_IUD_Insertion": {
+    title: "IUD Insertion",
+    subtitle: "What to expect",
+    image: imgBcIud,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["Procedure", "Cramps"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           The process usually takes less than five minutes.
+        </p>
+        <SectionTitle color="bg-blue-400">The Process</SectionTitle>
+        <ListSection items={[
+           "Doctor puts a speculum in vagina.",
+           "Uses an inserter to put IUD through cervix into uterus.",
+           "You may feel cramping or pain (like strong period cramps).",
+           "It's over quickly."
+        ]} />
+        
+        <InfoCard title="Afterwards" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+           <p className="text-xs">You might have cramping and spotting for a while. Plan to rest after your appointment.</p>
+        </InfoCard>
+      </>
+    )
+  },
+
+  "BC_Breastfeeding_Options": {
+    title: "Breastfeeding & Birth Control",
+    subtitle: "Safe options",
+    image: imgPregnancy,
+    color: "from-pink-400 to-rose-500",
+    accentColor: "bg-pink-500",
+    lightColor: "bg-pink-50 border-pink-100 text-pink-700",
+    tags: ["Postpartum", "Safe", "Milk Supply"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           You have many safe options while breastfeeding. Hormonal methods usually won't hurt you or your baby.
+        </p>
+        <SectionTitle color="bg-pink-400">Safe Methods</SectionTitle>
+        <ListSection items={[
+           "Copper IUD (Non-hormonal)",
+           "Hormonal IUDs (Mirena, Kyleena, etc.)",
+           "Implant (Nexplanon)",
+           "The Shot (Depo-Provera)",
+           "Mini-pills (Progestin-only pills)"
+        ]} />
+        <InfoCard title="Wait 3 weeks" colorClass="border-yellow-100 bg-yellow-50/30 text-yellow-800">
+           <p className="text-xs">Avoid methods with estrogen (pill, patch, ring) for the first 3 weeks after birth.</p>
+        </InfoCard>
+      </>
+    )
+  },
+  
+  "BC_FAM_Calendar": {
+    title: "Calendar Method (FAM)",
+    subtitle: "Tracking your cycle",
+    image: imgWellness,
+    color: "from-green-400 to-emerald-500",
+    accentColor: "bg-green-500",
+    lightColor: "bg-green-50 border-green-100 text-green-700",
+    tags: ["Natural", "Tracking", "Math"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           Predict fertile days by tracking the length of your menstrual cycles.
+        </p>
+        <ListSection items={[
+           "Track cycle length for at least 6 months first.",
+           "Find shortest cycle: Subtract 18 = First fertile day.",
+           "Find longest cycle: Subtract 11 = Last fertile day.",
+           "Avoid sex during the fertile window."
+        ]} />
+        <p className="text-xs text-muted-foreground">Not accurate if your cycles are shorter than 27 days.</p>
+      </>
+    )
+  },
+
+  "BC_FAM_CervicalMucus": {
+    title: "Cervical Mucus Method",
+    subtitle: "Checking discharge",
+    image: imgWellness,
+    color: "from-green-400 to-emerald-500",
+    accentColor: "bg-green-500",
+    lightColor: "bg-green-50 border-green-100 text-green-700",
+    tags: ["Body Signs", "Daily Check"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           Your cervical mucus changes throughout your cycle.
+        </p>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="space-y-3 text-sm">
+              <li>🔴 <strong>Period:</strong> Unsafe.</li>
+              <li>☁️ <strong>Dry Days (after period):</strong> Safe.</li>
+              <li>💧 <strong>Sticky/White:</strong> Less safe (ovulation coming).</li>
+              <li>🥚 <strong>Slippery/Clear (Egg white):</strong> <span className="text-red-500 font-bold">Unsafe (Most Fertile!)</span>.</li>
+              <li>☁️ <strong>Cloudy/Dry (after ovulation):</strong> Safe again.</li>
+           </ul>
+        </div>
+      </>
+    )
+  },
+
+  "BC_FAM_Temperature": {
+    title: "Temperature Method",
+    subtitle: "Basal Body Temperature",
+    image: imgWellness,
+    color: "from-green-400 to-emerald-500",
+    accentColor: "bg-green-500",
+    lightColor: "bg-green-50 border-green-100 text-green-700",
+    tags: ["Thermometer", "Daily"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           Your body temperature rises slightly after ovulation.
+        </p>
+        <ListSection items={[
+           "Take temp every morning BEFORE getting out of bed.",
+           "Use a special basal thermometer.",
+           "Safe days begin after temp rise lasts 3 days.",
+        ]} />
+      </>
+    )
+  },
+
+  "BC_FAM_StandardDays": {
+    title: "Standard Days Method",
+    subtitle: "CycleBeads",
+    image: imgWellness,
+    color: "from-green-400 to-emerald-500",
+    accentColor: "bg-green-500",
+    lightColor: "bg-green-50 border-green-100 text-green-700",
+    tags: ["Simple", "CycleBeads"],
+    content: (
+      <>
+         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+           Only works if your cycle is always between 26 and 32 days.
+         </p>
+         <InfoCard title="Rule" colorClass="border-green-100 bg-green-50/30 text-green-800">
+            <p className="text-sm">Don't have vaginal sex (or use condoms) from <strong>Day 8 to Day 19</strong> of your cycle.</p>
+         </InfoCard>
+      </>
+    )
+  },
+
 
 export default function ArticleDetail({ params }: { params: { id: string } }) {
   const [_, setLocation] = useLocation();
