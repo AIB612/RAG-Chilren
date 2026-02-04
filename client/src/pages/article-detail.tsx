@@ -712,6 +712,138 @@ const articles: Record<string, any> = {
     )
   },
 
+  "STDs_Home": {
+    title: "性传播疾病 (STDs)",
+    subtitle: "检测、治疗与预防",
+    image: imgSTDs,
+    color: "from-yellow-400 to-amber-500",
+    accentColor: "bg-amber-500",
+    lightColor: "bg-amber-50 border-amber-100 text-amber-700",
+    tags: ["STD", "HIV", "检测", "预防"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          性传播疾病 (STDs) 非常普遍，任何人只要有性生活都可能感染。好消息是，大多数 STDs 都可以治愈或治疗。了解事实，定期检测，是保护自己和伴侣的最佳方式。
+        </p>
+
+        <SectionTitle color="bg-amber-400">三大关键事实</SectionTitle>
+        <ListSection items={[
+           "大多数 STDs 没有症状：你不能通过外表判断某人是否有 STD。唯一确认的方法是检测。",
+           "可以治愈或控制：衣原体、淋病等细菌感染可治愈；疱疹、HIV 等病毒感染可控制。",
+           "避孕套有效：正确使用避孕套和口交膜可大大降低感染风险。"
+        ]} color="text-amber-500" />
+
+        <SectionTitle color="bg-amber-400">常见 STDs 详解</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="衣原体 (Chlamydia) & 淋病 (Gonorrhea)" colorClass="border-yellow-100 bg-yellow-50/30 text-yellow-800">
+             <p className="mb-2">最常见的细菌感染，尤其在年轻人中。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>传播：</strong> 阴道交、肛交、口交。</li>
+               <li><strong>症状：</strong> 多数无症状。可能有分泌物异常、排尿疼痛。</li>
+               <li><strong>治疗：</strong> 抗生素可轻松治愈。如不治疗可能导致不孕。</li>
+             </ul>
+           </InfoCard>
+
+           <InfoCard title="人乳头瘤病毒 (HPV) & 生殖器疣" colorClass="border-amber-100 bg-amber-50/30 text-amber-800">
+             <p className="mb-2">极其普遍。大多数人一生中都会感染某种 HPV。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>类型：</strong> 有些导致生殖器疣（低危），有些可能导致癌症（高危）。</li>
+               <li><strong>预防：</strong> HPV 疫苗非常有效。定期进行宫颈癌筛查。</li>
+               <li><strong>治疗：</strong> 病毒本身无药可治，通常依靠免疫系统清除。疣可以去除。</li>
+             </ul>
+           </InfoCard>
+
+           <InfoCard title="生殖器疱疹 (Herpes)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <p className="mb-2">由 HSV 病毒引起。非常常见。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>症状：</strong> 生殖器或嘴巴周围出现疼痛的水泡。但也可能无症状。</li>
+               <li><strong>治疗：</strong> 无法根治，但药物可以控制爆发频率和严重程度，并降低传染风险。</li>
+               <li><strong>事实：</strong> 虽然无法治愈，但并不危险，也不会影响整体健康。</li>
+             </ul>
+           </InfoCard>
+
+           <InfoCard title="艾滋病毒 (HIV) & 艾滋病 (AIDS)" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p className="mb-2">攻击免疫系统的病毒。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>传播：</strong> 体液（血液、精液、阴道液、母乳）。不通过唾液、拥抱传播。</li>
+               <li><strong>治疗：</strong> 现代抗逆转录病毒疗法可以让携带者保持健康，并使病毒载量低至无法检测（U=U: 测不到=不传染）。</li>
+               <li><strong>预防：</strong> 避孕套、PrEP（暴露前预防药）、PEP（暴露后预防药）。</li>
+             </ul>
+           </InfoCard>
+
+           <InfoCard title="乙型肝炎 (Hepatitis B)" colorClass="border-yellow-100 bg-yellow-50/30 text-yellow-800">
+             <p className="mb-2">影响肝脏的病毒感染。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>传播：</strong> 性接触、血液、共用针头。</li>
+               <li><strong>预防：</strong> 有非常有效的疫苗。</li>
+             </ul>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-amber-400">检测 (Testing)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <h4 className="font-bold text-amber-800 text-sm mb-2">我需要检测吗？</h4>
+           <p className="text-xs text-muted-foreground mb-4">如果你有性生活（阴道交、肛交、口交），答案通常是<strong>YES</strong>。即使你没有症状。</p>
+           
+           <h4 className="font-bold text-amber-800 text-sm mb-2">如何与伴侣谈论检测？</h4>
+           <p className="text-xs text-muted-foreground mb-2">这显示了你对彼此健康的关心。试着说：</p>
+           <div className="bg-amber-50 p-3 rounded-xl text-xs text-amber-900 italic">
+             "我很在乎我们的健康。在咱们更进一步之前，我们可以一起去检查一下吗？"
+           </div>
+        </div>
+
+        <SectionTitle color="bg-amber-400">更安全的性行为 (Safer Sex)</SectionTitle>
+        <ListSection items={[
+           "使用屏障：避孕套、内用避孕套、口交膜 (Dental Dams)。",
+           "使用润滑液：减少摩擦和破损，让性爱更安全舒适。",
+           "沟通：在开始性行为前，诚实讨论性健康史。",
+           "PrEP：如果你有高风险，可以服用药物预防 HIV。"
+        ]} color="text-amber-500" />
+      </>
+    )
+  },
+
+  "Pleasure_Full": {
+    title: "性与愉悦 (Sex & Pleasure)",
+    subtitle: "探索身体，享受快乐",
+    image: imgPleasure,
+    color: "from-pink-400 to-fuchsia-500",
+    accentColor: "bg-fuchsia-500",
+    lightColor: "bg-fuchsia-50 border-fuchsia-100 text-fuchsia-700",
+    tags: ["愉悦", "自慰", "性取向"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          性不仅仅是生育或预防疾病，它也关乎快乐、亲密和自我发现。拥有健康的性生活对身心健康都有益处。
+        </p>
+
+        <SectionTitle color="bg-fuchsia-400">自慰 (Masturbation)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">
+             自慰是完全正常且健康的。它是探索自己身体、了解什么让你感觉舒服的最安全方式。
+           </p>
+           <ListSection items={[
+             "好处：缓解压力、改善睡眠、缓解痛经、无需担心怀孕或 STD。",
+             "误区：自慰不会导致失明、不孕或任何健康问题。",
+             "频率：只要不影响你的日常生活，多少次都是正常的。"
+           ]} color="text-fuchsia-500" />
+        </div>
+
+        <SectionTitle color="bg-fuchsia-400">性取向 (Sexual Orientation)</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="定义你自己" colorClass="border-fuchsia-100 bg-fuchsia-50/30 text-fuchsia-800">
+             <p className="mb-2">性取向是关于你被谁吸引。只有你自己能决定什么标签最适合你。</p>
+             <p className="text-xs text-muted-foreground">你可能还没有搞清楚，这完全没问题。性取向也可能是流动的。</p>
+           </InfoCard>
+           <InfoCard title="出柜 (Coming Out)" colorClass="border-fuchsia-100 bg-fuchsia-50/30 text-fuchsia-800">
+             <p className="mb-2">没有所谓的“正确”出柜方式。这是你的旅程。</p>
+             <p className="text-xs text-muted-foreground">确保你的安全是第一位的。你可以选择只告诉特定的几个信任的朋友。</p>
+           </InfoCard>
+        </div>
+      </>
+    )
+  },
+
   "Abortion": {
     title: "堕胎 (Abortion)",
     subtitle: "安全、合法的医疗程序",
