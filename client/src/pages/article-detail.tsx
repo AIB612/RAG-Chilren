@@ -155,6 +155,19 @@ const articles: Record<string, any> = {
             </div>
           </InfoCard>
 
+          <InfoCard title="内置/女用避孕套 (Internal Condom)" colorClass="border-purple-100 bg-purple-50/30 text-purple-800">
+             <p>放入阴道内的柔软套管。由女性主导，防病防孕。</p>
+             <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
+              <span className="px-2 py-1 bg-purple-100 rounded text-purple-600">有效率: 79-95%</span>
+              <span className="px-2 py-1 bg-green-100 rounded text-green-600">防 STDs: 是</span>
+            </div>
+             <div className="mt-4 pt-3 border-t border-purple-200/50">
+               <a href="/learn/BC_InternalCondom_Detail" className="text-xs font-bold text-purple-600 flex items-center gap-1 hover:underline">
+                 了解详细用法 <ChevronRight size={12}/>
+               </a>
+            </div>
+          </InfoCard>
+
           <InfoCard title="避孕针 (The Shot)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
             <img src={imgBcShot} alt="Shot" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
             <p>每3个月注射一次孕激素。私密性好，不用每天记着吃药。</p>
@@ -187,12 +200,38 @@ const articles: Record<string, any> = {
             <img src={imgBcRing} alt="Ring" className="w-full h-32 object-contain bg-white rounded-xl mb-3 border border-blue-100/50 p-2" />
             <p>柔软的透明环，自行放入阴道内。放置3周，取出1周（来月经）。</p>
              <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
-              <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 91-99%</span>
+              <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 93-99%</span>
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">频率: 每月</span>
             </div>
             <div className="mt-4 pt-3 border-t border-blue-200/50">
                <a href="/learn/BC_Ring_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
                  了解详细操作 <ChevronRight size={12}/>
+               </a>
+            </div>
+          </InfoCard>
+
+          <InfoCard title="体外射精 (Withdrawal)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+            <p>在射精前将阴茎抽出。免费且无副作用，但失败率高，需极强的自控力。</p>
+             <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
+              <span className="px-2 py-1 bg-orange-100 rounded text-orange-600">有效率: 约 78%</span>
+              <span className="px-2 py-1 bg-green-100 rounded text-green-600">成本: $0</span>
+            </div>
+            <div className="mt-4 pt-3 border-t border-orange-200/50">
+               <a href="/learn/BC_Withdrawal_Detail" className="text-xs font-bold text-orange-600 flex items-center gap-1 hover:underline">
+                 为什么容易失败？ <ChevronRight size={12}/>
+               </a>
+            </div>
+          </InfoCard>
+
+          <InfoCard title="绝育手术 (Sterilization)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+            <p>输卵管结扎或输精管结扎。永久性的避孕方式。</p>
+             <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
+              <span className="px-2 py-1 bg-slate-100 rounded text-slate-600">有效率: &gt;99%</span>
+              <span className="px-2 py-1 bg-slate-100 rounded text-slate-600">时效: 永久</span>
+            </div>
+            <div className="mt-4 pt-3 border-t border-slate-200/50">
+               <a href="/learn/BC_TubalLigation_Detail" className="text-xs font-bold text-slate-600 flex items-center gap-1 hover:underline">
+                 了解手术详情 <ChevronRight size={12}/>
                </a>
             </div>
           </InfoCard>
@@ -1879,6 +1918,11 @@ const articles: Record<string, any> = {
                <li>需要医生处方和测量尺寸。</li>
                <li>性爱前放入，性爱后必须保留至少6小时。</li>
             </ul>
+             <div className="mt-2 pt-2 border-t border-blue-200/50">
+               <a href="/learn/BC_Diaphragm_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
+                 详细指南 <ChevronRight size={12}/>
+               </a>
+            </div>
           </InfoCard>
 
           <InfoCard title="宫颈帽 (Cervical Cap)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
@@ -1887,6 +1931,11 @@ const articles: Record<string, any> = {
                <li>有效率：未生育过约 86%，生育过约 71%。</li>
                <li>可以留置体内长达48小时。</li>
             </ul>
+             <div className="mt-2 pt-2 border-t border-blue-200/50">
+               <a href="/learn/BC_CervicalCap_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
+                 详细指南 <ChevronRight size={12}/>
+               </a>
+            </div>
           </InfoCard>
 
            <InfoCard title="避孕海绵 (The Sponge)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
@@ -1896,6 +1945,11 @@ const articles: Record<string, any> = {
                <li>使用前要用水浸湿以激活杀精剂。</li>
                <li>一次性使用，取出后丢弃。</li>
             </ul>
+             <div className="mt-2 pt-2 border-t border-blue-200/50">
+               <a href="/learn/BC_Sponge_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
+                 详细指南 <ChevronRight size={12}/>
+               </a>
+            </div>
           </InfoCard>
         </div>
       </>
@@ -1990,6 +2044,246 @@ const articles: Record<string, any> = {
              一旦任何一个条件不满足（比如宝宝开始吃辅食，或者你来例假了），这种方法的避孕效果就会立刻消失！你需要立即采用其他避孕措施。
            </p>
         </div>
+      </>
+    )
+  },
+
+  "BC_Sponge_Detail": {
+    title: "避孕海绵 (The Sponge)",
+    subtitle: "随用随弃，含杀精剂",
+    image: imgBcCondom, // Placeholder or specific
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["无需处方", "含杀精剂", "一次性"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          避孕海绵是一个充满杀精剂的小圆海绵。使用前用水浸湿，然后放入阴道深处覆盖宫颈。它能阻挡精子并释放杀精剂。
+        </p>
+
+        <SectionTitle color="bg-blue-400">有效率</SectionTitle>
+        <div className="space-y-4 mb-6">
+           <InfoCard title="未生育过" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
+             <p className="text-sm font-bold">约 86% - 91%</p>
+             <p className="text-xs">如果你从未生过孩子，海绵的效果更好。</p>
+           </InfoCard>
+           <InfoCard title="已生育过" colorClass="border-orange-100 bg-orange-50/50 text-orange-800">
+             <p className="text-sm font-bold">约 78% - 80%</p>
+             <p className="text-xs">生过孩子后，宫颈口形状改变，可能导致海绵贴合不严，效果下降。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-blue-400">使用方法</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+           <ol className="list-decimal pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>激活：</strong> 用水弄湿海绵，轻轻挤压直到起泡（这很重要！）。</li>
+             <li><strong>放入：</strong> 折叠海绵，推入阴道深处，凹面盖住宫颈。</li>
+             <li><strong>时效：</strong> 可在性爱前24小时内放入。放入后24小时内可进行多次性爱。</li>
+             <li><strong>取出：</strong> 最后一次射精后，必须让海绵留在体内至少 6 小时。但总共不要超过 30 小时（预防中毒性休克综合征 TSS）。</li>
+             <li><strong>丢弃：</strong> 取出后丢进垃圾桶，不要冲进马桶。不可重复使用。</li>
+           </ol>
+        </div>
+      </>
+    )
+  },
+
+  "BC_Diaphragm_Detail": {
+    title: "阴道隔膜 (Diaphragm)",
+    subtitle: "可重复使用的屏障",
+    image: imgBcCondom,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["需配合杀精剂", "需处方", "非激素"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          阴道隔膜是一个浅的硅胶杯，放入阴道覆盖宫颈。它必须配合杀精剂使用。
+        </p>
+
+        <SectionTitle color="bg-blue-400">有效率</SectionTitle>
+        <InfoCard title="约 88% - 94%" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
+          <p className="text-xs">完美使用下有效率很高，但实际使用中约为83%。配合杀精剂是必须的。</p>
+        </InfoCard>
+
+        <SectionTitle color="bg-blue-400">使用要点</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>配合杀精剂：</strong> 每次性爱前，在杯内和边缘涂抹杀精剂。</li>
+             <li><strong>再次性爱：</strong> 如果要在取出前再次性爱，必须再注入更多杀精剂。</li>
+             <li><strong>取出时间：</strong> 性爱后必须保留至少 6 小时。总共不要超过 24 小时。</li>
+             <li><strong>保养：</strong> 取出后用温和肥皂清洗，晾干。定期检查有无破损。</li>
+           </ul>
+        </div>
+      </>
+    )
+  },
+
+  "BC_CervicalCap_Detail": {
+    title: "宫颈帽 (Cervical Cap)",
+    subtitle: "小巧的屏障",
+    image: imgBcCondom,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["需处方", "长效留置", "杀精剂"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          宫颈帽（如 FemCap）比隔膜更小，像个小帽子紧扣在宫颈上。同样必须配合杀精剂。
+        </p>
+
+        <SectionTitle color="bg-blue-400">有效率</SectionTitle>
+        <div className="space-y-4 mb-6">
+           <InfoCard title="未生育过" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
+             <p className="text-sm font-bold">约 86%</p>
+           </InfoCard>
+           <InfoCard title="已生育过" colorClass="border-orange-100 bg-orange-50/50 text-orange-800">
+             <p className="text-sm font-bold">约 71%</p>
+             <p className="text-xs">生育后宫颈变化显著影响效果。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-blue-400">使用要点</SectionTitle>
+        <ListSection items={[
+          "放入前涂抹杀精剂。",
+          "可以提前放入，最长可在体内留置 48 小时（比隔膜久）。",
+          "性爱后必须保留至少 6 小时。",
+          "不防性病 (STDs)。"
+        ]} />
+      </>
+    )
+  },
+
+  "BC_InternalCondom_Detail": {
+    title: "内置/女用避孕套 (Internal Condom)",
+    subtitle: "自主掌控，防病防孕",
+    image: imgBcCondom,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["防STDs", "无乳胶", "可提前放入"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          内置避孕套（Internal Condom，曾称女用避孕套）是一个放入阴道或肛门的柔软塑料套管。两端有环，内环用于固定，外环留在体外。
+        </p>
+
+        <SectionTitle color="bg-blue-400">有效率</SectionTitle>
+        <InfoCard title="约 79% - 95%" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
+          <p className="text-xs">实际使用有效率约79%。如果完美使用可达95%。</p>
+        </InfoCard>
+
+        <SectionTitle color="bg-blue-400">优点与使用</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>防 STDs：</strong> 覆盖外阴面积比男用避孕套大，提供额外保护。</li>
+             <li><strong>材质：</strong> 通常是聚氨酯或丁腈，适合对乳胶过敏的人。</li>
+             <li><strong>提前准备：</strong> 可以在性爱前数小时放入，不必在激情时刻打断。</li>
+             <li><strong>注意：</strong> 不要和男用避孕套同时使用！摩擦会导致破裂。</li>
+           </ul>
+        </div>
+      </>
+    )
+  },
+
+  "BC_Spermicide_Detail": {
+    title: "杀精剂 (Spermicide)",
+    subtitle: "辅助避孕手段",
+    image: imgBcCondom, // Generic
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["凝胶/泡沫", "需等待", "不防病"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          杀精剂通过化学物质（通常是壬苯醇醚-9）杀死精子或使其失去活力。它有凝胶、泡沫、膜等形式。
+        </p>
+
+        <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-6">
+           <h4 className="font-bold text-yellow-800 text-sm mb-1">单独使用效果不佳</h4>
+           <p className="text-xs text-yellow-700">
+             单独使用失败率较高（约21%）。强烈建议搭配避孕套、隔膜等屏障方法使用。
+           </p>
+        </div>
+
+        <SectionTitle color="bg-blue-400">使用须知</SectionTitle>
+        <ListSection items={[
+          "等待时间：放入后通常需要等待 10-15 分钟让其溶解或起效（看说明书）。",
+          "时效性：通常只有 1 小时有效。如果超过时间需补放。",
+          "副作用：可能刺激阴道或阴茎皮肤，增加感染性病/HIV的风险（如果皮肤破损）。",
+          "不防 STDs。"
+        ]} />
+      </>
+    )
+  },
+
+  "BC_Withdrawal_Detail": {
+    title: "体外射精 (Withdrawal)",
+    subtitle: "Pulling Out",
+    image: imgBirthControl,
+    color: "from-orange-400 to-amber-500",
+    accentColor: "bg-orange-500",
+    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
+    tags: ["高风险", "免费", "需要技巧"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          体外射精指在射精前将阴茎完全从阴道抽出，并射在远离外阴的地方。
+        </p>
+
+        <SectionTitle color="bg-orange-400">为什么容易失败？(有效率 78%)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>前列腺液（Pre-cum）：</strong> 在射精前流出的液体中可能含有少量精子。</li>
+             <li><strong>时机难控：</strong> 在高潮来临前很难精确控制抽出时间。</li>
+             <li><strong>位置：</strong> 即使射在体外，如果精液流到外阴口，精子仍可能游进去。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-orange-400">正确做法</SectionTitle>
+        <ListSection color="text-orange-500" items={[
+          "必须在任何精液（包括前列腺液）流出前抽出。",
+          "射在远离阴道的地方（如大腿、肚子）。",
+          "如果不小心射在里面或门口，立即使用紧急避孕药。",
+          "结合避孕套使用效果更好。"
+        ]} />
+      </>
+    )
+  },
+
+  "BC_TubalLigation_Detail": {
+    title: "绝育手术 (Sterilization)",
+    subtitle: "一劳永逸的终极方案",
+    image: imgBcIud, // Placeholder
+    color: "from-slate-400 to-gray-500",
+    accentColor: "bg-slate-500",
+    lightColor: "bg-slate-50 border-slate-100 text-slate-700",
+    tags: ["永久性", "手术", "输卵管/输精管"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          绝育是一种永久性的避孕方式。对女性是输卵管结扎，对男性是输精管结扎。
+        </p>
+
+        <SectionTitle color="bg-slate-400">输卵管结扎 (Tubal Ligation)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-2">
+             切断、结扎或封闭输卵管，阻止卵子和精子相遇。
+           </p>
+           <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+             <li>有效率：&gt;99%。</li>
+             <li>永久性：虽有复通手术，但成功率不保证。应视为永久决定。</li>
+             <li>不影响激素：你还是会有月经（除非切除子宫），更年期不会提前。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-slate-400">男性输精管结扎 (Vasectomy)</SectionTitle>
+        <InfoCard title="更简单的选择" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
+          <p className="text-xs">相比女性结扎，男性结扎手术更简单、风险更小、恢复更快。它切断输精管，精液中不再含精子。不影响性功能和射精感（只是没精子了）。</p>
+        </InfoCard>
       </>
     )
   },
