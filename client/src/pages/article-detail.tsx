@@ -3540,6 +3540,17 @@ const articles: Record<string, any> = {
       </>
     )
   },
+
+  "Vaginitis": {
+    title: "阴道炎 (Vaginitis)",
+    subtitle: "常见炎症与护理",
+    image: imgWellness,
+    color: "from-rose-400 to-red-500",
+    accentColor: "bg-rose-500",
+    lightColor: "bg-rose-50 border-rose-100 text-rose-700",
+    tags: ["健康", "炎症", "护理"],
+    content: (
+      <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
           阴道炎是阴道或外阴的炎症。它非常常见，通常很容易治疗。
         </p>
