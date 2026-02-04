@@ -57,6 +57,13 @@ export default function Home() {
         let matchedResponse = null;
 
         const knowledgeBase = [
+          // Birth Control General
+          {
+            keywords: ["避孕", "避孕方式", "避孕方法", "不想要孩子", "预防怀孕"],
+            text: "目前有很多种有效的避孕方式！最常见的包括：\n1. 短效避孕药（每日服用，有效率99%）\n2. 避孕套（唯一防性病，方便购买）\n3. IUD宫内节育器（长效省心，有效期3-12年）\n4. 皮下埋植（手臂植入，有效期3年）\n5. 紧急避孕药（事后72小时内补救）。\n\n你需要根据自己的生活习惯来选，我可以为你详细介绍其中某一种哦！👩‍⚕️",
+            source: "RAG: Birth Control Overview"
+          },
+          // Birth Control Specifics
           {
             keywords: ["避孕药", "吃药", "短效"],
             text: "根据【Planned Parenthood】的资料：避孕药的有效率可达99%，但必须每天按时服用。如果你经常忘记吃药，可能更适合宫内节育器(IUD)或避孕贴。需要我详细介绍其他避孕方式吗？💊",
@@ -73,7 +80,13 @@ export default function Home() {
             source: "RAG: Barrier Methods"
           },
           {
-            keywords: ["std", "性病", "艾滋", "hiv", "梅毒", "疱疹", "尖锐湿疣", "hpv"],
+            keywords: ["紧急", "事后", "plan b", "漏服", "套破"],
+            text: "紧急避孕药（如毓婷/Plan B）在无保护性行为后越早吃越有效，最好在72小时内服用。但它不能作为常规避孕手段，因为它比常规避孕药副作用大且失败率略高。",
+            source: "RAG: Emergency Contraception"
+          },
+          // STDs
+          {
+            keywords: ["std", "性病", "艾滋", "hiv", "梅毒", "疱疹", "尖锐湿疣", "hpv", "淋病", "衣原体"],
             text: "大多数性传播疾病(STDs)在早期是没有症状的，所以“看起来健康”不代表没有感染。唯一确认的方法就是去检测。Planned Parenthood 或当地医院都可以提供保密的检测服务。这一步是保护你自己和伴侣的关键！🏥",
             source: "RAG: STD Testing & Prevention"
           },
@@ -82,15 +95,22 @@ export default function Home() {
             text: "私处的瘙痒、异味或异常分泌物可能是感染的迹象（如霉菌、细菌性阴道炎或滴虫），也可能只是普通的过敏。建议不要自己乱用药，去医院做一个简单的分泌物检查最放心。",
             source: "RAG: Vaginal Health"
           },
+          // Pregnancy & Abortion
+          {
+            keywords: ["怀孕", "有了", "怀上", "测", "两条杠"],
+            text: "如果你担心怀孕，最早可以在性行为后14天用验孕棒测试，或者等月经推迟一周后再测最准。如果意外怀孕了，不论你决定生下来、领养还是堕胎，都有相应的支持资源。",
+            source: "RAG: Pregnancy & Options"
+          },
+          {
+            keywords: ["堕胎", "流产", "打胎", "人流", "药流"],
+            text: "堕胎是安全合法的医疗程序。主要有两种方式：\n1. 药物流产（药流）：适用于怀孕11周内，像一次严重的痛经。\n2. 手术流产（人流）：在诊所进行，只需几分钟，安全高效。\n不论选择哪种，都要去正规医院哦。",
+            source: "RAG: Abortion Information"
+          },
+          // General Health & Consent
           {
             keywords: ["月经", "大姨妈", "痛经", "周期"],
             text: "每个人的月经周期都不太一样，21-35天都算正常。如果痛经严重影响生活，或者月经量突然变化很大，建议咨询医生。有时候短效避孕药也可以用来调节月经和缓解痛经哦。",
             source: "RAG: Menstrual Health"
-          },
-          {
-            keywords: ["怀孕", "有了", "怀上", "测"],
-            text: "如果你担心怀孕，最早可以在性行为后14天用验孕棒测试，或者等月经推迟一周后再测最准。如果意外怀孕了，不论你决定生下来、领养还是堕胎，都有相应的支持资源。",
-            source: "RAG: Pregnancy & Options"
           },
           {
             keywords: ["同意", "强迫", "不要", "拒绝"],
@@ -107,6 +127,7 @@ export default function Home() {
             text: "青春期情绪波动大是很正常的，但如果这种低落持续很久，或者让你不想做平时喜欢的事，可能需要找人聊聊。学校的心理老师或信任的长辈都是很好的倾诉对象。",
             source: "RAG: Mental Wellness"
           },
+          // Greetings
           {
             keywords: ["你好", "hello", "hi", "hey", "在吗"],
             text: "你好呀！👋 我是小白，很高兴见到你。今天有什么想聊的吗？无论是关于身体的小秘密，还是心里的困惑，我都在这里陪着你哦。✨",
