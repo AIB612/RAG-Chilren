@@ -3432,98 +3432,114 @@ const articles: Record<string, any> = {
 
   "Health_and_Wellness": {
     title: "健康与保健 (Health & Wellness)",
-    subtitle: "预防胜于治疗",
+    subtitle: "预防、身体与周期",
     image: imgWellness,
     color: "from-green-400 to-emerald-500",
     accentColor: "bg-green-500",
     lightColor: "bg-green-50 border-green-100 text-green-700",
-    tags: ["体检", "预防", "自我护理"],
+    tags: ["体检", "月经", "身体构造", "常见问题"],
     content: (
       <>
          <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-           照顾好自己的性健康和生殖健康是整体健康的重要组成部分。这意味着定期检查和了解自己的身体。
+           照顾好自己的性健康和生殖健康是整体健康的重要组成部分。这包括了解身体构造、月经周期，以及预防和治疗常见问题。
          </p>
+
          <SectionTitle color="bg-green-400">健康检查 (Wellness Exam)</SectionTitle>
-         <InfoCard title="什么是健康检查？" colorClass="border-green-100 bg-green-50/30 text-green-800">
-           <p>这是一年一次的全面检查，关注你的生殖健康。可能包括乳房检查、盆腔检查、巴氏涂片等。</p>
-         </InfoCard>
-         <ListSection title="为什么需要检查？" items={[
-           "及早发现潜在健康问题",
-           "进行性病 (STD) 筛查",
-           "获得避孕咨询",
-           "讨论月经或更年期问题"
-         ]} color="text-green-500" />
-      </>
-    )
-  },
-
-  "Anatomy": {
-    title: "生殖解剖学 (Anatomy)",
-    subtitle: "了解身体构造",
-    image: imgMicroAnatomy,
-    color: "from-blue-400 to-indigo-500",
-    accentColor: "bg-indigo-500",
-    lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
-    tags: ["身体", "器官", "教育"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          生殖和性解剖结构包括你的生殖器和内部生殖器官。每个人的身体构造都是独一无二的。
-        </p>
-        <SectionTitle color="bg-indigo-400">身体的性部位</SectionTitle>
-        <InfoCard title="不仅仅是生殖器" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
-          <p>虽然阴茎、阴道等是主要的性器官，但大脑其实是你最重要的性器官——它控制着性反应。皮肤也是一个巨大的性器官，充满了敏感神经。</p>
-        </InfoCard>
-        <InfoCard title="多样性" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
-           <p>大多数人有男性或女性的生殖器官，但也有间性人 (Intersex)，他们的身体特征不完全符合二元划分。</p>
-        </InfoCard>
-      </>
-    )
-  },
-
-  "UTIs": {
-    title: "尿路感染 (UTIs)",
-    subtitle: "症状与治疗",
-    image: imgWellness,
-    color: "from-yellow-400 to-orange-500",
-    accentColor: "bg-orange-500",
-    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
-    tags: ["感染", "疼痛", "治疗"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          尿路感染 (UTI) 是泌尿系统（包括膀胱和尿道）的感染。任何人都可能得 UTI，但在女性中更为常见。
-        </p>
-        <SectionTitle color="bg-orange-400">常见症状</SectionTitle>
-        <ListSection items={[
-          "尿频、尿急",
-          "排尿时有灼烧感或疼痛",
-          "尿液浑浊或有异味",
-          "下腹部或背部疼痛"
-        ]} color="text-orange-500" />
-        
-        <InfoCard title="如何预防？" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
-           <ul className="list-disc pl-4 space-y-1 text-sm">
-             <li>多喝水</li>
-             <li>性行为后排尿</li>
-             <li>从前向后擦拭</li>
-             <li>避免使用有刺激性的卫生用品</li>
+         <InfoCard title="为什么需要检查？" colorClass="border-green-100 bg-green-50/30 text-green-800">
+           <p className="mb-2">这是一年一次的全面检查，关注你的生殖健康。目的在于预防和及早发现问题。</p>
+           <ul className="list-disc pl-4 space-y-1 text-xs">
+             <li>及早发现潜在健康问题 (如癌症筛查)</li>
+             <li>进行性病 (STD) 筛查</li>
+             <li>获得避孕咨询</li>
+             <li>讨论月经或更年期问题</li>
            </ul>
-        </InfoCard>
+         </InfoCard>
+
+         <SectionTitle color="bg-green-400">月经周期 (Menstruation)</SectionTitle>
+         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+            <p className="text-sm text-muted-foreground mb-3">
+              月经是子宫内膜脱落的过程，通常每21-35天发生一次。
+            </p>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <Badge variant="outline" className="bg-red-50 text-red-600 border-red-100 shrink-0 mt-0.5">排卵</Badge>
+                <span className="text-xs text-muted-foreground">成熟卵子从卵巢释放。这是最容易受孕的时候。</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Badge variant="outline" className="bg-red-50 text-red-600 border-red-100 shrink-0 mt-0.5">PMS</Badge>
+                <span className="text-xs text-muted-foreground">经前综合症（情绪波动、腹胀等）通常发生在经期前一周。</span>
+              </div>
+            </div>
+         </div>
+
+         <SectionTitle color="bg-green-400">常见健康问题</SectionTitle>
+         <div className="space-y-4">
+            <InfoCard title="尿路感染 (UTIs)" colorClass="border-yellow-100 bg-yellow-50/30 text-yellow-800">
+              <p className="text-sm mb-2">症状：尿频、尿急、排尿灼烧感。</p>
+              <p className="text-xs">预防：多喝水，性行为后排尿，从前向后擦拭。</p>
+            </InfoCard>
+            
+            <InfoCard title="阴道炎 (Vaginitis)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
+              <p className="text-sm mb-2">症状：瘙痒、异味、分泌物异常（豆腐渣状或灰白色）。</p>
+              <p className="text-xs">常见类型：霉菌性阴道炎 (Yeast Infection)、细菌性阴道病 (BV)、滴虫病。</p>
+            </InfoCard>
+         </div>
+
+         <SectionTitle color="bg-green-400">身体构造 (Anatomy)</SectionTitle>
+         <InfoCard title="多样性" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
+            <p className="text-sm">每个人的身体构造都是独一无二的。除了常见的男性/女性生殖器，还有间性人 (Intersex)，他们的身体特征不完全符合传统的二元划分。</p>
+         </InfoCard>
       </>
     )
   },
 
-  "Vaginitis": {
-    title: "阴道炎 (Vaginitis)",
-    subtitle: "瘙痒与分泌物异常",
-    image: imgWellness,
-    color: "from-pink-400 to-rose-500",
-    accentColor: "bg-rose-500",
-    lightColor: "bg-rose-50 border-rose-100 text-rose-700",
-    tags: ["霉菌", "BV", "滴虫"],
+  "Pregnancy_Full": {
+    title: "怀孕全程 (Pregnancy)",
+    subtitle: "备孕、孕期与选择",
+    image: imgPregnancy,
+    color: "from-teal-400 to-cyan-500",
+    accentColor: "bg-cyan-500",
+    lightColor: "bg-cyan-50 border-cyan-100 text-cyan-700",
+    tags: ["备孕", "产检", "分娩", "产后", "不孕"],
     content: (
       <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          怀孕是一个复杂的生理过程。无论你是正在备孕、已经怀孕，还是面临意外怀孕的选择，了解相关知识都能帮助你做出最好的决定。
+        </p>
+
+        <SectionTitle color="bg-cyan-400">如果你想怀孕</SectionTitle>
+        <ListSection items={[
+           "了解排卵期：这是受孕的关键窗口。",
+           "服用产前维生素：特别是叶酸 (Folic Acid)。",
+           "戒烟戒酒：为宝宝创造健康的生长环境。",
+           "不孕不育：如果尝试一年（35岁以上为6个月）未果，建议咨询医生。"
+        ]} color="text-cyan-500" />
+
+        <SectionTitle color="bg-cyan-400">如果你面临意外怀孕</SectionTitle>
+        <div className="space-y-4 mb-6">
+           <InfoCard title="选择 1: 抚养 (Parenting)" colorClass="border-cyan-100 bg-cyan-50/30 text-cyan-800">
+             <p className="text-sm">这就意味着成为父母。这是一个重大的终身承诺，需要考虑经济、时间和情感准备。</p>
+           </InfoCard>
+           <InfoCard title="选择 2: 堕胎 (Abortion)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
+             <p className="text-sm">终止妊娠的医疗程序。安全且合法。分为药物流产和手术流产。</p>
+             <a href="/learn/Abortion" className="text-xs font-bold text-pink-600 flex items-center gap-1 hover:underline mt-2">
+               了解更多 <ChevronRight size={12}/>
+             </a>
+           </InfoCard>
+           <InfoCard title="选择 3: 领养 (Adoption)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <p className="text-sm">生下孩子，但将抚养权移交给他人。分为开放式（保持联系）和封闭式。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-cyan-400">孕期常见问题</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <FaqItem question="早孕迹象？" answer="停经、乳房胀痛、恶心（晨吐）、疲劳。" />
+           <FaqItem question="流产 (Miscarriage)？" answer="指怀孕20周前自然终止。非常常见（约10-20%的已知妊娠）。通常不是因为你做错了什么。" />
+           <FaqItem question="产后抑郁？" answer="产后荷尔蒙剧变可能导致情绪低落。如果持续悲伤超过两周，请寻求专业帮助。" />
+        </div>
+      </>
+    )
+  },
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
           阴道炎是阴道或外阴的炎症。它非常常见，通常很容易治疗。
         </p>
