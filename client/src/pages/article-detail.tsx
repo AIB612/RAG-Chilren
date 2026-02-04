@@ -452,11 +452,11 @@ const articles: Record<string, any> = {
     color: "from-red-400 to-pink-500",
     accentColor: "bg-pink-500",
     lightColor: "bg-pink-50 border-pink-100 text-pink-700",
-    tags: ["药物流产", "手术流产", "安全性"],
+    tags: ["药物流产", "手术流产", "安全性", "法律"],
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          堕胎（Abortion）是一种终止妊娠的医疗手段。它是一项非常常见的医疗保健服务。在正规医疗机构进行的堕胎是非常安全的，比拔牙还要安全。了解不同类型的堕胎方式可以帮助你做出适合自己的决定。
+          堕胎（Abortion）是一种终止妊娠的医疗手段。它是一项非常常见的医疗保健服务。在正规医疗机构进行的堕胎是非常安全的。每个人都有自己独特的理由选择堕胎，比如为了更好地照顾现有的孩子、尚未准备好成为父母、健康原因等。无论原因是什么，这都是你个人的决定。
         </p>
 
         <SectionTitle color="bg-pink-400">主要类型详解</SectionTitle>
@@ -464,43 +464,271 @@ const articles: Record<string, any> = {
         <div className="space-y-4">
           <InfoCard title="药物流产 (The Abortion Pill)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
             <img src={imgMicroAbortionPills} alt="Pills" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-pink-100" />
-            <p className="mb-2">通常适用于怀孕早期（10-11周以内）。包含两步：</p>
-            <ul className="list-disc pl-4 space-y-1 text-xs mb-2">
-              <li><strong>米非司酮：</strong> 阻断孕酮，使妊娠停止发展。</li>
-              <li><strong>米索前列醇：</strong> 引起子宫收缩，排出妊娠组织（通常在家中发生）。</li>
-            </ul>
-            <p className="text-xs text-muted-foreground">感受：类似严重的痛经和大量出血，过程持续几小时。</p>
+            <p className="mb-2">通常适用于怀孕早期（11周以内）。包含米非司酮和米索前列醇两种药物。</p>
+            <div className="mt-3">
+               <a href="/learn/Abortion_Pill_Detail" className="text-xs font-bold text-pink-600 flex items-center gap-1 hover:underline">
+                 了解详细流程与副作用 <ChevronRight size={12}/>
+               </a>
+            </div>
           </InfoCard>
 
           <InfoCard title="手术流产 (In-Clinic Abortion)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
             <img src={imgMicroClinic} alt="Procedure" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-pink-100" />
-            <p className="mb-2">由医生在诊所进行。常见的有“负压吸引术”。</p>
-             <ul className="list-disc pl-4 space-y-1 text-xs mb-2">
-              <li><strong>高效：</strong> 过程通常只需5-10分钟。</li>
-              <li><strong>舒适度：</strong> 医生会使用麻醉或镇痛药物。</li>
-            </ul>
-             <p className="text-xs text-muted-foreground">感受：术后可能会有几天的轻微出血和痉挛。</p>
+            <p className="mb-2">由医生在诊所进行。常见的有负压吸引术（Vacuum Aspiration）和扩张与清宫术（D&E）。</p>
+             <div className="mt-3">
+               <a href="/learn/In_Clinic_Abortion_Detail" className="text-xs font-bold text-pink-600 flex items-center gap-1 hover:underline">
+                 了解手术过程与恢复 <ChevronRight size={12}/>
+               </a>
+            </div>
+          </InfoCard>
+          
+          <InfoCard title="各州法律与例外 (State Laws)" colorClass="border-red-100 bg-red-50/30 text-red-800">
+            <p className="mb-2">有些州禁止堕胎或有很多限制，但也有例外情况（如生命危险）。了解你所在州的法律。</p>
+             <div className="mt-3">
+               <a href="/learn/Abortion_State_Laws" className="text-xs font-bold text-red-600 flex items-center gap-1 hover:underline">
+                 查看各州禁令例外情况 <ChevronRight size={12}/>
+               </a>
+            </div>
           </InfoCard>
         </div>
 
-        <SectionTitle color="bg-pink-400">术后护理</SectionTitle>
+        <SectionTitle color="bg-pink-400">做决定前的考虑</SectionTitle>
         <ListSection color="text-pink-500" items={[
-          "休息：给自己几天时间恢复体力。",
-          "避免感染：术后2周内避免阴道冲洗、性生活或使用卫生棉条。",
-          "观察症状：如果出现发烧、剧烈腹痛或出血量过大（一小时湿透两片卫生巾），请立即就医。",
-          "情绪支持：感到如释重负、悲伤或复杂的情绪都是正常的。给自己一点时间。"
+          "我准备好成为父母了吗？",
+          "这对我的未来、家庭和职业意味着什么？",
+          "我有强烈的个人或宗教信仰吗？",
+          "有人强迫我做决定吗？（任何决定都应是你自己的）",
+          "如果决定堕胎/生下孩子，我需要什么样的支持？"
         ]} />
+        
+        <p className="text-xs text-muted-foreground mt-4">
+          如果你很难做出决定，可以寻找中立的咨询机构（如 All-Options）进行倾诉。避免那些试图恐吓或羞辱你的“危机怀孕中心”。
+        </p>
 
         <SectionTitle color="bg-pink-400">常见问题</SectionTitle>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
           <FaqItem 
-            question="堕胎会增加患乳腺癌的风险吗？" 
-            answer="不会。广泛的科学研究表明，堕胎与乳腺癌之间没有联系。" 
+            question="堕胎安全吗？" 
+            answer="非常安全。堕胎是所有医疗程序中最安全的一种之一，并发症率极低。药流甚至比青霉素、泰诺等药物更安全。" 
           />
           <FaqItem 
             question="堕胎会影响未来的生育能力吗？" 
-            answer="通常不会。安全、合法的堕胎不会导致不孕。事实上，堕胎后几周内你就可能再次怀孕，所以如果你不打算怀孕，请立即开始避孕。" 
+            answer="通常不会。安全、合法的堕胎不会导致不孕，也不会增加患乳腺癌的风险。" 
           />
+           <FaqItem 
+            question="我会有什么感觉？" 
+            answer="大多数人在堕胎后感到如释重负，但也可能感到悲伤、内疚或遗憾。所有这些情绪都是正常的。" 
+          />
+        </div>
+      </>
+    )
+  },
+
+  "Abortion_Pill_Detail": {
+    title: "药物流产详解",
+    subtitle: "The Abortion Pill",
+    image: imgMicroAbortionPills,
+    color: "from-pink-400 to-rose-500",
+    accentColor: "bg-pink-500",
+    lightColor: "bg-pink-50 border-pink-100 text-pink-700",
+    tags: ["米非司酮", "米索前列醇", "家庭流产"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          “堕胎药”通常指使用两种药物：米非司酮 (Mifepristone) 和米索前列醇 (Misoprostol)。这种方法通常在怀孕11周以内有效。
+        </p>
+
+        <SectionTitle color="bg-pink-400">它是如何工作的？</SectionTitle>
+        <div className="space-y-4">
+           <div className="bg-white p-4 rounded-xl border border-pink-100">
+             <h4 className="font-bold text-pink-700 mb-1">第1步：米非司酮</h4>
+             <p className="text-sm text-muted-foreground">这种药会阻断孕酮（一种维持妊娠的激素）。没有孕酮，妊娠就无法继续生长。</p>
+           </div>
+           <div className="bg-white p-4 rounded-xl border border-pink-100">
+             <h4 className="font-bold text-pink-700 mb-1">第2步：米索前列醇</h4>
+             <p className="text-sm text-muted-foreground">通常在第一步后48小时内服用。它会导致子宫收缩和出血，将妊娠组织排出。这通常就像一次严重的痛经或早期流产。</p>
+           </div>
+        </div>
+
+        <SectionTitle color="bg-pink-400">如何服用？</SectionTitle>
+        <div className="bg-pink-50 border border-pink-100 rounded-2xl p-5 mb-6">
+           <p className="text-sm font-bold text-pink-800 mb-2">米索前列醇的服用方式（根据医生指导）：</p>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-pink-700">
+             <li><strong>含服 (Buccal)：</strong> 放在脸颊和牙龈之间30分钟。</li>
+             <li><strong>舌下 (Sublingual)：</strong> 放在舌头下30分钟。</li>
+             <li><strong>阴道 (Vaginal)：</strong> 放入阴道深处。</li>
+           </ul>
+           <p className="text-xs text-pink-600 mt-3 font-bold">不要直接吞服米索前列醇！这会降低药效并增加恶心的副作用。</p>
+        </div>
+
+        <SectionTitle color="bg-pink-400">之后会发生什么？</SectionTitle>
+        <ListSection color="text-pink-500" items={[
+          "出血和痉挛：这是正常的，通常比月经量大，可能有柠檬大小的血块。",
+          "持续时间：大部分组织会在服药后4-5小时内排出，但出血可能会持续几周。",
+          "副作用：可能伴有恶心、腹泻、发冷或低烧（服药当天）。",
+          "复查：使用特殊的验孕棒或进行超声波检查，确保流产完全。"
+        ]} />
+
+        <SectionTitle color="bg-pink-400">何时需要就医？</SectionTitle>
+        <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+          <ul className="list-disc pl-4 space-y-2 text-xs text-red-700">
+             <li><strong>出血过多：</strong> 连续2小时，每小时湿透2片大号卫生巾。</li>
+             <li><strong>持续发烧：</strong> 服药24小时后仍发烧超过38°C (100.4°F)。</li>
+             <li><strong>剧烈疼痛：</strong> 服用止痛药后仍无法缓解的剧烈腹痛。</li>
+             <li><strong>无出血：</strong> 服用米索前列醇24小时后仍无出血。</li>
+          </ul>
+        </div>
+      </>
+    )
+  },
+
+  "In_Clinic_Abortion_Detail": {
+    title: "手术流产详解",
+    subtitle: "In-Clinic Procedures",
+    image: imgMicroClinic,
+    color: "from-pink-400 to-rose-500",
+    accentColor: "bg-pink-500",
+    lightColor: "bg-pink-50 border-pink-100 text-pink-700",
+    tags: ["负压吸引", "D&E", "诊所流程"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          诊所流产是由医生进行的医疗程序。它非常高效（成功率超过99%），且过程迅速。
+        </p>
+
+        <SectionTitle color="bg-pink-400">主要程序类型</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="负压吸引术 (Suction Abortion)" colorClass="border-pink-100 bg-white text-pink-800">
+             <p className="text-sm">最常见的类型，通常用于怀孕14-16周以内。医生使用温和的吸力清空子宫。</p>
+             <p className="text-xs mt-1 font-bold text-pink-600">时长：5-10分钟。</p>
+           </InfoCard>
+           
+           <InfoCard title="扩张与清宫术 (D&E)" colorClass="border-pink-100 bg-white text-pink-800">
+             <p className="text-sm">通常用于怀孕16周以后。结合了吸力和医疗器械。可能需要提前一天扩张宫颈。</p>
+             <p className="text-xs mt-1 font-bold text-pink-600">时长：10-20分钟。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-pink-400">手术过程</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ol className="list-decimal pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>准备：</strong> 你会接受检查，并服用止痛药或镇静剂。</li>
+             <li><strong>扩张：</strong> 医生会使用窥阴器，并可能麻醉宫颈，然后轻轻扩张宫颈口。</li>
+             <li><strong>吸引：</strong> 医生将一根细管插入子宫，使用吸力清除组织。</li>
+             <li><strong>恢复：</strong> 术后你会在恢复室休息约一小时。</li>
+           </ol>
+        </div>
+
+        <SectionTitle color="bg-pink-400">疼痛管理</SectionTitle>
+        <p className="text-sm text-muted-foreground mb-4">
+          感觉因人而异，可能像强烈的经期痉挛。医生会提供：
+        </p>
+        <ListSection color="text-pink-500" items={[
+          "局部麻醉（麻醉宫颈）",
+          "口服止痛药（如布洛芬）",
+          "镇静剂（让你放松或昏昏欲睡）",
+          "有些诊所提供深度镇静（你会睡着）"
+        ]} />
+
+        <SectionTitle color="bg-pink-400">术后恢复</SectionTitle>
+        <div className="bg-pink-50 border border-pink-100 rounded-2xl p-5">
+           <ul className="list-disc pl-4 space-y-2 text-xs text-pink-700">
+             <li>大多数人第二天就能恢复正常活动。</li>
+             <li>可能会有类似月经的出血和痉挛，持续几天到几周。</li>
+             <li><strong>避免感染：</strong> 医生可能会开抗生素。按时服用。</li>
+             <li><strong>避孕：</strong> 你的生育能力会立即恢复。如果你愿意，可以在手术时直接放置宫内节育器 (IUD)。</li>
+           </ul>
+        </div>
+      </>
+    )
+  },
+
+  "Abortion_State_Laws": {
+    title: "各州堕胎禁令例外情况",
+    subtitle: "State by State Exceptions",
+    image: imgMicroClinic,
+    color: "from-red-500 to-orange-500",
+    accentColor: "bg-red-500",
+    lightColor: "bg-red-50 border-red-100 text-red-700",
+    tags: ["法律", "旅行堕胎", "生命危险例外"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          一些州禁止堕胎或设置了严格限制。但即使在禁止堕胎的州，通常也有“例外情况”（例如孕妇生命垂危）。堕胎在许多州仍然是合法的，并且<strong>跨州旅行去堕胎是合法的</strong>。
+        </p>
+        
+        <div className="bg-yellow-50 border border-yellow-100 rounded-2xl p-4 mb-6 flex gap-3">
+          <AlertCircle className="text-yellow-600 shrink-0" size={20} />
+          <p className="text-xs text-yellow-800">
+            法律变化很快。请务必访问 <strong>AbortionFinder.org</strong> 获取最新信息。以下信息仅供参考。
+          </p>
+        </div>
+
+        <SectionTitle color="bg-red-400">各州概览</SectionTitle>
+        <div className="space-y-3 h-[500px] overflow-y-auto pr-2">
+          {[
+            { state: "Alabama", status: "Banned", detail: "禁止。例外：孕妇生命或健康受到严重威胁。" },
+            { state: "Alaska", status: "Legal", detail: "合法。无限制。" },
+            { state: "Arizona", status: "Restricted", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "Arkansas", status: "Banned", detail: "禁止。例外：生命危险。" },
+            { state: "California", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "Colorado", status: "Legal", detail: "合法。无限制。" },
+            { state: "Connecticut", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "Delaware", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险、胎儿无法存活。" },
+            { state: "District of Columbia", status: "Legal", detail: "合法。无限制。" },
+            { state: "Florida", status: "Restricted", detail: "允许至6周。例外：生命/健康危险、胎儿无法存活、强奸/乱伦/贩运。" },
+            { state: "Georgia", status: "Restricted", detail: "允许至6周。例外：生命/健康危险、胎儿无法存活、强奸/乱伦/贩运。" },
+            { state: "Hawaii", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "Idaho", status: "Banned", detail: "禁止。例外：生命危险、强奸/乱伦/贩运。" },
+            { state: "Illinois", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "Indiana", status: "Banned", detail: "禁止。例外：生命/健康危险、胎儿无法存活、强奸/乱伦/贩运。" },
+            { state: "Iowa", status: "Restricted", detail: "允许至6周。例外：生命/健康危险、胎儿无法存活、强奸/乱伦/贩运。" },
+            { state: "Kansas", status: "Legal", detail: "允许至21周6天。例外：生命/健康危险。" },
+            { state: "Kentucky", status: "Banned", detail: "禁止。例外：生命/健康危险。" },
+            { state: "Louisiana", status: "Banned", detail: "禁止。例外：生命/健康危险、胎儿无法存活。" },
+            { state: "Maine", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "Maryland", status: "Legal", detail: "合法。无限制。" },
+            { state: "Massachusetts", status: "Legal", detail: "允许至26周6天。例外：生命/健康危险、胎儿无法存活。" },
+            { state: "Michigan", status: "Legal", detail: "合法。无限制。" },
+            { state: "Minnesota", status: "Legal", detail: "合法。无限制。" },
+            { state: "Mississippi", status: "Banned", detail: "禁止。例外：生命危险、强奸/乱伦/贩运。" },
+            { state: "Missouri", status: "Restricted", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "Montana", status: "Legal", detail: "允许至24周左右。例外：生命危险。" },
+            { state: "Nebraska", status: "Restricted", detail: "允许至11周6天。例外：生命/健康危险、强奸/乱伦/贩运。" },
+            { state: "Nevada", status: "Legal", detail: "允许至25周6天。例外：生命/健康危险。" },
+            { state: "New Hampshire", status: "Legal", detail: "允许至23周6天。例外：生命/健康危险、胎儿无法存活。" },
+            { state: "New Jersey", status: "Legal", detail: "合法。无限制。" },
+            { state: "New Mexico", status: "Legal", detail: "合法。无限制。" },
+            { state: "New York", status: "Legal", detail: "允许至26周6天。例外：生命/健康危险、胎儿无法存活。" },
+            { state: "North Carolina", status: "Restricted", detail: "允许至12周6天。例外：生命/健康危险、胎儿无法存活、强奸/乱伦/贩运。" },
+            { state: "North Dakota", status: "Banned", detail: "禁止。例外：生命/健康危险、强奸/乱伦/贩运。" },
+            { state: "Ohio", status: "Restricted", detail: "允许至21周6天。例外：生命危险。" },
+            { state: "Oklahoma", status: "Banned", detail: "禁止。例外：生命危险。" },
+            { state: "Oregon", status: "Legal", detail: "合法。无限制。" },
+            { state: "Pennsylvania", status: "Restricted", detail: "允许至23周6天。例外：生命/健康危险。" },
+            { state: "Rhode Island", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "South Carolina", status: "Restricted", detail: "允许至6周。例外：生命/健康危险、胎儿无法存活、强奸/乱伦/贩运。" },
+            { state: "South Dakota", status: "Banned", detail: "禁止。例外：生命危险。" },
+            { state: "Tennessee", status: "Banned", detail: "禁止。例外：生命/健康危险。" },
+            { state: "Texas", status: "Banned", detail: "禁止。例外：生命/健康危险。" },
+            { state: "Utah", status: "Restricted", detail: "允许至17周6天。例外：生命/健康危险、胎儿无法存活、强奸/乱伦/贩运。" },
+            { state: "Vermont", status: "Legal", detail: "合法。无限制。" },
+            { state: "Virginia", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "Washington", status: "Legal", detail: "允许至24周左右。例外：生命/健康危险。" },
+            { state: "West Virginia", status: "Banned", detail: "禁止。例外：生命/健康危险、胎儿无法存活、强奸/乱伦/贩运。" },
+            { state: "Wisconsin", status: "Restricted", detail: "允许至21周6天。例外：生命/健康危险。" },
+            { state: "Wyoming", status: "Legal", detail: "合法。无限制。" },
+          ].map((item) => (
+            <div key={item.state} className="bg-white p-3 rounded-xl border border-border/50">
+              <div className="flex justify-between items-center mb-1">
+                <span className="font-bold text-sm">{item.state}</span>
+                <Badge variant={item.status === "Legal" ? "default" : item.status === "Banned" ? "destructive" : "secondary"} className={item.status === "Legal" ? "bg-green-500 hover:bg-green-600" : item.status === "Banned" ? "bg-red-500 hover:bg-red-600" : "bg-orange-500 hover:bg-orange-600"}>
+                  {item.status}
+                </Badge>
+              </div>
+              <p className="text-xs text-muted-foreground">{item.detail}</p>
+            </div>
+          ))}
         </div>
       </>
     )
