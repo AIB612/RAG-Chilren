@@ -302,241 +302,6 @@ const articles: Record<string, any> = {
       </>
     )
   },
-  },
-  
-  // ------------------------------------
-  // DETAILED SUB-ARTICLES (BIRTH CONTROL)
-  // ------------------------------------
-  "BC_Pill_Detail": {
-    title: "短效避孕药详解",
-    subtitle: "每日一片，科学避孕",
-    image: imgBcPill,
-    color: "from-blue-400 to-cyan-500",
-    accentColor: "bg-blue-500",
-    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
-    tags: ["漏服指南", "副作用", "使用方法"],
-    content: (
-      <>
-        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 mb-6">
-           <h4 className="font-bold text-blue-800 mb-2">💊 它是如何工作的？</h4>
-           <p className="text-sm text-blue-700/80 leading-relaxed">
-             短效避孕药含有激素（通常是雌激素和孕激素），它们主要通过三种方式防止怀孕：
-           </p>
-           <ul className="list-disc pl-4 mt-2 space-y-1 text-xs text-blue-700/80">
-             <li>阻止卵巢排卵。</li>
-             <li>使宫颈粘液变稠，阻止精子游向卵子。</li>
-             <li>使子宫内膜变薄，受精卵难以着床。</li>
-           </ul>
-        </div>
-
-        <SectionTitle color="bg-blue-400">漏服了怎么办？(重要)</SectionTitle>
-        <div className="space-y-4">
-           <InfoCard title="漏服 1 片" colorClass="border-yellow-100 bg-yellow-50/50 text-yellow-800">
-             <p className="text-sm font-bold">尽快补服。</p>
-             <p className="text-xs mt-1">
-               如果想起来的时候已经是第二天吃药的时间了，就一次吃两片。你不需要额外的避孕措施。
-             </p>
-           </InfoCard>
-           
-           <InfoCard title="漏服 2 片或更多" colorClass="border-red-100 bg-red-50/50 text-red-800">
-             <p className="text-sm font-bold">不仅要补服，还需要备用避孕措施！</p>
-             <ul className="list-disc pl-4 mt-2 space-y-1 text-xs">
-               <li>尽快服用最后漏服的那一片（哪怕意味着一天吃两片）。扔掉之前漏服的药片。</li>
-               <li>接下来的7天内，如果你发生性行为，<span className="font-bold">必须使用避孕套</span>。</li>
-               <li>如果漏服发生在第一周，并且你有无保护性行为，你可能需要紧急避孕药。</li>
-             </ul>
-           </InfoCard>
-        </div>
-
-        <SectionTitle color="bg-blue-400">常见副作用</SectionTitle>
-        <ListSection items={[
-          "不规则出血（点滴出血）：通常在前3个月最常见。",
-          "恶心：建议在睡前或饭后服用。",
-          "乳房胀痛：通常几周后会消失。",
-          "情绪变化：如果你觉得情绪受到严重影响，可以咨询医生换一种品牌的药。"
-        ]} />
-
-        <SectionTitle color="bg-blue-400">额外的好处</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
-           <ul className="list-disc pl-4 space-y-2 text-sm text-muted-foreground">
-             <li>让月经更规律、量更少、痛经更轻。</li>
-             <li>改善痤疮（痘痘）。</li>
-             <li>降低患卵巢癌和子宫内膜癌的风险。</li>
-           </ul>
-        </div>
-      </>
-    )
-  },
-
-  "BC_Condom_Detail": {
-    title: "避孕套完全指南",
-    subtitle: "双重保护：避孕 + 防病",
-    image: imgBcCondom,
-    color: "from-blue-400 to-cyan-500",
-    accentColor: "bg-blue-500",
-    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
-    tags: ["使用图解", "材质选择", "防破裂"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          避孕套（Condoms）是唯一能同时预防怀孕和性传播疾病 (STDs) 的方法。正确使用避孕套，有效率可达98%。
-        </p>
-
-        <SectionTitle color="bg-blue-400">正确使用步骤</SectionTitle>
-        <div className="space-y-3">
-           <div className="flex gap-4 items-start bg-white p-4 rounded-xl border border-border/50">
-             <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">1</div>
-             <div>
-               <p className="text-sm font-bold text-foreground">检查有效期和包装</p>
-               <p className="text-xs text-muted-foreground">确保包装中有空气（像个小气囊），这说明没有破损。过期的避孕套容易破裂。</p>
-             </div>
-           </div>
-           
-           <div className="flex gap-4 items-start bg-white p-4 rounded-xl border border-border/50">
-             <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">2</div>
-             <div>
-               <p className="text-sm font-bold text-foreground">分清正反面</p>
-               <p className="text-xs text-muted-foreground">它应该像一顶卷边的小帽子。如果卷边在里面，那就是反了。如果不小心戴反了，<span className="text-red-500">扔掉换一个新的</span>，不要翻过来再用（上面可能已经沾有精液）。</p>
-             </div>
-           </div>
-
-           <div className="flex gap-4 items-start bg-white p-4 rounded-xl border border-border/50">
-             <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">3</div>
-             <div>
-               <p className="text-sm font-bold text-foreground">捏住储精囊</p>
-               <p className="text-xs text-muted-foreground">戴上之前，捏住顶端的小囊排出空气。这给精液留出了空间，防止避孕套破裂。</p>
-             </div>
-           </div>
-
-           <div className="flex gap-4 items-start bg-white p-4 rounded-xl border border-border/50">
-             <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">4</div>
-             <div>
-               <p className="text-sm font-bold text-foreground">戴到底</p>
-               <p className="text-xs text-muted-foreground">在勃起的阴茎上，将避孕套一直展开到根部。</p>
-             </div>
-           </div>
-
-           <div className="flex gap-4 items-start bg-white p-4 rounded-xl border border-border/50">
-             <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">5</div>
-             <div>
-               <p className="text-sm font-bold text-foreground">及时撤出</p>
-               <p className="text-xs text-muted-foreground">射精后，在阴茎疲软之前，按住避孕套的根部撤出。防止精液溢出。</p>
-             </div>
-           </div>
-        </div>
-
-        <SectionTitle color="bg-blue-400">常见错误</SectionTitle>
-        <ListSection items={[
-          "戴两层：错！两层避孕套摩擦更容易破裂。",
-          "使用油性润滑剂：错！凡士林、婴儿油会腐蚀乳胶，导致避孕套破裂。请使用水性或硅基润滑剂。",
-          "放在钱包里：错！摩擦和体温会使避孕套老化变脆。"
-        ]} />
-      </>
-    )
-  },
-
-  "BC_IUD_Detail": {
-    title: "宫内节育器 (IUD)",
-    subtitle: "一劳永逸的选择",
-    image: imgBcIud,
-    color: "from-blue-400 to-cyan-500",
-    accentColor: "bg-blue-500",
-    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
-    tags: ["含铜IUD", "曼月乐", "放置过程"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          宫内节育器 (Intrauterine Device, IUD) 是一个T形的小装置，由医生放入子宫内。它是目前最有效的可逆避孕方法之一。一旦取出，受孕能力立即恢复。
-        </p>
-
-        <SectionTitle color="bg-blue-400">两种类型的区别</SectionTitle>
-        <div className="grid grid-cols-1 gap-4 mb-6">
-           <div className="bg-orange-50 p-4 rounded-xl border border-orange-100">
-             <h4 className="font-bold text-orange-800 mb-2">含铜 IUD (ParaGard)</h4>
-             <ul className="list-disc pl-4 space-y-1 text-xs text-orange-700">
-               <li><strong>无激素：</strong> 适合不想使用激素的人。</li>
-               <li><strong>原理：</strong> 铜离子对精子有毒，阻止精子受精。</li>
-               <li><strong>副作用：</strong> 可能导致月经量变多、痛经加重。</li>
-               <li><strong>有效期：</strong> 最长可达 10-12 年。</li>
-               <li><strong>额外技能：</strong> 可作为紧急避孕措施！</li>
-             </ul>
-           </div>
-
-           <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-             <h4 className="font-bold text-blue-800 mb-2">含激素 IUD (Mirena/Kyleena)</h4>
-             <ul className="list-disc pl-4 space-y-1 text-xs text-blue-700">
-               <li><strong>含孕激素：</strong> 释放微量孕激素。</li>
-               <li><strong>原理：</strong> 增稠宫颈粘液，变薄子宫内膜。</li>
-               <li><strong>副作用：</strong> 可能导致不规则出血。</li>
-               <li><strong>有效期：</strong> 3-8 年（取决于品牌）。</li>
-               <li><strong>额外技能：</strong> 通常会让月经变少，甚至消失（这是无害的）。</li>
-             </ul>
-           </div>
-        </div>
-
-        <SectionTitle color="bg-blue-400">放置过程痛吗？</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
-          <p className="text-sm text-muted-foreground mb-3">
-            这因人而异。大多数人会感到强烈的痉挛痛（像严重的痛经），持续几分钟。
-          </p>
-          <p className="text-sm font-bold text-foreground mb-2">建议：</p>
-          <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-            <li>在手术前1小时服用布洛芬 (Ibuprofen)。</li>
-            <li>安排在月经期间放置（此时宫颈较软）。</li>
-            <li>放好后休息一天，对自己好一点。</li>
-          </ul>
-        </div>
-      </>
-    )
-  },
-
-  "BC_Implant_Detail": {
-    title: "皮下埋植剂 (The Implant)",
-    subtitle: "长效、隐形、省心",
-    image: imgBcImplant,
-    color: "from-blue-400 to-cyan-500",
-    accentColor: "bg-blue-500",
-    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
-    tags: ["操作过程", "副作用", "恢复生育"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          皮下埋植剂（如 Nexplanon）是一根火柴棍大小的柔韧塑料棒。医生会把它植入你上臂内侧的皮肤下。它释放孕激素来防止怀孕。
-        </p>
-
-        <SectionTitle color="bg-blue-400">为什么选择它？</SectionTitle>
-        <ListSection items={[
-          "极其有效：失败率只有 0.05%，比结扎手术还可靠。",
-          "省心：一旦植入，3-5年不用管它。",
-          "隐形：别人看不出来，只有你自己能摸到它。",
-          "可逆：想怀孕了？找医生取出，受孕能力很快恢复。"
-        ]} />
-
-        <SectionTitle color="bg-blue-400">植入过程</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
-           <ol className="list-decimal pl-4 space-y-2 text-xs text-muted-foreground">
-             <li>医生会先给你的手臂局部麻醉（打一针麻药）。</li>
-             <li>使用特殊的植入器，将小棒滑入皮下。你会有感觉，但不会痛。</li>
-             <li>整个过程只需要几分钟。</li>
-             <li>之后手臂可能会淤青几天，会有绷带包扎。</li>
-           </ol>
-        </div>
-
-        <SectionTitle color="bg-blue-400">主要副作用</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
-           <p className="text-sm text-muted-foreground mb-2">
-             最常见的副作用是<strong>月经模式的改变</strong>：
-           </p>
-           <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-             <li>大约1/3的人会月经停止（这是安全的）。</li>
-             <li>大约1/3的人会有不规则出血或点滴出血。</li>
-             <li>少数人可能会有较长时间的出血。</li>
-           </ul>
-           <p className="text-xs text-blue-600 mt-3 font-medium">通常给身体3-6个月的时间去适应。</p>
-        </div>
-      </>
-    )
-  },
 
   "Abortion": {
     title: "堕胎 (Abortion)",
@@ -1548,29 +1313,24 @@ const articles: Record<string, any> = {
   // DETAILED SUB-ARTICLES (BIRTH CONTROL)
   // ------------------------------------
   "BC_Pill_Detail": {
-    title: "短效避孕药详解",
+    title: "短效避孕药 (The Pill)",
     subtitle: "每日一片，科学避孕",
     image: imgBcPill,
     color: "from-blue-400 to-cyan-500",
     accentColor: "bg-blue-500",
     lightColor: "bg-blue-50 border-blue-100 text-blue-700",
-    tags: ["漏服指南", "副作用", "使用方法"],
+    tags: ["漏服指南", "副作用", "禁忌症"],
     content: (
       <>
         <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 mb-6">
            <h4 className="font-bold text-blue-800 mb-2">💊 它是如何工作的？</h4>
            <p className="text-sm text-blue-700/80 leading-relaxed">
-             短效避孕药含有激素（通常是雌激素和孕激素），它们主要通过三种方式防止怀孕：
+             短效避孕药含有激素（通常是雌激素和孕激素），阻止卵巢排卵，并使宫颈粘液变稠阻止精子。
            </p>
-           <ul className="list-disc pl-4 mt-2 space-y-1 text-xs text-blue-700/80">
-             <li>阻止卵巢排卵。</li>
-             <li>使宫颈粘液变稠，阻止精子游向卵子。</li>
-             <li>使子宫内膜变薄，受精卵难以着床。</li>
-           </ul>
         </div>
 
         <SectionTitle color="bg-blue-400">漏服了怎么办？(重要)</SectionTitle>
-        <div className="space-y-4">
+        <div className="space-y-4 mb-6">
            <InfoCard title="漏服 1 片" colorClass="border-yellow-100 bg-yellow-50/50 text-yellow-800">
              <p className="text-sm font-bold">尽快补服。</p>
              <p className="text-xs mt-1">
@@ -1588,6 +1348,17 @@ const articles: Record<string, any> = {
            </InfoCard>
         </div>
 
+        <SectionTitle color="bg-blue-400">谁不适合吃药？(禁忌症)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-xs text-muted-foreground mb-2">如果你有以下情况，请咨询医生选择其他方法（如不含雌激素的药或IUD）：</p>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>吸烟且超过35岁：</strong> 极大增加血栓风险。</li>
+             <li><strong>高血压：</strong> 未控制的高血压。</li>
+             <li><strong>偏头痛：</strong> 带有先兆（Aura）的偏头痛。</li>
+             <li><strong>血栓病史：</strong> 曾经有过深静脉血栓或肺栓塞。</li>
+           </ul>
+        </div>
+
         <SectionTitle color="bg-blue-400">常见副作用</SectionTitle>
         <ListSection items={[
           "不规则出血（点滴出血）：通常在前3个月最常见。",
@@ -1595,21 +1366,12 @@ const articles: Record<string, any> = {
           "乳房胀痛：通常几周后会消失。",
           "情绪变化：如果你觉得情绪受到严重影响，可以咨询医生换一种品牌的药。"
         ]} />
-
-        <SectionTitle color="bg-blue-400">额外的好处</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
-           <ul className="list-disc pl-4 space-y-2 text-sm text-muted-foreground">
-             <li>让月经更规律、量更少、痛经更轻。</li>
-             <li>改善痤疮（痘痘）。</li>
-             <li>降低患卵巢癌和子宫内膜癌的风险。</li>
-           </ul>
-        </div>
       </>
     )
   },
 
   "BC_Condom_Detail": {
-    title: "避孕套完全指南",
+    title: "避孕套 (Condoms)",
     subtitle: "双重保护：避孕 + 防病",
     image: imgBcCondom,
     color: "from-blue-400 to-cyan-500",
@@ -1622,21 +1384,21 @@ const articles: Record<string, any> = {
           避孕套（Condoms）是唯一能同时预防怀孕和性传播疾病 (STDs) 的方法。正确使用避孕套，有效率可达98%。
         </p>
 
-        <SectionTitle color="bg-blue-400">正确使用步骤</SectionTitle>
-        <div className="space-y-3">
+        <SectionTitle color="bg-blue-400">正确使用 5 步曲</SectionTitle>
+        <div className="space-y-3 mb-6">
            <div className="flex gap-4 items-start bg-white p-4 rounded-xl border border-border/50">
              <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">1</div>
              <div>
-               <p className="text-sm font-bold text-foreground">检查有效期和包装</p>
-               <p className="text-xs text-muted-foreground">确保包装中有空气（像个小气囊），这说明没有破损。过期的避孕套容易破裂。</p>
+               <p className="text-sm font-bold text-foreground">检查与拆包</p>
+               <p className="text-xs text-muted-foreground">检查有效期。确保包装有气囊感（未破损）。小心撕开，别用牙咬或剪刀，以免划破套套。</p>
              </div>
            </div>
            
            <div className="flex gap-4 items-start bg-white p-4 rounded-xl border border-border/50">
              <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">2</div>
              <div>
-               <p className="text-sm font-bold text-foreground">分清正反面</p>
-               <p className="text-xs text-muted-foreground">它应该像一顶卷边的小帽子。如果卷边在里面，那就是反了。如果不小心戴反了，<span className="text-red-500">扔掉换一个新的</span>，不要翻过来再用（上面可能已经沾有精液）。</p>
+               <p className="text-sm font-bold text-foreground">分清正反</p>
+               <p className="text-xs text-muted-foreground">像个卷边小帽子。卷边在外才对。<strong>戴反了？扔掉换新的！</strong>不要翻过来用，上面可能已有精液。</p>
              </div>
            </div>
 
@@ -1644,7 +1406,7 @@ const articles: Record<string, any> = {
              <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">3</div>
              <div>
                <p className="text-sm font-bold text-foreground">捏住储精囊</p>
-               <p className="text-xs text-muted-foreground">戴上之前，捏住顶端的小囊排出空气。这给精液留出了空间，防止避孕套破裂。</p>
+               <p className="text-xs text-muted-foreground">戴上前，捏住顶端小囊排出空气。这给精液留出空间，防止压力过大撑破。</p>
              </div>
            </div>
 
@@ -1652,7 +1414,7 @@ const articles: Record<string, any> = {
              <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">4</div>
              <div>
                <p className="text-sm font-bold text-foreground">戴到底</p>
-               <p className="text-xs text-muted-foreground">在勃起的阴茎上，将避孕套一直展开到根部。</p>
+               <p className="text-xs text-muted-foreground">勃起时戴上，一直展开到根部。</p>
              </div>
            </div>
 
@@ -1660,16 +1422,16 @@ const articles: Record<string, any> = {
              <div className="bg-blue-100 text-blue-600 font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">5</div>
              <div>
                <p className="text-sm font-bold text-foreground">及时撤出</p>
-               <p className="text-xs text-muted-foreground">射精后，在阴茎疲软之前，按住避孕套的根部撤出。防止精液溢出。</p>
+               <p className="text-xs text-muted-foreground">射精后，趁阴茎还硬时，<strong>按住根部</strong>一起撤出。防止精液溢出。</p>
              </div>
            </div>
         </div>
 
-        <SectionTitle color="bg-blue-400">常见错误</SectionTitle>
+        <SectionTitle color="bg-blue-400">致命错误 (千万别做)</SectionTitle>
         <ListSection items={[
-          "戴两层：错！两层避孕套摩擦更容易破裂。",
-          "使用油性润滑剂：错！凡士林、婴儿油会腐蚀乳胶，导致避孕套破裂。请使用水性或硅基润滑剂。",
-          "放在钱包里：错！摩擦和体温会使避孕套老化变脆。"
+          "戴两层：摩擦会导致破裂！一层就够了。",
+          "使用油性润滑剂：凡士林、婴儿油、按摩油会溶解乳胶！必须使用水性或硅基润滑剂。",
+          "重复使用：绝对不行。"
         ]} />
       </>
     )
@@ -1686,7 +1448,7 @@ const articles: Record<string, any> = {
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          宫内节育器 (Intrauterine Device, IUD) 是一个T形的小装置，由医生放入子宫内。它是目前最有效的可逆避孕方法之一。一旦取出，受孕能力立即恢复。
+          宫内节育器 (IUD) 是一个T形小装置，由医生放入子宫内。它是最有效的可逆避孕方法之一 (&gt;99%)。
         </p>
 
         <SectionTitle color="bg-blue-400">两种类型的区别</SectionTitle>
@@ -1694,37 +1456,34 @@ const articles: Record<string, any> = {
            <div className="bg-orange-50 p-4 rounded-xl border border-orange-100">
              <h4 className="font-bold text-orange-800 mb-2">含铜 IUD (ParaGard)</h4>
              <ul className="list-disc pl-4 space-y-1 text-xs text-orange-700">
-               <li><strong>无激素：</strong> 适合不想使用激素的人。</li>
-               <li><strong>原理：</strong> 铜离子对精子有毒，阻止精子受精。</li>
+               <li><strong>无激素：</strong> 适合不想用激素的人。</li>
+               <li><strong>有效期：</strong> 最长 10-12 年。</li>
                <li><strong>副作用：</strong> 可能导致月经量变多、痛经加重。</li>
-               <li><strong>有效期：</strong> 最长可达 10-12 年。</li>
-               <li><strong>额外技能：</strong> 可作为紧急避孕措施！</li>
+               <li><strong>紧急避孕：</strong> 可以在无保护性行为后5天内放入，作为最有效的紧急避孕药。</li>
              </ul>
            </div>
 
            <div className="bg-blue-50 p-4 rounded-xl border border-blue-100">
              <h4 className="font-bold text-blue-800 mb-2">含激素 IUD (Mirena/Kyleena)</h4>
              <ul className="list-disc pl-4 space-y-1 text-xs text-blue-700">
-               <li><strong>含孕激素：</strong> 释放微量孕激素。</li>
-               <li><strong>原理：</strong> 增稠宫颈粘液，变薄子宫内膜。</li>
+               <li><strong>少激素：</strong> 只有孕激素，且主要在局部作用。</li>
+               <li><strong>有效期：</strong> 3-8 年。</li>
                <li><strong>副作用：</strong> 可能导致不规则出血。</li>
-               <li><strong>有效期：</strong> 3-8 年（取决于品牌）。</li>
-               <li><strong>额外技能：</strong> 通常会让月经变少，甚至消失（这是无害的）。</li>
+               <li><strong>福利：</strong> 通常会让月经变少，甚至消失，缓解痛经。</li>
              </ul>
            </div>
         </div>
 
-        <SectionTitle color="bg-blue-400">放置过程痛吗？</SectionTitle>
+        <SectionTitle color="bg-blue-400">放置过程与风险</SectionTitle>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
-          <p className="text-sm text-muted-foreground mb-3">
-            这因人而异。大多数人会感到强烈的痉挛痛（像严重的痛经），持续几分钟。
+          <p className="text-sm font-bold text-foreground mb-2">关于疼痛：</p>
+          <p className="text-xs text-muted-foreground mb-3">
+            放置时会有痉挛痛（像严重痛经）。建议提前服用止痛药。
           </p>
-          <p className="text-sm font-bold text-foreground mb-2">建议：</p>
-          <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-            <li>在手术前1小时服用布洛芬 (Ibuprofen)。</li>
-            <li>安排在月经期间放置（此时宫颈较软）。</li>
-            <li>放好后休息一天，对自己好一点。</li>
-          </ul>
+          <p className="text-sm font-bold text-foreground mb-2">关于脱落：</p>
+          <p className="text-xs text-muted-foreground">
+            极少数情况 IUD 会滑出。建议每月经期后检查一下阴道内是否有 IUD 的尾丝（不要拉它！只是摸摸它还在不在）。
+          </p>
         </div>
       </>
     )
@@ -1741,7 +1500,7 @@ const articles: Record<string, any> = {
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          皮下埋植剂（如 Nexplanon）是一根火柴棍大小的柔韧塑料棒。医生会把它植入你上臂内侧的皮肤下。它释放孕激素来防止怀孕。
+          皮下埋植剂（如 Nexplanon）是一根火柴棍大小的柔韧塑料棒，植入上臂皮下。它释放孕激素。
         </p>
 
         <SectionTitle color="bg-blue-400">为什么选择它？</SectionTitle>
@@ -1749,7 +1508,7 @@ const articles: Record<string, any> = {
           "极其有效：失败率只有 0.05%，比结扎手术还可靠。",
           "省心：一旦植入，3-5年不用管它。",
           "隐形：别人看不出来，只有你自己能摸到它。",
-          "可逆：想怀孕了？找医生取出，受孕能力很快恢复。"
+          "可逆：取出后，受孕能力立即恢复。"
         ]} />
 
         <SectionTitle color="bg-blue-400">植入过程</SectionTitle>
@@ -1788,35 +1547,22 @@ const articles: Record<string, any> = {
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          避孕贴（如 Xulane, Twirla）是一种贴在皮肤上的米色小方块。它释放激素（雌激素和孕激素）通过皮肤进入血液来防止怀孕。
+          避孕贴（如 Xulane）是一种贴在皮肤上的米色小方块。每周换一次，连续3周，第4周休息。
         </p>
 
-        <SectionTitle color="bg-blue-400">使用方法</SectionTitle>
+        <SectionTitle color="bg-blue-400">使用贴士</SectionTitle>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
            <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
-             <li><strong>贴在哪里：</strong> 腹部、臀部、背部或上臂外侧（避开胸部和容易摩擦的地方）。</li>
-             <li><strong>频率：</strong> 每周换一次，连续贴3周。</li>
-             <li><strong>休息周：</strong> 第4周不贴，这周会来月经。</li>
-             <li><strong>新周期：</strong> 休息7天后，无论月经是否结束，都要贴上新的一片。</li>
+             <li><strong>位置：</strong> 腹部、臀部、背部或上臂外侧。不要贴在胸部。</li>
+             <li><strong>轮换：</strong> 每次换新贴片时，换个位置贴，以防皮肤过敏。</li>
+             <li><strong>洗澡：</strong> 它是防水的，游泳洗澡都没问题。</li>
            </ul>
         </div>
 
-        <SectionTitle color="bg-blue-400">如果贴片掉了怎么办？</SectionTitle>
-        <div className="space-y-4">
-           <InfoCard title="不到 48 小时" colorClass="border-yellow-100 bg-yellow-50/50 text-yellow-800">
-             <p className="text-xs">如果还有粘性，重新贴上；如果不粘了，换一片新的。不需要额外的避孕措施。</p>
-           </InfoCard>
-           <InfoCard title="超过 48 小时" colorClass="border-red-100 bg-red-50/50 text-red-800">
-             <p className="text-xs">立即贴一片新的。这标志着你新周期的开始。接下来7天必须使用避孕套。</p>
-           </InfoCard>
-        </div>
-
-        <SectionTitle color="bg-blue-400">副作用</SectionTitle>
-        <ListSection items={[
-          "皮肤刺激：贴片部位可能会发红或发痒（轮换粘贴位置有助于缓解）。",
-          "乳房胀痛、恶心：通常在几个月后会消失。",
-          "月经变化：可能会有点滴出血。"
-        ]} />
+        <SectionTitle color="bg-blue-400">风险提示</SectionTitle>
+        <InfoCard title="血栓风险" colorClass="border-red-100 bg-red-50/50 text-red-800">
+           <p className="text-xs">避孕贴释放的雌激素水平比口服药略高，因此血栓风险可能略高（虽然绝对风险仍然很低）。吸烟者、35岁以上女性慎用。</p>
+        </InfoCard>
       </>
     )
   },
@@ -1828,31 +1574,19 @@ const articles: Record<string, any> = {
     color: "from-blue-400 to-cyan-500",
     accentColor: "bg-blue-500",
     lightColor: "bg-blue-50 border-blue-100 text-blue-700",
-    tags: ["NuvaRing", "放置方法", "忘记取出"],
+    tags: ["NuvaRing", "放置方法", "储存"],
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          避孕环（如 NuvaRing, Annovera）是一个柔软、透明的弹性圆环。你把它放入阴道内，它会释放激素来防止怀孕。别人看不出来，你也感觉不到。
+          避孕环（如 NuvaRing）是一个柔软透明的弹性圆环。放入阴道3周，取出休息1周。
         </p>
 
-        <SectionTitle color="bg-blue-400">如何使用 (NuvaRing)</SectionTitle>
+        <SectionTitle color="bg-blue-400">储存与使用</SectionTitle>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
-           <ol className="list-decimal pl-4 space-y-2 text-xs text-muted-foreground">
-             <li><strong>放入：</strong> 洗手，捏扁圆环，像用卫生棉条一样推入阴道深处。具体位置不重要，只要舒服就行。</li>
-             <li><strong>放置：</strong> 让它在里面呆 3 周（21天）。</li>
-             <li><strong>取出：</strong> 第4周取出，这周会来月经。</li>
-             <li><strong>循环：</strong> 休息7天后，放入一个新的环。</li>
-           </ol>
-        </div>
-
-        <SectionTitle color="bg-blue-400">常见问题</SectionTitle>
-        <div className="space-y-4">
-           <InfoCard title="做爱时要有取出来吗？" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
-             <p className="text-xs">不需要。大多数人做爱时感觉不到它。如果觉得不舒服，可以取出来，但<span className="font-bold">不能超过3小时</span>，否则避孕效果会降低。</p>
-           </InfoCard>
-           <InfoCard title="副作用" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
-             <p className="text-xs">可能会增加阴道分泌物（白带）。其他副作用与避孕药相似（恶心、乳房胀痛）。</p>
-           </InfoCard>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>储存：</strong> 购买后如果是 NuvaRing，建议在药房拿回家后放入<strong>冰箱</strong>冷藏（如果在室温下，有效期只有4个月）。Annovera 不需要冷藏。</li>
+             <li><strong>性爱时：</strong> 不需要取出。如果取出，不能超过 3 小时，否则避孕失效。</li>
+           </ul>
         </div>
       </>
     )
@@ -1869,28 +1603,22 @@ const articles: Record<string, any> = {
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          避孕针（Depo-Provera）是一种注射避孕药。每3个月（12-13周）打一次。它含有一种孕激素。
+          避孕针（Depo-Provera）每3个月注射一次。
         </p>
 
-        <SectionTitle color="bg-blue-400">优缺点对比</SectionTitle>
-        <div className="grid grid-cols-1 gap-4 mb-6">
-           <div className="bg-green-50 p-4 rounded-xl border border-green-100">
-             <h4 className="font-bold text-green-800 mb-2">优点</h4>
-             <ul className="list-disc pl-4 space-y-1 text-xs text-green-700">
-               <li><strong>隐私：</strong> 没有药瓶，没人知道你在避孕。</li>
-               <li><strong>方便：</strong> 只要记得每3个月去打针。</li>
-               <li><strong>月经消失：</strong> 很多人打针一年后月经完全停止（这是安全的）。</li>
-             </ul>
-           </div>
-           <div className="bg-amber-50 p-4 rounded-xl border border-amber-100">
-             <h4 className="font-bold text-amber-800 mb-2">缺点</h4>
-             <ul className="list-disc pl-4 space-y-1 text-xs text-amber-700">
-               <li><strong>恢复排卵慢：</strong> 停针后，可能需要 10 个月甚至更久才能怀孕。不适合想要近期怀孕的人。</li>
-               <li><strong>骨密度：</strong> 长期使用可能导致骨密度轻微下降（停药后通常会恢复）。</li>
-               <li><strong>体重增加：</strong> 这是唯一可能直接导致体重增加的避孕方法。</li>
-             </ul>
-           </div>
+        <SectionTitle color="bg-blue-400">重要缺点 (须知)</SectionTitle>
+        <div className="bg-amber-50 p-4 rounded-xl border border-amber-100 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-xs text-amber-800">
+             <li><strong>恢复排卵慢：</strong> 停针后，平均需要 10 个月才能怀孕。不适合短期避孕或近期打算怀孕的人。</li>
+             <li><strong>骨密度流失：</strong> 长期使用（超过2年）可能导致骨密度下降。建议多补钙和维生素D。</li>
+             <li><strong>体重增加：</strong> 部分使用者会有明显的食欲增加和体重增长。</li>
+           </ul>
         </div>
+
+        <SectionTitle color="bg-blue-400">优点</SectionTitle>
+        <InfoCard title="极高的隐私性" colorClass="border-green-100 bg-green-50/50 text-green-800">
+          <p className="text-xs">没人知道你在避孕。没有药瓶，没有包装。</p>
+        </InfoCard>
       </>
     )
   },
@@ -2051,7 +1779,7 @@ const articles: Record<string, any> = {
   "BC_Sponge_Detail": {
     title: "避孕海绵 (The Sponge)",
     subtitle: "随用随弃，含杀精剂",
-    image: imgBcCondom, // Placeholder or specific
+    image: imgBcCondom, // Generic
     color: "from-blue-400 to-cyan-500",
     accentColor: "bg-blue-500",
     lightColor: "bg-blue-50 border-blue-100 text-blue-700",
@@ -2075,15 +1803,21 @@ const articles: Record<string, any> = {
         </div>
 
         <SectionTitle color="bg-blue-400">使用方法</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
            <ol className="list-decimal pl-4 space-y-2 text-xs text-muted-foreground">
-             <li><strong>激活：</strong> 用水弄湿海绵，轻轻挤压直到起泡（这很重要！）。</li>
+             <li><strong>激活：</strong> 必须先用水弄湿，轻轻挤压直到起泡（这很重要！）。</li>
              <li><strong>放入：</strong> 折叠海绵，推入阴道深处，凹面盖住宫颈。</li>
-             <li><strong>时效：</strong> 可在性爱前24小时内放入。放入后24小时内可进行多次性爱。</li>
+             <li><strong>时效：</strong> 可在性爱前24小时内放入。放入后24小时内可进行多次性爱，无需更换。</li>
              <li><strong>取出：</strong> 最后一次射精后，必须让海绵留在体内至少 6 小时。但总共不要超过 30 小时（预防中毒性休克综合征 TSS）。</li>
              <li><strong>丢弃：</strong> 取出后丢进垃圾桶，不要冲进马桶。不可重复使用。</li>
            </ol>
         </div>
+        
+        <SectionTitle color="bg-blue-400">安全性警告 (TSS)</SectionTitle>
+        <InfoCard title="中毒性休克综合征 (TSS)" colorClass="border-red-100 bg-red-50 text-red-800">
+           <p className="text-xs">这是一种罕见但严重的疾病。症状包括突然发高烧、晒伤样皮疹、腹泻、呕吐。如果你出现这些症状，立即取出海绵并就医。</p>
+           <p className="text-xs mt-2 font-bold">为了安全：不要在经期使用海绵。不要留置超过 30 小时。</p>
+        </InfoCard>
       </>
     )
   },
@@ -2107,13 +1841,14 @@ const articles: Record<string, any> = {
           <p className="text-xs">完美使用下有效率很高，但实际使用中约为83%。配合杀精剂是必须的。</p>
         </InfoCard>
 
-        <SectionTitle color="bg-blue-400">使用要点</SectionTitle>
+        <SectionTitle color="bg-blue-400">使用要点与安全</SectionTitle>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
            <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
              <li><strong>配合杀精剂：</strong> 每次性爱前，在杯内和边缘涂抹杀精剂。</li>
              <li><strong>再次性爱：</strong> 如果要在取出前再次性爱，必须再注入更多杀精剂。</li>
              <li><strong>取出时间：</strong> 性爱后必须保留至少 6 小时。总共不要超过 24 小时。</li>
              <li><strong>保养：</strong> 取出后用温和肥皂清洗，晾干。定期检查有无破损。</li>
+             <li><strong>风险：</strong> 可能增加尿路感染 (UTI) 风险。如出现排尿痛，请咨询医生。</li>
            </ul>
         </div>
       </>
@@ -2150,7 +1885,8 @@ const articles: Record<string, any> = {
           "放入前涂抹杀精剂。",
           "可以提前放入，最长可在体内留置 48 小时（比隔膜久）。",
           "性爱后必须保留至少 6 小时。",
-          "不防性病 (STDs)。"
+          "不防性病 (STDs)。",
+          "注意：如出现阴道刺激或异味，可能是对材质或杀精剂过敏。"
         ]} />
       </>
     )
@@ -2167,21 +1903,21 @@ const articles: Record<string, any> = {
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          内置避孕套（Internal Condom，曾称女用避孕套）是一个放入阴道或肛门的柔软塑料套管。两端有环，内环用于固定，外环留在体外。
+          内置避孕套（Internal Condom，曾称女用避孕套）是一个放入阴道或肛门的柔软塑料套管。它由两端的环支撑，内环用于固定在阴道深处，外环留在体外。
         </p>
 
         <SectionTitle color="bg-blue-400">有效率</SectionTitle>
         <InfoCard title="约 79% - 95%" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
-          <p className="text-xs">实际使用有效率约79%。如果完美使用可达95%。</p>
+          <p className="text-xs">实际使用有效率约79%。如果每次都完美使用可达95%。</p>
         </InfoCard>
 
         <SectionTitle color="bg-blue-400">优点与使用</SectionTitle>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
            <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
              <li><strong>防 STDs：</strong> 覆盖外阴面积比男用避孕套大，提供额外保护。</li>
-             <li><strong>材质：</strong> 通常是聚氨酯或丁腈，适合对乳胶过敏的人。</li>
+             <li><strong>材质优势：</strong> 通常是聚氨酯或丁腈，不含乳胶，导热性好，感觉更自然。</li>
              <li><strong>提前准备：</strong> 可以在性爱前数小时放入，不必在激情时刻打断。</li>
-             <li><strong>注意：</strong> 不要和男用避孕套同时使用！摩擦会导致破裂。</li>
+             <li><strong>禁忌：</strong> 绝对不要和男用避孕套同时使用！摩擦会导致破裂。</li>
            </ul>
         </div>
       </>
@@ -2209,12 +1945,13 @@ const articles: Record<string, any> = {
            </p>
         </div>
 
-        <SectionTitle color="bg-blue-400">使用须知</SectionTitle>
+        <SectionTitle color="bg-blue-400">使用须知与风险</SectionTitle>
         <ListSection items={[
           "等待时间：放入后通常需要等待 10-15 分钟让其溶解或起效（看说明书）。",
           "时效性：通常只有 1 小时有效。如果超过时间需补放。",
-          "副作用：可能刺激阴道或阴茎皮肤，增加感染性病/HIV的风险（如果皮肤破损）。",
-          "不防 STDs。"
+          "副作用：频繁使用可能刺激阴道或阴茎皮肤。",
+          "HIV风险：如果皮肤因刺激而破损，反而会增加感染 HIV 或其他 STDs 的风险。",
+          "不可食用：只供外用。"
         ]} />
       </>
     )
@@ -2231,15 +1968,15 @@ const articles: Record<string, any> = {
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          体外射精指在射精前将阴茎完全从阴道抽出，并射在远离外阴的地方。
+          体外射精指在射精前将阴茎完全从阴道抽出，并射在远离外阴的地方。虽然免费且无副作用，但失败率极高。
         </p>
 
-        <SectionTitle color="bg-orange-400">为什么容易失败？(有效率 78%)</SectionTitle>
+        <SectionTitle color="bg-orange-400">为什么容易失败？(有效率约 78%)</SectionTitle>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
            <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
              <li><strong>前列腺液（Pre-cum）：</strong> 在射精前流出的液体中可能含有少量精子。</li>
-             <li><strong>时机难控：</strong> 在高潮来临前很难精确控制抽出时间。</li>
-             <li><strong>位置：</strong> 即使射在体外，如果精液流到外阴口，精子仍可能游进去。</li>
+             <li><strong>时机难控：</strong> 在高潮来临前很难精确控制抽出时间。需要极强的自我控制力。</li>
+             <li><strong>位置错误：</strong> 即使射在体外，如果精液流到外阴口，精子仍可能游进去。</li>
            </ul>
         </div>
 
@@ -2257,7 +1994,7 @@ const articles: Record<string, any> = {
   "BC_TubalLigation_Detail": {
     title: "绝育手术 (Sterilization)",
     subtitle: "一劳永逸的终极方案",
-    image: imgBcIud, // Placeholder
+    image: imgBcIud,
     color: "from-slate-400 to-gray-500",
     accentColor: "bg-slate-500",
     lightColor: "bg-slate-50 border-slate-100 text-slate-700",
@@ -2265,25 +2002,45 @@ const articles: Record<string, any> = {
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          绝育是一种永久性的避孕方式。对女性是输卵管结扎，对男性是输精管结扎。
+          绝育是一种永久性的避孕方式。对女性是输卵管结扎，对男性是输精管结扎。有效率均超过 99%。
         </p>
 
-        <SectionTitle color="bg-slate-400">输卵管结扎 (Tubal Ligation)</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
-           <p className="text-sm text-muted-foreground mb-2">
-             切断、结扎或封闭输卵管，阻止卵子和精子相遇。
+        <SectionTitle color="bg-slate-400">男性输精管结扎 (Vasectomy)</SectionTitle>
+        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 mb-6">
+           <h4 className="font-bold text-blue-800 mb-2">更加简单安全的选择</h4>
+           <p className="text-sm text-blue-800/80 mb-3">
+             相比女性结扎，男性结扎手术更简单、风险更小、恢复更快、费用更低。
            </p>
-           <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-             <li>有效率：&gt;99%。</li>
-             <li>永久性：虽有复通手术，但成功率不保证。应视为永久决定。</li>
-             <li>不影响激素：你还是会有月经（除非切除子宫），更年期不会提前。</li>
-           </ul>
+           <InfoCard title="手术过程" colorClass="border-blue-100 bg-white text-blue-800">
+             <p className="text-xs">医生切断或封闭输精管，使精子无法进入精液。手术通常在门诊进行，仅需局麻。</p>
+           </InfoCard>
+           <InfoCard title="起效时间 (重要!)" colorClass="border-yellow-100 bg-yellow-50 text-yellow-800">
+             <p className="text-xs"><strong>不是立即生效！</strong> 手术后输精管中仍有残留精子。需要等待至少 2 个月或射精 20 次以上，并经精液检测确认无精子后，才算成功。在此期间必须使用其他避孕措施。</p>
+           </InfoCard>
+            <div className="grid grid-cols-2 gap-2 mt-3 text-xs">
+              <div className="bg-white p-2 rounded border border-blue-100">
+                <span className="font-bold block text-blue-600">费用</span>
+                $0 - $1,000 (通常保险覆盖)
+              </div>
+              <div className="bg-white p-2 rounded border border-blue-100">
+                <span className="font-bold block text-blue-600">安全性</span>
+                极高。风险包括轻微感染、血肿 (Hematoma)。
+              </div>
+            </div>
         </div>
 
-        <SectionTitle color="bg-slate-400">男性输精管结扎 (Vasectomy)</SectionTitle>
-        <InfoCard title="更简单的选择" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
-          <p className="text-xs">相比女性结扎，男性结扎手术更简单、风险更小、恢复更快。它切断输精管，精液中不再含精子。不影响性功能和射精感（只是没精子了）。</p>
-        </InfoCard>
+        <SectionTitle color="bg-slate-400">女性输卵管结扎 (Tubal Ligation)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-2">
+             通过手术切断、结扎或封闭输卵管。
+           </p>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>费用：</strong> $0 - $6,000 (视保险而定)。</li>
+             <li><strong>安全性：</strong> 非常安全，但作为腹部手术，风险略高于男性结扎（如麻醉反应、出血）。</li>
+             <li><strong>异位妊娠风险：</strong> 虽然极罕见，但如果结扎后怀孕，发生宫外孕的风险较高，需立即就医。</li>
+             <li><strong>永久性：</strong> 虽然有复通手术，但昂贵且成功率不保。请将其视为永久性决定。</li>
+           </ul>
+        </div>
       </>
     )
   },
