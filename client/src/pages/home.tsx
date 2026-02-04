@@ -175,13 +175,6 @@ export default function Home() {
             keywords: ["痒", "异味", "分泌物", "痛"],
             text: "私处的不适（痒、痛、异味）可能是感染迹象（如阴道炎或 STD），也可能只是过敏。建议去医院做分泌物检查，不要自己盲目用药。",
             source: "RAG: STDs_HIV_Safer_Sex"
-          },
-
-          // Greetings (AI fallback for politeness)
-          {
-            keywords: ["你好", "hello", "hi", "hey", "在吗"],
-            text: "你好呀！👋 我是小白。我可以为你提供关于避孕、性健康、人际关系等方面的专业知识。有什么想问的吗？",
-            source: "AI: Greeting"
           }
         ];
 
