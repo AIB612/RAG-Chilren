@@ -162,6 +162,11 @@ const articles: Record<string, any> = {
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 94-99%</span>
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">频率: 每3个月</span>
             </div>
+            <div className="mt-4 pt-3 border-t border-blue-200/50">
+               <a href="/learn/BC_Shot_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
+                 优缺点对比 <ChevronRight size={12}/>
+               </a>
+            </div>
           </InfoCard>
 
           <InfoCard title="避孕贴 (The Patch)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
@@ -171,6 +176,11 @@ const articles: Record<string, any> = {
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 91-99%</span>
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">频率: 每周</span>
             </div>
+            <div className="mt-4 pt-3 border-t border-blue-200/50">
+               <a href="/learn/BC_Patch_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
+                 掉了怎么办？ <ChevronRight size={12}/>
+               </a>
+            </div>
           </InfoCard>
 
           <InfoCard title="阴道避孕环 (NuvaRing)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
@@ -179,6 +189,50 @@ const articles: Record<string, any> = {
              <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-semibold">
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">有效率: 91-99%</span>
               <span className="px-2 py-1 bg-blue-100 rounded text-blue-600">频率: 每月</span>
+            </div>
+            <div className="mt-4 pt-3 border-t border-blue-200/50">
+               <a href="/learn/BC_Ring_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
+                 了解详细操作 <ChevronRight size={12}/>
+               </a>
+            </div>
+          </InfoCard>
+
+          <SectionTitle color="bg-green-400">自然与行为避孕法</SectionTitle>
+          
+          <InfoCard title="自然避孕法 (FAM)" colorClass="border-green-100 bg-green-50/30 text-green-800">
+             <p>通过体温、宫颈粘液等追踪排卵期。无副作用，但需要极高的自律性。</p>
+             <div className="mt-4 pt-3 border-t border-green-200/50">
+               <a href="/learn/BC_FAM_Detail" className="text-xs font-bold text-green-600 flex items-center gap-1 hover:underline">
+                 三大指标详解 <ChevronRight size={12}/>
+               </a>
+            </div>
+          </InfoCard>
+
+          <InfoCard title="禁欲与边缘性行为" colorClass="border-purple-100 bg-purple-50/30 text-purple-800">
+             <p>唯一 100% 有效的方法。边缘性行为（Outercourse）指不进行阴道插入的亲密行为。</p>
+             <div className="mt-4 pt-3 border-t border-purple-200/50">
+               <a href="/learn/BC_Abstinence_Detail" className="text-xs font-bold text-purple-600 flex items-center gap-1 hover:underline">
+                 什么是边缘性行为？ <ChevronRight size={12}/>
+               </a>
+            </div>
+          </InfoCard>
+
+           <InfoCard title="哺乳期避孕 (LAM)" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
+             <p>仅适用于产后6个月内、纯母乳喂养且月经未恢复的妈妈。</p>
+             <div className="mt-4 pt-3 border-t border-pink-200/50">
+               <a href="/learn/BC_Breastfeeding_Detail" className="text-xs font-bold text-pink-600 flex items-center gap-1 hover:underline">
+                 三个必须条件 <ChevronRight size={12}/>
+               </a>
+            </div>
+          </InfoCard>
+          
+          <SectionTitle color="bg-blue-400">其他屏障方法</SectionTitle>
+          <InfoCard title="膈膜、宫颈帽与海绵" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+             <p>放置在阴道内的屏障，阻止精子进入。必须配合杀精剂使用。</p>
+             <div className="mt-4 pt-3 border-t border-blue-200/50">
+               <a href="/learn/BC_Barrier_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
+                 了解更多 <ChevronRight size={12}/>
+               </a>
             </div>
           </InfoCard>
         </div>
@@ -1684,6 +1738,262 @@ const articles: Record<string, any> = {
       </>
     )
   },
+  "BC_Patch_Detail": {
+    title: "避孕贴 (The Patch)",
+    subtitle: "每周一贴，简单方便",
+    image: imgBcPatch,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["使用方法", "副作用", "补救措施"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          避孕贴（如 Xulane, Twirla）是一种贴在皮肤上的米色小方块。它释放激素（雌激素和孕激素）通过皮肤进入血液来防止怀孕。
+        </p>
+
+        <SectionTitle color="bg-blue-400">使用方法</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>贴在哪里：</strong> 腹部、臀部、背部或上臂外侧（避开胸部和容易摩擦的地方）。</li>
+             <li><strong>频率：</strong> 每周换一次，连续贴3周。</li>
+             <li><strong>休息周：</strong> 第4周不贴，这周会来月经。</li>
+             <li><strong>新周期：</strong> 休息7天后，无论月经是否结束，都要贴上新的一片。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-blue-400">如果贴片掉了怎么办？</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="不到 48 小时" colorClass="border-yellow-100 bg-yellow-50/50 text-yellow-800">
+             <p className="text-xs">如果还有粘性，重新贴上；如果不粘了，换一片新的。不需要额外的避孕措施。</p>
+           </InfoCard>
+           <InfoCard title="超过 48 小时" colorClass="border-red-100 bg-red-50/50 text-red-800">
+             <p className="text-xs">立即贴一片新的。这标志着你新周期的开始。接下来7天必须使用避孕套。</p>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-blue-400">副作用</SectionTitle>
+        <ListSection items={[
+          "皮肤刺激：贴片部位可能会发红或发痒（轮换粘贴位置有助于缓解）。",
+          "乳房胀痛、恶心：通常在几个月后会消失。",
+          "月经变化：可能会有点滴出血。"
+        ]} />
+      </>
+    )
+  },
+
+  "BC_Ring_Detail": {
+    title: "阴道避孕环 (The Ring)",
+    subtitle: "每月一次，私密无感",
+    image: imgBcRing,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["NuvaRing", "放置方法", "忘记取出"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          避孕环（如 NuvaRing, Annovera）是一个柔软、透明的弹性圆环。你把它放入阴道内，它会释放激素来防止怀孕。别人看不出来，你也感觉不到。
+        </p>
+
+        <SectionTitle color="bg-blue-400">如何使用 (NuvaRing)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ol className="list-decimal pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>放入：</strong> 洗手，捏扁圆环，像用卫生棉条一样推入阴道深处。具体位置不重要，只要舒服就行。</li>
+             <li><strong>放置：</strong> 让它在里面呆 3 周（21天）。</li>
+             <li><strong>取出：</strong> 第4周取出，这周会来月经。</li>
+             <li><strong>循环：</strong> 休息7天后，放入一个新的环。</li>
+           </ol>
+        </div>
+
+        <SectionTitle color="bg-blue-400">常见问题</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="做爱时要有取出来吗？" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
+             <p className="text-xs">不需要。大多数人做爱时感觉不到它。如果觉得不舒服，可以取出来，但<span className="font-bold">不能超过3小时</span>，否则避孕效果会降低。</p>
+           </InfoCard>
+           <InfoCard title="副作用" colorClass="border-blue-100 bg-blue-50/50 text-blue-800">
+             <p className="text-xs">可能会增加阴道分泌物（白带）。其他副作用与避孕药相似（恶心、乳房胀痛）。</p>
+           </InfoCard>
+        </div>
+      </>
+    )
+  },
+
+  "BC_Shot_Detail": {
+    title: "避孕针 (The Shot)",
+    subtitle: "三个月一针，隐私性强",
+    image: imgBcShot,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["Depo-Provera", "副作用", "恢复生育"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          避孕针（Depo-Provera）是一种注射避孕药。每3个月（12-13周）打一次。它含有一种孕激素。
+        </p>
+
+        <SectionTitle color="bg-blue-400">优缺点对比</SectionTitle>
+        <div className="grid grid-cols-1 gap-4 mb-6">
+           <div className="bg-green-50 p-4 rounded-xl border border-green-100">
+             <h4 className="font-bold text-green-800 mb-2">优点</h4>
+             <ul className="list-disc pl-4 space-y-1 text-xs text-green-700">
+               <li><strong>隐私：</strong> 没有药瓶，没人知道你在避孕。</li>
+               <li><strong>方便：</strong> 只要记得每3个月去打针。</li>
+               <li><strong>月经消失：</strong> 很多人打针一年后月经完全停止（这是安全的）。</li>
+             </ul>
+           </div>
+           <div className="bg-amber-50 p-4 rounded-xl border border-amber-100">
+             <h4 className="font-bold text-amber-800 mb-2">缺点</h4>
+             <ul className="list-disc pl-4 space-y-1 text-xs text-amber-700">
+               <li><strong>恢复排卵慢：</strong> 停针后，可能需要 10 个月甚至更久才能怀孕。不适合想要近期怀孕的人。</li>
+               <li><strong>骨密度：</strong> 长期使用可能导致骨密度轻微下降（停药后通常会恢复）。</li>
+               <li><strong>体重增加：</strong> 这是唯一可能直接导致体重增加的避孕方法。</li>
+             </ul>
+           </div>
+        </div>
+      </>
+    )
+  },
+
+  "BC_Barrier_Detail": {
+    title: "屏障避孕法 (Barrier Methods)",
+    subtitle: "膈膜、宫颈帽与海绵",
+    image: imgBcCondom, 
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["杀精剂", "非激素", "使用方法"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          除了避孕套，还有其他屏障方法：阴道隔膜 (Diaphragm)、宫颈帽 (Cervical Cap) 和避孕海绵 (Sponge)。它们都必须配合<strong>杀精剂</strong>使用。
+        </p>
+
+        <SectionTitle color="bg-blue-400">种类介绍</SectionTitle>
+        <div className="space-y-4">
+          <InfoCard title="阴道隔膜 (Diaphragm)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <p className="text-xs mb-2">一个浅的硅胶杯。放入阴道覆盖宫颈。</p>
+            <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+               <li>有效率：约 88% (配合杀精剂)。</li>
+               <li>需要医生处方和测量尺寸。</li>
+               <li>性爱前放入，性爱后必须保留至少6小时。</li>
+            </ul>
+          </InfoCard>
+
+          <InfoCard title="宫颈帽 (Cervical Cap)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <p className="text-xs mb-2">比隔膜小，像个小水手帽，紧扣在宫颈上。</p>
+            <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+               <li>有效率：未生育过约 86%，生育过约 71%。</li>
+               <li>可以留置体内长达48小时。</li>
+            </ul>
+          </InfoCard>
+
+           <InfoCard title="避孕海绵 (The Sponge)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+            <p className="text-xs mb-2">含有杀精剂的小泡沫海绵。</p>
+            <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+               <li>无需处方，药店可买。</li>
+               <li>使用前要用水浸湿以激活杀精剂。</li>
+               <li>一次性使用，取出后丢弃。</li>
+            </ul>
+          </InfoCard>
+        </div>
+      </>
+    )
+  },
+
+  "BC_FAM_Detail": {
+    title: "自然避孕法 (Fertility Awareness)",
+    subtitle: "了解身体，计算排卵期",
+    image: imgBirthControl, 
+    color: "from-green-400 to-emerald-500",
+    accentColor: "bg-green-500",
+    lightColor: "bg-green-50 border-green-100 text-green-700",
+    tags: ["安全期", "体温法", "宫颈粘液"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          自然避孕法（FAMs）是指通过追踪月经周期和身体信号（如体温、粘液）来判断排卵期，并在“危险期”避免性生活或使用避孕套。
+        </p>
+
+        <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-6">
+           <h4 className="font-bold text-yellow-800 text-sm mb-1">⚠️ 警告</h4>
+           <p className="text-xs text-yellow-700">
+             这种方法失败率较高（约24%的人会在一年内意外怀孕）。它需要极高的自律性，并且你的月经周期必须非常规律。
+           </p>
+        </div>
+
+        <SectionTitle color="bg-green-400">三大指标</SectionTitle>
+        <ListSection color="text-green-500" items={[
+          "基础体温 (Temperature)：每天早上醒来第一件事量体温。排卵后体温会轻微升高。",
+          "宫颈粘液 (Cervical Mucus)：排卵期时，分泌物会变得像生鸡蛋清一样透明、拉丝。",
+          "日历记录 (Calendar)：记录月经周期，推算排卵日。"
+        ]} />
+      </>
+    )
+  },
+
+  "BC_Abstinence_Detail": {
+    title: "禁欲与边缘性行为",
+    subtitle: "Abstinence & Outercourse",
+    image: imgRelationships, 
+    color: "from-purple-400 to-violet-500",
+    accentColor: "bg-purple-500",
+    lightColor: "bg-purple-50 border-purple-100 text-purple-700",
+    tags: ["100%有效", "无副作用", "情感亲密"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          禁欲（Abstinence）是不进行阴道性交。它是唯一 100% 有效防止怀孕的方法。
+        </p>
+
+        <SectionTitle color="bg-purple-400">什么是边缘性行为 (Outercourse)？</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+           <p className="text-sm text-muted-foreground mb-3">
+             指除了阴道性交以外的其他亲密行为。既能享受快感，又不会怀孕。
+           </p>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>包括：</strong> 接吻、爱抚、手淫、互相摩擦（隔着衣服）、口交（需防范STDs）。</li>
+             <li><strong>原则：</strong> 只要精液不进入阴道或外阴区域，就不会怀孕。</li>
+           </ul>
+        </div>
+      </>
+    )
+  },
+
+   "BC_Breastfeeding_Detail": {
+    title: "哺乳期避孕 (LAM)",
+    subtitle: "自然闭经法",
+    image: imgPregnancy, 
+    color: "from-pink-400 to-rose-500",
+    accentColor: "bg-pink-500",
+    lightColor: "bg-pink-50 border-pink-100 text-pink-700",
+    tags: ["产后", "激素抑制", "有时限"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          哺乳闭经法 (LAM) 是利用纯母乳喂养来自然抑制排卵。
+        </p>
+
+        <SectionTitle color="bg-pink-400">生效的三个必须条件</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-xs text-muted-foreground mb-3">只有同时满足以下3点，才有效（有效率约98%）：</p>
+           <ListSection color="text-pink-500" items={[
+             "1. 宝宝小于 6 个月大。",
+             "2. 你完全没有来月经（产后出血不算）。",
+             "3. 纯母乳喂养：不加配方奶，白天至少每4小时喂一次，晚上每6小时一次。"
+           ]} />
+        </div>
+
+        <div className="bg-blue-50 border border-blue-100 rounded-xl p-4">
+           <p className="text-xs text-blue-700">
+             一旦任何一个条件不满足（比如宝宝开始吃辅食，或者你来例假了），这种方法的避孕效果就会立刻消失！你需要立即采用其他避孕措施。
+           </p>
+        </div>
+      </>
+    )
+  },
+
   "STDs_HIV_Safer_Sex": {
     title: "性健康与 STDs",
     subtitle: "了解风险，安全去爱",
