@@ -417,8 +417,8 @@ const articles: Record<string, any> = {
     )
   },
 
-  "Pregnancy_Full": {
-    title: "怀孕全程 (Pregnancy)",
+  "Pregnancy_Basics": {
+    title: "备孕与产检 (Pre-Pregnancy)",
     subtitle: "从备孕、发育到分娩",
     image: imgPregnancy,
     color: "from-rose-400 to-red-500",
@@ -3517,8 +3517,8 @@ const articles: Record<string, any> = {
     )
   },
 
-  "Pregnancy_Full": {
-    title: "怀孕全程 (Pregnancy)",
+  "Pregnancy_Choices": {
+    title: "怀孕选择 (Pregnancy Choices)",
     subtitle: "备孕、孕期与选择",
     image: imgPregnancy,
     color: "from-teal-400 to-cyan-500",
