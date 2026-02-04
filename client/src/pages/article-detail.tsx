@@ -2,7 +2,7 @@ import { MobileLayout } from "@/components/mobile-layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChevronLeft, Share2, ThumbsUp, BookOpen, AlertCircle, Info, HelpCircle, CheckCircle2, Heart, XCircle, Baby } from "lucide-react";
+import { ChevronLeft, ChevronRight, Share2, ThumbsUp, BookOpen, AlertCircle, Info, HelpCircle, CheckCircle2, Heart, XCircle, Baby } from "lucide-react";
 import { useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 
@@ -588,52 +588,6 @@ const articles: Record<string, any> = {
             </div>
           ))}
         </div>
-      </>
-    )
-  },
-  "Emergency_Contraception": {
-    title: "紧急避孕",
-    subtitle: "事后补救措施",
-    image: imgEmergencyPill,
-    color: "from-orange-400 to-amber-500",
-    accentColor: "bg-orange-500",
-    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
-    tags: ["紧急避孕药", "黄金72小时", "IUD"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          紧急避孕（Emergency Contraception）是在无保护性行为或避孕失败（如避孕套破裂、漏服避孕药）后，用于防止怀孕的方法。它不能终止已经发生的妊娠（它不是堕胎药）。
-        </p>
-        
-        <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5 text-center mb-6 relative overflow-hidden">
-          <div className="absolute right-2 top-2 opacity-20"><img src={imgMicroClock} className="w-16 h-16" /></div>
-          <h4 className="text-xl font-bold text-orange-600 mb-2 relative z-10">⏰ 越早越好</h4>
-          <p className="text-sm text-orange-800 relative z-10">虽然有些方法在5天内有效，但<span className="font-bold">24小时内</span>服用效果最好。</p>
-        </div>
-
-        <SectionTitle color="bg-orange-400">你的选择</SectionTitle>
-         <div className="space-y-4">
-          <InfoCard title="左炔诺孕酮片 (Plan B / 毓婷)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
-            <p className="text-sm">最常见的非处方药。性行为后72小时（3天）内服用有效。</p>
-            <p className="text-xs mt-2 text-muted-foreground">注意：对于体重指数 (BMI) 较高的女性，效果可能降低。</p>
-          </InfoCard>
-
-          <InfoCard title="醋酸乌利司他 (Ella)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
-            <p className="text-sm">处方药。性行为后120小时（5天）内服用有效，且效果比普通药片更强。</p>
-          </InfoCard>
-
-          <InfoCard title="铜宫内节育器 (Copper IUD)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
-            <p className="text-sm">最有效的紧急避孕方式（有效率&gt;99.9%）。如果在性行为后5天内放入，不仅能紧急避孕，还能提供长达10年的保护。</p>
-          </InfoCard>
-        </div>
-
-        <SectionTitle color="bg-orange-400">副作用</SectionTitle>
-        <ListSection color="text-orange-500" items={[
-          "恶心或呕吐（如果服药后2小时内呕吐，需要补服）",
-          "下一次月经提前或推迟",
-          "乳房胀痛、头痛或疲劳",
-          "这种不适通常在24小时内消失"
-        ]} />
       </>
     )
   },
@@ -2383,40 +2337,6 @@ const articles: Record<string, any> = {
     )
   },
 
-  "BC_Withdrawal_Detail": {
-    title: "Withdrawal (Pull Out)",
-    subtitle: "High Risk, No Cost",
-    image: imgBirthControl,
-    color: "from-orange-400 to-red-500",
-    accentColor: "bg-orange-500",
-    lightColor: "bg-orange-50 border-orange-100 text-orange-700",
-    tags: ["High Failure Rate", "Free", "No Protection"],
-    content: (
-      <>
-        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          Pulling out (withdrawal) is pulling the penis out of the vagina before ejaculation. It is not as effective as other methods.
-        </p>
-        
-        <SectionTitle color="bg-orange-400">Why it fails</SectionTitle>
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
-           <ListSection items={[
-             "Hard to pull out in time (requires great self-control)",
-             "Pre-cum can contain sperm",
-             "Sperm on outer genitals can still swim inside"
-           ]} icon={AlertCircle} color="text-red-500" />
-        </div>
-
-        <InfoCard title="Effectiveness" colorClass="border-red-100 bg-red-50/30 text-red-800">
-           <p className="text-xs font-bold">78% Effective</p>
-           <p className="text-xs mt-1">That means about 1 in 5 people who use withdrawal will get pregnant each year.</p>
-        </InfoCard>
-        
-        <InfoCard title="No STD Protection" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
-           <p className="text-xs">Withdrawal does not protect against STDs.</p>
-        </InfoCard>
-      </>
-    )
-  },
 
   "BC_TubalLigation_Expectations": {
     title: "Tubal Ligation Expectations",
@@ -2681,6 +2601,180 @@ const articles: Record<string, any> = {
     )
   },
 
+  "Emergency_Contraception": {
+    title: "紧急避孕 (Emergency Contraception)",
+    subtitle: "事后补救措施",
+    image: imgEmergencyPill,
+    color: "from-purple-400 to-indigo-500",
+    accentColor: "bg-indigo-500",
+    lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
+    tags: ["后悔药", "事后避孕", "72小时"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          紧急避孕（Emergency Contraception, EC）是在无保护性行为后防止怀孕的一种安全有效的方法。通常被称为“事后避孕药”（Morning-after Pill）。
+        </p>
+
+        <SectionTitle color="bg-indigo-400">什么时候需要用？</SectionTitle>
+        <ListSection items={[
+          "没有任何避孕措施的性行为。",
+          "避孕套破裂或滑落。",
+          "漏服避孕药（连续漏服2天以上）。",
+          "算错了安全期。",
+          "被迫发生的性行为。"
+        ]} />
+
+        <SectionTitle color="bg-indigo-400">主要类型</SectionTitle>
+        <div className="space-y-4 mb-6">
+           <InfoCard title="紧急避孕药 (Pills)" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
+             <p className="mb-2 text-sm">最常见的方法。分两种：</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs mb-3">
+               <li><strong>Ella (ulipristal acetate):</strong> 最有效，需处方。5天内有效。</li>
+               <li><strong>Plan B (Levonorgestrel):</strong> 非处方药。3天内效果最好。</li>
+             </ul>
+             <div className="grid grid-cols-2 gap-3 mt-3">
+               <a href="/learn/EC_Ella_Detail" className="text-xs font-bold text-indigo-600 bg-white p-2 rounded-lg text-center border border-indigo-100 shadow-sm hover:bg-indigo-50">
+                 了解 Ella
+               </a>
+               <a href="/learn/EC_PlanB_Detail" className="text-xs font-bold text-indigo-600 bg-white p-2 rounded-lg text-center border border-indigo-100 shadow-sm hover:bg-indigo-50">
+                 了解 Plan B
+               </a>
+             </div>
+           </InfoCard>
+
+           <InfoCard title="宫内节育器 (IUD)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+             <p className="mb-2 text-sm">最有效的紧急避孕方式（有效率 &gt;99.9%）。</p>
+             <p className="text-xs text-muted-foreground mb-3">需要在事后5天内由医生放入。放入后可持续避孕8-12年。</p>
+             <a href="/learn/EC_IUD_Detail" className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">
+               了解 IUD 紧急避孕 <ChevronRight size={12}/>
+             </a>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-indigo-400">关键原则</SectionTitle>
+        <div className="bg-yellow-50 border border-yellow-100 rounded-2xl p-5 mb-6">
+           <h4 className="font-bold text-yellow-800 mb-2 flex items-center gap-2">
+             <AlertCircle size={16} /> 越早越好！
+           </h4>
+           <p className="text-sm text-yellow-800/80 leading-relaxed">
+             虽然有些方法在5天内有效，但时间越早，效果越好。精子可以在体内存活5天等待排卵，紧急避孕药的作用通常是推迟排卵。如果已经排卵，药可能就没用了。
+           </p>
+        </div>
+      </>
+    )
+  },
+
+  "EC_Ella_Detail": {
+    title: "Ella (Ulipristal)",
+    subtitle: "最有效的紧急避孕药",
+    image: imgEmergencyPill,
+    color: "from-purple-400 to-indigo-500",
+    accentColor: "bg-indigo-500",
+    lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
+    tags: ["处方药", "5天内", "高效"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          Ella (ulipristal acetate) 是目前最有效的口服紧急避孕药。它需要在无保护性行为后 <strong>5天 (120小时)</strong> 内服用。
+        </p>
+
+        <SectionTitle color="bg-indigo-400">特点与优势</SectionTitle>
+        <ListSection items={[
+          "比 Plan B 更有效：尤其是在接近排卵期时。",
+          "时效性强：第1天和第5天服用效果一样好（但仍建议尽快）。",
+          "体重限制宽松：对体重超过165磅（75kg）的人依然有效（直到195磅/88kg）。"
+        ]} />
+
+        <SectionTitle color="bg-indigo-400">注意事项 (重要)</SectionTitle>
+        <div className="space-y-4 mb-6">
+           <InfoCard title="需要处方" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <p className="text-sm">在美国通常需要医生处方。可以通过 Planned Parenthood Direct 等 App 在线开方。</p>
+           </InfoCard>
+           
+           <InfoCard title="哺乳期注意" colorClass="border-pink-100 bg-pink-50/30 text-pink-800">
+             <p className="text-sm">服用 Ella 后，建议 <strong>24小时内</strong> 把母乳泵出并倒掉（Pump and Dump）。</p>
+           </InfoCard>
+
+           <InfoCard title="避孕药相互作用" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p className="text-sm">服用 Ella 后，如果想继续吃短效避孕药，需 <strong>等待6天</strong>。如果立刻吃避孕药，可能会让 Ella 失效！这期间请用避孕套。</p>
+           </InfoCard>
+        </div>
+      </>
+    )
+  },
+
+  "EC_PlanB_Detail": {
+    title: "Plan B (Levonorgestrel)",
+    subtitle: "非处方紧急避孕药",
+    image: imgEmergencyPill,
+    color: "from-purple-400 to-indigo-500",
+    accentColor: "bg-indigo-500",
+    lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
+    tags: ["OTC", "72小时", "药店可买"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          Plan B (及其仿制药如 Take Action, My Way) 是含有左炔诺孕酮 (Levonorgestrel) 的紧急避孕药。无需处方，在药店可以直接买到。
+        </p>
+
+        <SectionTitle color="bg-indigo-400">使用指南</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="space-y-3 text-sm text-muted-foreground">
+             <li>🕒 <strong>黄金时间：</strong> 3天 (72小时) 内服用效果最好。虽然5天内也能吃，但效果随时间递减。</li>
+             <li>⚖️ <strong>体重影响：</strong> 如果你的体重超过 165磅 (约75kg)，Plan B 的效果可能会显著降低。建议使用 Ella 或 IUD。</li>
+             <li>💊 <strong>服用方法：</strong> 通常只有一片，直接吞服。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-indigo-400">副作用</SectionTitle>
+        <p className="text-sm text-muted-foreground mb-4">通常很安全，副作用轻微且短暂。</p>
+        <ListSection items={[
+          "月经变化：下次月经可能会提前或推迟，量可能变多或变少。",
+          "恶心/呕吐：如果在服药后2小时内呕吐，需要补服一片。",
+          "头痛、乳房胀痛、疲劳。"
+        ]} />
+      </>
+    )
+  },
+
+  "EC_IUD_Detail": {
+    title: "IUD 紧急避孕",
+    subtitle: "最有效的补救措施",
+    image: imgBcIud,
+    color: "from-blue-400 to-cyan-500",
+    accentColor: "bg-blue-500",
+    lightColor: "bg-blue-50 border-blue-100 text-blue-700",
+    tags: ["99.9%有效", "长期避孕", "需医生"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          在无保护性行为后 <strong>5天 (120小时)</strong> 内放入宫内节育器 (IUD)，是目前世界上最有效的紧急避孕方法，有效率超过 99.9%。
+        </p>
+
+        <SectionTitle color="bg-blue-400">它是如何工作的？</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">
+             铜 IUD (Paragard) 或 激素 IUD (Mirena, Liletta) 都可以用作紧急避孕。
+           </p>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>主要原理：</strong> 铜离子或激素对精子有毒性，阻止精子使卵子受精。同时改变子宫环境，防止受精卵着床。</li>
+             <li><strong>不受体重影响：</strong> 无论体重多少，效果都一样好。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-blue-400">一举两得</SectionTitle>
+        <InfoCard title="超级福利" colorClass="border-green-100 bg-green-50/30 text-green-800">
+           <p className="text-sm font-bold mb-1">解决当下的危机 + 未来的保障</p>
+           <p className="text-sm">一旦放入 IUD，你不仅完成了这次的紧急避孕，还直接获得了长达 8-12 年的高效避孕保护！不用再担心下次意外了。</p>
+        </InfoCard>
+
+        <p className="text-xs text-muted-foreground mt-4">
+          <strong>注意：</strong> 需要预约医生进行放置手术。因为有5天的时间限制，请尽快联系诊所 (如 Planned Parenthood)。
+        </p>
+      </>
+    )
+  },
+};
 
 export default function ArticleDetail({ params }: { params: { id: string } }) {
   const [_, setLocation] = useLocation();
