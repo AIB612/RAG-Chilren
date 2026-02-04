@@ -729,7 +729,7 @@ const articles: Record<string, any> = {
         <SectionTitle color="bg-amber-400">三大关键事实</SectionTitle>
         <ListSection items={[
            "大多数 STDs 没有症状：你不能通过外表判断某人是否有 STD。唯一确认的方法是检测。",
-           "可以治愈或控制：衣原体、淋病等细菌感染可治愈；疱疹、HIV 等病毒感染可控制。",
+           "可以治愈或控制：衣原体、淋病、梅毒、滴虫等细菌/寄生虫感染通常可治愈；疱疹、HIV 等病毒感染可控制。",
            "避孕套有效：正确使用避孕套和口交膜可大大降低感染风险。"
         ]} color="text-amber-500" />
 
@@ -744,12 +744,30 @@ const articles: Record<string, any> = {
              </ul>
            </InfoCard>
 
+           <InfoCard title="梅毒 (Syphilis)" colorClass="border-amber-100 bg-amber-50/30 text-amber-800">
+             <p className="mb-2">一种常见的细菌感染，如果不治疗会造成严重后果。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>传播：</strong> 直接接触梅毒疮（chancre），通常在生殖器、肛门或口腔。</li>
+               <li><strong>症状：</strong> 初期是无痛的疮，后期可能有皮疹。如不治疗可能导致脑损伤或失明。</li>
+               <li><strong>治疗：</strong> 早期发现可以用抗生素轻松治愈。</li>
+             </ul>
+           </InfoCard>
+
+           <InfoCard title="滴虫病 (Trichomoniasis)" colorClass="border-yellow-100 bg-yellow-50/30 text-yellow-800">
+             <p className="mb-2">最常见的可治愈 STD 之一，由寄生虫引起。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>传播：</strong> 性接触（体液交换）。</li>
+               <li><strong>症状：</strong> 多数无症状。可能有异味分泌物、瘙痒或排尿痛。</li>
+               <li><strong>治疗：</strong> 药物（通常是甲硝唑）可轻松治愈。</li>
+             </ul>
+           </InfoCard>
+
            <InfoCard title="人乳头瘤病毒 (HPV) & 生殖器疣" colorClass="border-amber-100 bg-amber-50/30 text-amber-800">
              <p className="mb-2">极其普遍。大多数人一生中都会感染某种 HPV。</p>
              <ul className="list-disc pl-4 space-y-1 text-xs">
-               <li><strong>类型：</strong> 有些导致生殖器疣（低危），有些可能导致癌症（高危）。</li>
-               <li><strong>预防：</strong> HPV 疫苗非常有效。定期进行宫颈癌筛查。</li>
-               <li><strong>治疗：</strong> 病毒本身无药可治，通常依靠免疫系统清除。疣可以去除。</li>
+               <li><strong>类型：</strong> 低危型导致生殖器疣（类型 6, 11）；高危型可能导致宫颈癌、肛门癌等（类型 16, 18）。</li>
+               <li><strong>预防：</strong> HPV 疫苗非常有效。定期进行宫颈癌筛查 (Pap test)。</li>
+               <li><strong>治疗：</strong> 病毒本身无特效药，通常靠免疫系统清除。疣可以去除。</li>
              </ul>
            </InfoCard>
 
@@ -778,6 +796,24 @@ const articles: Record<string, any> = {
                <li><strong>预防：</strong> 有非常有效的疫苗。</li>
              </ul>
            </InfoCard>
+
+           <InfoCard title="阴虱 (Pubic Lice) & 疥疮 (Scabies)" colorClass="border-orange-100 bg-orange-50/30 text-orange-800">
+             <p className="mb-2">皮肤寄生虫感染，引起剧烈瘙痒。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>传播：</strong> 密切的皮肤接触（不一定是性行为），或共用床上用品/衣物。</li>
+               <li><strong>症状：</strong> 阴虱是可见的小虫（像微小的螃蟹）；疥疮是皮下螨虫引起的皮疹。</li>
+               <li><strong>治疗：</strong> 药用洗剂或乳膏可治愈。需清洗所有衣物和床单。</li>
+             </ul>
+           </InfoCard>
+
+           <InfoCard title="传染性软疣 (Molluscum Contagiosum)" colorClass="border-amber-100 bg-amber-50/30 text-amber-800">
+             <p className="mb-2">皮肤病毒感染，导致皮肤出现小疙瘩。</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>传播：</strong> 皮肤接触。</li>
+               <li><strong>症状：</strong> 圆形、坚硬的小凸起，通常无痛但可能发痒。</li>
+               <li><strong>治疗：</strong> 通常会自行消失，但可能需要数月。</li>
+             </ul>
+           </InfoCard>
         </div>
 
         <SectionTitle color="bg-amber-400">检测 (Testing)</SectionTitle>
@@ -785,6 +821,14 @@ const articles: Record<string, any> = {
            <h4 className="font-bold text-amber-800 text-sm mb-2">我需要检测吗？</h4>
            <p className="text-xs text-muted-foreground mb-4">如果你有性生活（阴道交、肛交、口交），答案通常是<strong>YES</strong>。即使你没有症状。</p>
            
+           <h4 className="font-bold text-amber-800 text-sm mb-2">去哪里检测？</h4>
+           <p className="text-xs text-muted-foreground mb-2">
+             你可以去 <strong>Planned Parenthood</strong>、社区卫生中心、医院或私人诊所。
+           </p>
+           <p className="text-xs text-muted-foreground mb-4">
+             费用因地点和保险而异。许多 Planned Parenthood 诊所根据收入提供免费或低成本服务。即使你是未成年人，许多地方也提供保密的检测服务。
+           </p>
+
            <h4 className="font-bold text-amber-800 text-sm mb-2">如何与伴侣谈论检测？</h4>
            <p className="text-xs text-muted-foreground mb-2">这显示了你对彼此健康的关心。试着说：</p>
            <div className="bg-amber-50 p-3 rounded-xl text-xs text-amber-900 italic">
@@ -794,10 +838,11 @@ const articles: Record<string, any> = {
 
         <SectionTitle color="bg-amber-400">更安全的性行为 (Safer Sex)</SectionTitle>
         <ListSection items={[
-           "使用屏障：避孕套、内用避孕套、口交膜 (Dental Dams)。",
-           "使用润滑液：减少摩擦和破损，让性爱更安全舒适。",
-           "沟通：在开始性行为前，诚实讨论性健康史。",
-           "PrEP：如果你有高风险，可以服用药物预防 HIV。"
+           "全程使用屏障：避孕套、内用避孕套、口交膜 (Dental Dams) 是预防 STD 的最佳防线。",
+           "润滑液：减少摩擦和微小伤口，让性行为更安全。",
+           "边缘性行为 (Outercourse)：如互相手淫、磨蹭（隔着衣服），这些行为几乎没有 STD 风险。",
+           "避免醉酒：酒精和药物会降低判断力，让你更容易忘记使用保护措施。",
+           "PrEP/PEP：如果你有高风险，可以咨询医生服用药物预防 HIV。"
         ]} color="text-amber-500" />
       </>
     )
