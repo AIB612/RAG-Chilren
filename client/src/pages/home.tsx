@@ -57,80 +57,130 @@ export default function Home() {
         let matchedResponse = null;
 
         const knowledgeBase = [
-          // Birth Control General
+          // 1. Abortion: 堕胎（人工流产）
+          {
+            keywords: ["堕胎", "流产", "人工流产", "打胎", "药流", "人流", "手术流产"],
+            text: "堕胎（人工流产）是一种安全、合法的医疗程序。主要有两种方式：\n1. 药物流产（药流）：通常适用于怀孕11周以内，使用米非司酮和米索前列醇。\n2. 手术流产（人流）：在诊所由医生进行，通常只需几分钟。\n每个人都有权根据自己的情况做出决定。❤️",
+            source: "RAG: Abortion"
+          },
+          {
+            keywords: ["米非司酮", "米索前列醇", "堕胎药"],
+            text: "堕胎药包含两种药物：米非司酮（阻断孕激素）和米索前列醇（引起子宫收缩）。这通常像一次严重的痛经。切记要在医生指导下使用。",
+            source: "RAG: Abortion"
+          },
+
+          // 2. Birth_Control: 避孕（生育控制）
           {
             keywords: ["避孕", "避孕方式", "避孕方法", "不想要孩子", "预防怀孕"],
-            text: "目前有很多种有效的避孕方式！最常见的包括：\n1. 短效避孕药（每日服用，有效率99%）\n2. 避孕套（唯一防性病，方便购买）\n3. IUD宫内节育器（长效省心，有效期3-12年）\n4. 皮下埋植（手臂植入，有效期3年）\n5. 紧急避孕药（事后72小时内补救）。\n\n你需要根据自己的生活习惯来选，我可以为你详细介绍其中某一种哦！👩‍⚕️",
-            source: "RAG: Birth Control Overview"
+            text: "避孕方式有很多种，选择适合你的最重要：\n- 短效避孕药（每日服用，有效率99%）\n- 避孕套（唯一防性病，方便购买）\n- IUD宫内节育器（长效省心，3-12年）\n- 皮下埋植（手臂植入，3年）\n- 避孕针（每3个月注射一次）\n你需要详细了解哪一种呢？",
+            source: "RAG: Birth_Control"
           },
-          // Birth Control Specifics
           {
             keywords: ["避孕药", "吃药", "短效"],
-            text: "根据【Planned Parenthood】的资料：避孕药的有效率可达99%，但必须每天按时服用。如果你经常忘记吃药，可能更适合宫内节育器(IUD)或避孕贴。需要我详细介绍其他避孕方式吗？💊",
-            source: "RAG: Birth Control Methods"
+            text: "短效避孕药需要每天同一时间服用，有效率可达99%。它还可以调节月经、缓解痛经。如果你经常忘吃，可能更适合长效避孕方式（如IUD）。",
+            source: "RAG: Birth_Control"
           },
           {
-            keywords: ["iud", "节育器", "环"],
-            text: "IUD（宫内节育器）是非常高效的长效避孕方式。分两种：含铜（无激素，有效期12年）和含激素（有效期3-7年）。置入后你就不用操心避孕的事了，而且随时可以取出恢复生育能力。",
-            source: "RAG: Long-Acting Reversible Contraception"
+            keywords: ["iud", "节育器", "环", "上环"],
+            text: "IUD（宫内节育器）是放置在子宫内的小型T状装置。分含铜（无激素，12年）和含激素（3-7年）两种。它是最有效的长效可逆避孕方式之一。",
+            source: "RAG: Birth_Control"
+          },
+
+          // 3. Emergency_Contraception: 紧急避孕
+          {
+            keywords: ["紧急", "事后", "plan b", "毓婷", "漏服", "套破", "意外"],
+            text: "紧急避孕药（如Plan B）在无保护性行为后越早服用效果越好（最好在72小时内）。它不是堕胎药，如果已经怀孕则无效。注意：它不能作为常规避孕手段。",
+            source: "RAG: Emergency_Contraception"
+          },
+
+          // 4. Gender_Identity: 性别认同
+          {
+            keywords: ["性别", "跨性别", "非二元", "男", "女", "认同"],
+            text: "性别认同是你内心对自己性别的深层感受，可能与出生时的指定性别一致（顺性别），也可能不一致（跨性别）。这完全是个人的体验，只有你能定义你自己。",
+            source: "RAG: Gender_Identity"
           },
           {
-            keywords: ["避孕套", "套套", "安全套"],
-            text: "避孕套是唯一能同时预防怀孕和性传播疾病(STDs)的方法！建议每次性行为都全程使用。如果搭配润滑液使用，体验会更好哦。🛡️",
-            source: "RAG: Barrier Methods"
+            keywords: ["代词", "称呼", "他", "她", "ta"],
+            text: "使用正确的代词（如他、她、Ta/They）是对他人性别认同的基本尊重。如果不确定，礼貌地询问对方希望被如何称呼是完全可以的。",
+            source: "RAG: Gender_Identity"
+          },
+
+          // 5. Health_and_Wellness: 健康与保健（健康与福祉）
+          {
+            keywords: ["月经", "大姨妈", "痛经", "周期", "经期"],
+            text: "健康的月经周期通常为21-35天。痛经是常见的，但如果痛到无法正常生活，建议咨询医生。保持良好的卫生习惯和心情对经期健康很有帮助。",
+            source: "RAG: Health_and_Wellness"
           },
           {
-            keywords: ["紧急", "事后", "plan b", "漏服", "套破"],
-            text: "紧急避孕药（如毓婷/Plan B）在无保护性行为后越早吃越有效，最好在72小时内服用。但它不能作为常规避孕手段，因为它比常规避孕药副作用大且失败率略高。",
-            source: "RAG: Emergency Contraception"
+            keywords: ["心情", "抑郁", "焦虑", "压力", "难过"],
+            text: "心理健康和身体健康一样重要。感到压力或焦虑是正常的，但如果持续时间很长，或者影响了生活，请寻求帮助（如学校心理咨询或信任的长辈）。",
+            source: "RAG: Health_and_Wellness"
           },
-          // STDs
+
+          // 6. Pregnancy_Full: 怀孕全程（完整孕期）
           {
-            keywords: ["std", "性病", "艾滋", "hiv", "梅毒", "疱疹", "尖锐湿疣", "hpv", "淋病", "衣原体"],
-            text: "大多数性传播疾病(STDs)在早期是没有症状的，所以“看起来健康”不代表没有感染。唯一确认的方法就是去检测。Planned Parenthood 或当地医院都可以提供保密的检测服务。这一步是保护你自己和伴侣的关键！🏥",
-            source: "RAG: STD Testing & Prevention"
+            keywords: ["怀孕", "有了", "怀上", "测", "两条杠", "孕期"],
+            text: "怀孕是一个复杂的生理过程。最早可以在性行为后14天用验孕棒检测。如果你怀孕了，你需要考虑产前护理，并了解你的选择（抚养、领养或堕胎）。",
+            source: "RAG: Pregnancy_Full"
           },
           {
+            keywords: ["早孕", "反应", "恶心", "吐"],
+            text: "早孕反应（如晨吐、乳房胀痛、疲劳）因人而异。如果你怀疑自己怀孕了，进行测试是确认的唯一方法。",
+            source: "RAG: Pregnancy_Full"
+          },
+
+          // 7. Relationships: 情感关系（亲密关系）
+          {
+            keywords: ["同意", "强迫", "不要", "拒绝", "consent"],
+            text: "在任何关系中，性同意（Consent）都是核心。它必须是自愿的、知情的、热情的，且可以随时撤销。没有同意的性行为就是性侵犯。你的身体由你做主。✋",
+            source: "RAG: Relationships"
+          },
+          {
+            keywords: ["分手", "虐待", "控制", "暴力", "关系"],
+            text: "健康的关系建立在尊重、信任和沟通之上。如果伴侣试图控制你、羞辱你或伤害你，这是虐待的迹象。你有权结束任何让你感到不安全或不快乐的关系。",
+            source: "RAG: Relationships"
+          },
+
+          // 8. Sex_and_Pleasure: 性与愉悦
+          {
+            keywords: ["自慰", "手淫", "diy", "高潮", "舒服"],
+            text: "性与愉悦是健康生活的一部分。自慰是完全正常且安全的，是探索自己身体喜好的方式。了解什么让你感到快乐和舒适，有助于建立健康的性观念。",
+            source: "RAG: Sex_and_Pleasure"
+          },
+
+          // 9. Sexual_Orientation: 性取向
+          {
+            keywords: ["性取向", "喜欢", "同性", "异性", "双性", "出柜"],
+            text: "性取向是指你在情感、浪漫或性方面被谁吸引（如异性恋、同性恋、双性恋等）。这不需要被“治愈”或改变。发现自己的性取向是一个旅程，不用急于贴标签。🌈",
+            source: "RAG: Sexual_Orientation"
+          },
+
+          // 10. STDs_HIV_Safer_Sex: 性传播疾病 (STD)、艾滋病毒 (HIV) 与安全性行为
+          {
+            keywords: ["std", "性病", "性传播", "梅毒", "淋病", "衣原体", "疱疹", "尖锐湿疣", "hpv"],
+            text: "大多数 STD 在早期没有症状！唯一确认的方法是检测。常见 STD 包括衣原体、淋病、梅毒、HPV 等。好消息是大多数都是可以治愈或控制的。",
+            source: "RAG: STDs_HIV_Safer_Sex"
+          },
+          {
+            keywords: ["hiv", "艾滋", "aids"],
+            text: "HIV 是攻击免疫系统的病毒。现在有很好的药物（抗逆转录病毒疗法）可以让感染者保持健康且不具传染性（U=U）。PrEP 是一种可以预防 HIV 的药物。",
+            source: "RAG: STDs_HIV_Safer_Sex"
+          },
+          {
+            keywords: ["安全", "避孕套", "套套", "润滑液"],
+            text: "安全性行为（Safer Sex）可以保护你免受 STD 和意外怀孕。全程正确使用避孕套是最好的防护措施。定期检测也是安全性行为的一部分。",
+            source: "RAG: STDs_HIV_Safer_Sex"
+          },
+           {
             keywords: ["痒", "异味", "分泌物", "痛"],
-            text: "私处的瘙痒、异味或异常分泌物可能是感染的迹象（如霉菌、细菌性阴道炎或滴虫），也可能只是普通的过敏。建议不要自己乱用药，去医院做一个简单的分泌物检查最放心。",
-            source: "RAG: Vaginal Health"
+            text: "私处的不适（痒、痛、异味）可能是感染迹象（如阴道炎或 STD），也可能只是过敏。建议去医院做分泌物检查，不要自己盲目用药。",
+            source: "RAG: STDs_HIV_Safer_Sex"
           },
-          // Pregnancy & Abortion
-          {
-            keywords: ["怀孕", "有了", "怀上", "测", "两条杠"],
-            text: "如果你担心怀孕，最早可以在性行为后14天用验孕棒测试，或者等月经推迟一周后再测最准。如果意外怀孕了，不论你决定生下来、领养还是堕胎，都有相应的支持资源。",
-            source: "RAG: Pregnancy & Options"
-          },
-          {
-            keywords: ["堕胎", "流产", "打胎", "人流", "药流"],
-            text: "堕胎是安全合法的医疗程序。主要有两种方式：\n1. 药物流产（药流）：适用于怀孕11周内，像一次严重的痛经。\n2. 手术流产（人流）：在诊所进行，只需几分钟，安全高效。\n不论选择哪种，都要去正规医院哦。",
-            source: "RAG: Abortion Information"
-          },
-          // General Health & Consent
-          {
-            keywords: ["月经", "大姨妈", "痛经", "周期"],
-            text: "每个人的月经周期都不太一样，21-35天都算正常。如果痛经严重影响生活，或者月经量突然变化很大，建议咨询医生。有时候短效避孕药也可以用来调节月经和缓解痛经哦。",
-            source: "RAG: Menstrual Health"
-          },
-          {
-            keywords: ["同意", "强迫", "不要", "拒绝"],
-            text: "记住，性同意(Consent)必须是自愿、清醒、热情且可随时撤销的。如果对方施压、强迫或者你在醉酒状态下，那都不是有效的同意。你的身体完全由你自己做主。✋",
-            source: "RAG: Relationships & Consent"
-          },
-          {
-            keywords: ["自慰", "手淫", "diy"],
-            text: "自慰是完全正常、健康且安全的行为，是探索自己身体喜好的好方式。它不会导致失明、不孕或任何健康问题。尽情享受属于你自己的快乐吧！✨",
-            source: "RAG: Sex & Pleasure"
-          },
-          {
-            keywords: ["心情", "抑郁", "难过", "焦虑"],
-            text: "青春期情绪波动大是很正常的，但如果这种低落持续很久，或者让你不想做平时喜欢的事，可能需要找人聊聊。学校的心理老师或信任的长辈都是很好的倾诉对象。",
-            source: "RAG: Mental Wellness"
-          },
-          // Greetings
+
+          // Greetings (AI fallback for politeness)
           {
             keywords: ["你好", "hello", "hi", "hey", "在吗"],
-            text: "你好呀！👋 我是小白，很高兴见到你。今天有什么想聊的吗？无论是关于身体的小秘密，还是心里的困惑，我都在这里陪着你哦。✨",
+            text: "你好呀！👋 我是小白。我可以为你提供关于避孕、性健康、人际关系等方面的专业知识。有什么想问的吗？",
             source: "AI: Greeting"
           }
         ];
