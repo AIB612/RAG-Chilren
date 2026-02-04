@@ -106,6 +106,11 @@ export default function Home() {
             keywords: ["心情", "抑郁", "难过", "焦虑"],
             text: "青春期情绪波动大是很正常的，但如果这种低落持续很久，或者让你不想做平时喜欢的事，可能需要找人聊聊。学校的心理老师或信任的长辈都是很好的倾诉对象。",
             source: "RAG: Mental Wellness"
+          },
+          {
+            keywords: ["你好", "hello", "hi", "hey", "在吗"],
+            text: "你好呀！👋 我是小白，很高兴见到你。今天有什么想聊的吗？无论是关于身体的小秘密，还是心里的困惑，我都在这里陪着你哦。✨",
+            source: "AI: Greeting"
           }
         ];
 
