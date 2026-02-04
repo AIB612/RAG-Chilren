@@ -1248,6 +1248,11 @@ const articles: Record<string, any> = {
                  <p className="text-xs text-muted-foreground">生殖器发育、变声（喉结突出）、梦遗。</p>
               </div>
            </div>
+           <div className="mt-3 text-center">
+             <a href="/learn/Anatomy" className="text-xs font-bold text-green-600 flex items-center justify-center gap-1 hover:underline p-2 bg-green-50 rounded-lg border border-green-100">
+               查看详细生殖器官解剖图解 <ChevronRight size={14}/>
+             </a>
+           </div>
         </div>
 
         <SectionTitle color="bg-green-400">月经百科 (Period 101)</SectionTitle>
@@ -2586,7 +2591,7 @@ const articles: Record<string, any> = {
   },
 
   "STDs_HIV_Safer_Sex": {
-    title: "性健康与 STDs",
+    title: "性传播疾病 (STDs)",
     subtitle: "了解风险，安全去爱",
     image: imgSTDs,
     color: "from-slate-400 to-gray-500",
@@ -2599,52 +2604,64 @@ const articles: Record<string, any> = {
           性传播疾病 (STDs) 非常普遍。任何有性生活的人都可能感染。好消息是，大多数 STDs 都是可以治愈或控制的。得病并不羞耻，重要的是及时治疗。
         </p>
         
-        <SectionTitle color="bg-slate-400">常见 STDs 速览</SectionTitle>
+        <SectionTitle color="bg-slate-400">常见 STDs 详解</SectionTitle>
         
         <div className="space-y-4">
-           <InfoCard title="衣原体与淋病 (Chlamydia & Gonorrhea)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+           <InfoCard title="衣原体 (Chlamydia)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
              <p className="text-xs mb-1"><strong>症状：</strong> 很多人无症状。可能有排尿痛、异常分泌物。</p>
-             <p className="text-xs"><strong>治疗：</strong> 抗生素可轻松治愈。如果不治疗，可能导致不孕。</p>
+             <p className="text-xs"><strong>治疗：</strong> 细菌感染，抗生素可轻松治愈。如果不治疗，可能导致不孕。</p>
+           </InfoCard>
+
+           <InfoCard title="淋病 (Gonorrhea)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+             <p className="text-xs mb-1"><strong>症状：</strong> 排尿灼烧感，黄绿色分泌物。但也可能无症状。</p>
+             <p className="text-xs"><strong>治疗：</strong> 细菌感染，抗生素可治愈。</p>
            </InfoCard>
 
            <InfoCard title="生殖器疱疹 (Herpes)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
-             <p className="text-xs mb-1"><strong>症状：</strong> 生殖器部位的水泡或溃疡，伴有疼痛。</p>
-             <p className="text-xs"><strong>治疗：</strong> 无法根治，但抗病毒药物可以控制症状爆发。</p>
+             <p className="text-xs mb-1"><strong>症状：</strong> 生殖器部位的水泡或溃疡，伴有疼痛。但很多人携带病毒却从未发病。</p>
+             <p className="text-xs"><strong>治疗：</strong> 病毒感染，无法根治。但抗病毒药物可以控制症状爆发，降低传染性。</p>
            </InfoCard>
 
            <InfoCard title="HPV (人乳头瘤病毒)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
-             <p className="text-xs mb-1"><strong>症状：</strong> 大多数无症状自行清除。某些类型导致尖锐湿疣或宫颈癌。</p>
-             <p className="text-xs"><strong>预防：</strong> 疫苗非常有效！</p>
+             <p className="text-xs mb-1"><strong>症状：</strong> 大多数无症状自行清除。某些类型导致尖锐湿疣（菜花状突起）或宫颈癌。</p>
+             <p className="text-xs"><strong>预防：</strong> 疫苗（Gardasil 9）非常有效！建议在性生活开始前接种。</p>
            </InfoCard>
 
            <InfoCard title="HIV (艾滋病毒)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
-             <p className="text-xs mb-1"><strong>症状：</strong> 早期可能像流感。只有检测才能确认。</p>
-             <p className="text-xs"><strong>治疗：</strong> 虽然无法根治，但在现代药物治疗下，感染者可以拥有正常寿命且不传染给他人 (U=U)。</p>
+             <p className="text-xs mb-1"><strong>症状：</strong> 早期可能像流感。只有检测才能确认。它会破坏免疫系统。</p>
+             <p className="text-xs"><strong>治疗：</strong> 虽然无法根治，但在现代药物治疗下，感染者可以拥有正常寿命且不传染给他人 (U=U)。PrEP 药物可以有效预防感染。</p>
            </InfoCard>
 
            <InfoCard title="梅毒 (Syphilis)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
-             <p className="text-xs mb-1"><strong>症状：</strong> 早期为无痛溃疡（硬下疳），之后可能出现皮疹。如果不治疗，会严重损害心脏和大脑。</p>
+             <p className="text-xs mb-1"><strong>症状：</strong> 第一阶段为无痛溃疡（硬下疳），第二阶段为皮疹（手掌/脚底）。如果不治疗，会严重损害心脏和大脑。</p>
              <p className="text-xs"><strong>治疗：</strong> 早期使用青霉素可完全治愈。</p>
            </InfoCard>
 
            <InfoCard title="滴虫病 (Trichomoniasis)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
              <p className="text-xs mb-1"><strong>症状：</strong> 分泌物增多、异味、瘙痒。男性通常无症状。</p>
-             <p className="text-xs"><strong>治疗：</strong> 抗生素可治愈。</p>
+             <p className="text-xs"><strong>治疗：</strong> 寄生虫感染，抗生素可治愈。</p>
+           </InfoCard>
+
+           <InfoCard title="阴虱 (Pubic Lice / Crabs)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+             <p className="text-xs mb-1"><strong>症状：</strong> 阴部剧烈瘙痒，可能看到微小的虫子。</p>
+             <p className="text-xs"><strong>治疗：</strong> 使用特殊的非处方洗液杀死它们。</p>
            </InfoCard>
         </div>
 
         <SectionTitle color="bg-slate-400">如何保护自己？</SectionTitle>
         <ListSection color="text-slate-600" items={[
           "全程使用避孕套：包括口交和肛交。",
-          "定期检测：即使没有症状，每年也要体检一次。",
-          "PrEP：如果你有高风险，可以服用 PrEP 药物预防 HIV。"
+          "定期检测：即使没有症状，每年也要体检一次。这是对自己和伴侣负责。",
+          "接种疫苗：HPV 和 乙肝疫苗。",
+          "沟通：在发生性行为前，与伴侣谈论 STDs 和检测结果。"
         ]} />
         <InfoCard title="检测方式 (Testing)" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
            <img src={imgMicroTestKit} alt="Testing" className="w-16 h-16 object-contain float-right ml-2 bg-white rounded-lg p-1 border border-slate-100" />
            <ul className="list-disc pl-4 space-y-1 text-xs">
              <li><strong>尿液检测：</strong> 查淋病、衣原体。</li>
-             <li><strong>血液检测：</strong> 查HIV、梅毒、疱疹。</li>
-             <li><strong>拭子取样：</strong> 从咽喉、直肠或生殖器取样。</li>
+             <li><strong>血液检测：</strong> 查HIV、梅毒、疱疹、乙肝。</li>
+             <li><strong>拭子取样：</strong> 医生可能会从咽喉、直肠或生殖器取样。</li>
+             <li><strong>过程：</strong> 快速、通常无痛。很多地方提供免费或低成本检测。</li>
            </ul>
         </InfoCard>
       </>
@@ -2694,9 +2711,14 @@ const articles: Record<string, any> = {
         <SectionTitle color="bg-pink-400">关于“知情同意” (Consent)</SectionTitle>
         <div className="bg-white p-5 rounded-2xl shadow-sm border border-pink-100 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-1 h-full bg-pink-400"></div>
-          <p className="text-foreground/80 text-sm leading-relaxed mb-2">
-            同意必须是<strong>FRIES</strong>：
-          </p>
+          <div className="flex justify-between items-start mb-2">
+            <p className="text-foreground/80 text-sm leading-relaxed">
+              同意必须是<strong>FRIES</strong>：
+            </p>
+            <a href="/learn/Consent" className="text-xs font-bold text-pink-600 flex items-center gap-1 hover:underline shrink-0 ml-2">
+               详细指南 <ChevronRight size={12}/>
+            </a>
+          </div>
           <ul className="space-y-1 text-xs text-muted-foreground">
             <li><strong>F</strong>reely given (自由给予)：没有压力或威胁。</li>
             <li><strong>R</strong>eversible (可撤销)：你可以随时改变主意。</li>
@@ -3595,6 +3617,114 @@ const articles: Record<string, any> = {
           "情绪波动",
           "阴道干涩"
         ]} color="text-fuchsia-500" />
+      </>
+    )
+  },
+
+  "Anatomy": {
+    title: "生殖与性器官解剖",
+    subtitle: "了解你的身体构造",
+    image: imgMicroAnatomy,
+    color: "from-green-400 to-teal-500",
+    accentColor: "bg-teal-500",
+    lightColor: "bg-teal-50 border-teal-100 text-teal-700",
+    tags: ["女性生殖器", "男性生殖器", "生理知识"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          生殖和性解剖结构包括你的生殖器（Genitals）以及内部的性器官和生殖器官。了解它们可以帮助你更好地照顾自己的身体。
+        </p>
+
+        <SectionTitle color="bg-teal-400">女性生殖器 (Vulva & Vagina)</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm font-bold text-foreground mb-2">外阴 (Vulva)</p>
+           <p className="text-xs text-muted-foreground mb-4">
+             人们常把下面统称为“阴道”，但其实你在外面能看到的所有部分统称为<strong className="text-teal-600">外阴</strong>。
+           </p>
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>阴蒂 (Clitoris)：</strong> 位于外阴顶端，富含数千个神经末梢。它的唯一功能就是提供性快感。</li>
+             <li><strong>大阴唇 (Labia Majora)：</strong> 外侧长有阴毛的皮肤褶皱。</li>
+             <li><strong>小阴唇 (Labia Minora)：</strong> 内侧的皮肤褶皱，形状、颜色、大小因人而异（完全正常！）。</li>
+             <li><strong>尿道口 (Urethra)：</strong> 排尿的小孔，位于阴道口上方。</li>
+             <li><strong>阴道口 (Vaginal Opening)：</strong> 经血流出和阴茎/性玩具进入的地方。</li>
+           </ul>
+        </div>
+
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm font-bold text-foreground mb-2">阴道 (Vagina)</p>
+           <p className="text-xs text-muted-foreground">
+             连接外阴和子宫的弹性肌肉通道。它有惊人的伸缩性（能容纳卫生棉条，也能生孩子）。阴道具有自我清洁功能，<strong className="text-red-500">不需要</strong>清洗阴道内部（灌洗）。
+           </p>
+        </div>
+
+        <SectionTitle color="bg-teal-400">男性生殖器</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
+             <li><strong>阴茎 (Penis)：</strong> 由海绵体组成，充血时会勃起。</li>
+             <li><strong>阴囊 (Scrotum)：</strong> 装有睾丸的皮肤囊袋。调节温度以保护精子。</li>
+             <li><strong>睾丸 (Testicles)：</strong> 制造精子和雄性激素（睾酮）。</li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-teal-400">所有身体部位都是性的</SectionTitle>
+        <p className="text-sm text-muted-foreground mb-4">
+          最大的性器官其实是你的<strong>大脑</strong>。它是性幻想、欲望和兴奋的来源。此外，皮肤是最大的感官器官，全身许多部位（性感带）都能在被触摸时产生快感，如颈部、耳朵、大腿内侧等。
+        </p>
+      </>
+    )
+  },
+
+  "Consent": {
+    title: "性同意 (Consent)",
+    subtitle: "每一次，每一刻",
+    image: imgRelationships,
+    color: "from-purple-400 to-indigo-500",
+    accentColor: "bg-indigo-500",
+    lightColor: "bg-indigo-50 border-indigo-100 text-indigo-700",
+    tags: ["FRIES原则", "界限", "尊重"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          性同意是指主动同意与某人发生性行为。同意是让对方知道你想要性行为。没有同意的性行为就是性侵犯或强奸。
+        </p>
+
+        <SectionTitle color="bg-indigo-400">同意就像 F.R.I.E.S.</SectionTitle>
+        <div className="bg-indigo-50 rounded-2xl p-5 mb-6 border border-indigo-100">
+          <ul className="space-y-4">
+            <li>
+              <p className="text-sm font-bold text-indigo-800">🍟 Freely Given (自由给予)</p>
+              <p className="text-xs text-indigo-700">同意必须是自愿的选择，没有任何压力、操纵，且未受到药物或酒精的影响。</p>
+            </li>
+            <li>
+              <p className="text-sm font-bold text-indigo-800">🍟 Reversible (可撤销)</p>
+              <p className="text-xs text-indigo-700">你可以随时改变主意。即使你之前同意了，或者现在正如火如荼，你也可以随时喊停。</p>
+            </li>
+            <li>
+              <p className="text-sm font-bold text-indigo-800">🍟 Informed (知情)</p>
+              <p className="text-xs text-indigo-700">你必须知道全部真相才能同意。例如，如果对方说会戴套但没戴，这就不是知情同意。</p>
+            </li>
+            <li>
+              <p className="text-sm font-bold text-indigo-800">🍟 Enthusiastic (热情)</p>
+              <p className="text-xs text-indigo-700">性应该是你<strong>想要</strong>做的事，而不是觉得有义务做的事。如果不确定，就停下来。</p>
+            </li>
+            <li>
+              <p className="text-sm font-bold text-indigo-800">🍟 Specific (具体)</p>
+              <p className="text-xs text-indigo-700">同意接吻不代表同意上床。同意这一次不代表同意下一次。</p>
+            </li>
+          </ul>
+        </div>
+
+        <SectionTitle color="bg-indigo-400">关于界限</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50">
+           <p className="text-sm text-muted-foreground mb-3">
+             你有权决定谁可以触碰你的身体，以及如何触碰。沉默不是同意。如果不确定伴侣是否想要，<strong>直接问出来</strong>是最性感的。
+           </p>
+           <p className="text-xs font-bold text-indigo-600">
+             "Can I kiss you?" (我可以吻你吗？)<br/>
+             "Do you like this?" (你喜欢这样吗？)<br/>
+             "Is this okay?" (这样可以吗？)
+           </p>
+        </div>
       </>
     )
   },
