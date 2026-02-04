@@ -347,6 +347,76 @@ const articles: Record<string, any> = {
     )
   },
 
+  "Considering_Parenthood": {
+    title: "为人父母 (Parenthood)",
+    subtitle: "做足准备，迎接新生命",
+    image: imgPregnancy,
+    color: "from-teal-400 to-cyan-500",
+    accentColor: "bg-cyan-500",
+    lightColor: "bg-cyan-50 border-cyan-100 text-cyan-700",
+    tags: ["抚养", "责任", "支持"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          抚养孩子是一件大事，也是一个非常个人的决定。无论你是第一次做父母，还是已经有了孩子，了解将要面临的挑战和快乐，能帮助你做出更明智的决定。
+        </p>
+
+        <SectionTitle color="bg-cyan-400">我准备好了吗？</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-4">
+             虽然育儿充满乐趣和满足感，但也非常辛苦。孩子在食物、住所、安全、爱和引导方面完全依赖你。问问自己是否具备以下条件：
+           </p>
+           <ul className="space-y-3 text-sm text-muted-foreground">
+             <li className="flex gap-2">
+               <span className="text-cyan-500 font-bold">时间:</span>
+               <span>这是一份全职工作，可能会暂停你的学业或职业计划。</span>
+             </li>
+             <li className="flex gap-2">
+               <span className="text-cyan-500 font-bold">精力:</span>
+               <span>孩子需要耐心、爱心和持续的关注。</span>
+             </li>
+             <li className="flex gap-2">
+               <span className="text-cyan-500 font-bold">规划:</span>
+               <span>需要为孩子成长的每个阶段做短期和长期的规划。</span>
+             </li>
+             <li className="flex gap-2">
+               <span className="text-cyan-500 font-bold">物质:</span>
+               <span>尿布、衣服、食物、医疗保健等都需要持续的资金支持。</span>
+             </li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-cyan-400">抚养方式：伴侣 vs 单亲</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="与伴侣共同抚养" colorClass="border-teal-100 bg-teal-50/30 text-teal-800">
+             <p className="mb-2">共同抚养可以分担责任，但也考验关系。由于压力，即使是最好的关系也会受到挑战。你们需要沟通以下问题：</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li>我们是否对何时要孩子达成一致？</li>
+               <li>我们会分担经济责任和日常照看工作吗？</li>
+               <li>如果关系结束，我们如何继续共同抚养？</li>
+             </ul>
+           </InfoCard>
+           <InfoCard title="单亲抚养" colorClass="border-cyan-100 bg-cyan-50/30 text-cyan-800">
+             <p className="mb-2">单亲抚养虽然艰难，但你不需要妥协，可以完全按照自己的价值观抚养孩子。你需要特别考虑：</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li>我有多大的亲友支持网络？</li>
+               <li>我能独自承担经济压力吗？</li>
+               <li>当我生病或加班时，谁来照顾孩子？</li>
+             </ul>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-cyan-400">产后感受</SectionTitle>
+        <p className="mb-4 text-sm text-foreground/80">
+          分娩后荷尔蒙的剧烈变化会影响情绪。感到快乐和爱是正常的，但感到悲伤和焦虑也很常见。
+        </p>
+        <InfoCard title="产后抑郁 (Postpartum Depression)" colorClass="border-blue-100 bg-blue-50/30 text-blue-800">
+           <p>如果你的低落情绪持续超过两周，或者影响了日常生活，请务必寻求医生或心理咨询师的帮助。你并不孤单。</p>
+        </InfoCard>
+      </>
+    )
+  },
+
   "Pregnancy_Full": {
     title: "怀孕全程 (Pregnancy)",
     subtitle: "从受孕到分娩",
@@ -438,15 +508,29 @@ const articles: Record<string, any> = {
         </div>
 
         <SectionTitle color="bg-indigo-400">治疗方案</SectionTitle>
-        <div className="space-y-4">
-           <InfoCard title="药物治疗" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
-             <p>使用药物调节荷尔蒙，促进排卵。</p>
-           </InfoCard>
+        <div className="space-y-6">
            <InfoCard title="宫腔内人工授精 (IUI)" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
-             <p>在排卵期，将处理过的精子直接注入子宫内。</p>
+             <p className="mb-3">一种简单的程序，将处理过的健康精子直接注入子宫内，缩短精子游动的距离。</p>
+             <div className="bg-white/50 rounded-lg p-3 text-xs space-y-2">
+               <p><strong>适合人群：</strong> 轻度精子问题、宫颈粘液问题、不明原因不孕。</p>
+               <p><strong>过程：</strong> 通常配合促排卵药物。在排卵期进行，过程只需几分钟，无痛。</p>
+               <p><strong>费用：</strong> 相对较低 ($300-$1000/次，具体视地区而定)。</p>
+             </div>
            </InfoCard>
-           <InfoCard title="体外受精 (IVF)" colorClass="border-indigo-100 bg-indigo-50/30 text-indigo-800">
-             <p>试管婴儿。在实验室中让精卵结合受精，然后将胚胎移植回子宫。</p>
+           
+           <InfoCard title="体外受精 (IVF)" colorClass="border-purple-100 bg-purple-50/30 text-purple-800">
+             <p className="mb-3">俗称“试管婴儿”。在实验室中让精子和卵子结合，然后将受精卵（胚胎）移植回子宫。</p>
+             <div className="bg-white/50 rounded-lg p-3 text-xs space-y-2">
+               <p><strong>过程：</strong></p>
+               <ol className="list-decimal pl-4 space-y-1">
+                 <li>促排卵：注射药物产生多个卵子。</li>
+                 <li>取卵：微创手术取出成熟卵子。</li>
+                 <li>受精：实验室中精卵结合。</li>
+                 <li>移植：将胚胎放入子宫。</li>
+               </ol>
+               <p className="mt-2"><strong>成功率：</strong> 较高，但取决于年龄和健康状况。</p>
+               <p><strong>费用：</strong> 昂贵 ($15,000+/周期)。</p>
+             </div>
            </InfoCard>
         </div>
       </>
