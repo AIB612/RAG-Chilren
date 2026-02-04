@@ -630,6 +630,88 @@ const articles: Record<string, any> = {
     )
   },
 
+  "Relationships_Full": {
+    title: "人际关系 (Relationships)",
+    subtitle: "健康、同意与安全",
+    image: imgRelationships,
+    color: "from-purple-400 to-indigo-500",
+    accentColor: "bg-purple-500",
+    lightColor: "bg-purple-50 border-purple-100 text-purple-700",
+    tags: ["健康关系", "同意", "安全", "分手"],
+    content: (
+      <>
+        <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
+          无论是友情、爱情还是亲情，人际关系都是生活的重要组成部分。建立健康的关系需要双方的努力、沟通和尊重。了解什么是健康的，什么是不健康的，以及如何设定界限（同意），对您的幸福至关重要。
+        </p>
+
+        <SectionTitle color="bg-purple-400">健康关系的特征</SectionTitle>
+        <div className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 mb-6">
+           <p className="text-sm text-muted-foreground mb-3">没有完美的关系，但在健康的关系中，双方大部分时间都感到快乐和被尊重。</p>
+           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-muted-foreground">
+             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div><span><strong>沟通：</strong> 公开谈论感受，不让对方猜测。</span></li>
+             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div><span><strong>诚实：</strong> 建立信任的基础。</span></li>
+             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div><span><strong>空间：</strong> 允许彼此有独立的朋友和兴趣。</span></li>
+             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div><span><strong>尊重：</strong> 即使意见不合，也尊重对方的想法。</span></li>
+             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div><span><strong>支持：</strong> 为对方的成就感到骄傲。</span></li>
+             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div><span><strong>性健康：</strong> 公开讨论避孕和性病检测。</span></li>
+           </ul>
+        </div>
+
+        <SectionTitle color="bg-purple-400">性同意 (Sexual Consent)</SectionTitle>
+        <InfoCard title="FRIES 原则" colorClass="border-purple-100 bg-purple-50/30 text-purple-800">
+           <p className="mb-3 text-sm">性同意必须是双方自愿、明确的。没有同意的性行为就是性侵犯或强奸。</p>
+           <ul className="space-y-2 text-xs">
+             <li><strong>Freely Given (自愿)：</strong> 没有压力、操纵或药物/酒精影响。</li>
+             <li><strong>Reversible (可撤销)：</strong> 任何时候都可以改变主意说“停”。</li>
+             <li><strong>Informed (知情)：</strong> 了解全部情况（如是否使用避孕套）。</li>
+             <li><strong>Enthusiastic (热情)：</strong> 是因为想做，而不是觉得有义务做。</li>
+             <li><strong>Specific (具体)：</strong> 同意接吻不代表同意性交。</li>
+           </ul>
+        </InfoCard>
+        <div className="bg-white rounded-2xl p-4 border border-purple-100 shadow-sm mb-6">
+          <h4 className="font-bold text-purple-700 text-sm mb-2">如何谈论同意？</h4>
+          <p className="text-xs text-muted-foreground mb-2">这并不尴尬，反而能增进亲密感。简单地问：</p>
+          <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
+            <li>"我可以亲你吗？"</li>
+            <li>"你想让我做...吗？"</li>
+            <li>"我想确认你也想继续，我们要继续吗？"</li>
+          </ul>
+          <p className="text-xs text-red-500 font-bold mt-2">如果对方说“不”、沉默或看起来不确定，那就是“没有同意”。</p>
+        </div>
+
+        <SectionTitle color="bg-purple-400">警惕不健康关系</SectionTitle>
+        <div className="space-y-4">
+           <InfoCard title="虐待的迹象" colorClass="border-red-100 bg-red-50/30 text-red-800">
+             <p className="mb-2 text-sm">虐待不仅仅是身体上的，还包括：</p>
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>控制：</strong> 检查你的手机，限制你见朋友/家人。</li>
+               <li><strong>言语/情感虐待：</strong> 羞辱、贬低、嫉妒、威胁。</li>
+               <li><strong>性虐待：</strong> 强迫进行你不想要的性行为。</li>
+               <li><strong>生殖控制：</strong> 破坏避孕措施，强迫怀孕或堕胎。</li>
+             </ul>
+           </InfoCard>
+           <InfoCard title="如何结束关系" colorClass="border-slate-100 bg-slate-50/30 text-slate-800">
+             <ul className="list-disc pl-4 space-y-1 text-xs">
+               <li><strong>准备：</strong> 提前想好要说什么。</li>
+               <li><strong>地点：</strong> 选择让双方都舒适的地方（如担心安全，选公共场所）。</li>
+               <li><strong>清晰：</strong> 如果你是为了让对方好过点而说“做朋友”，但这并非你本意，请不要这么说。彻底的了断通常更好。</li>
+               <li><strong>坚持：</strong> 不要因为内疚而动摇决定。</li>
+             </ul>
+           </InfoCard>
+        </div>
+
+        <SectionTitle color="bg-purple-400">性侵犯资源</SectionTitle>
+        <ListSection color="text-red-500" items={[
+           "如果你或朋友遭受性侵犯，这不是你的错。",
+           "确保安全：前往安全的地方或联系信任的人。",
+           "保留证据：如果可能，不要洗澡或更换衣物，以便采集证据。",
+           "医疗帮助：Planned Parenthood 或医院可以提供紧急避孕药、PEP（预防艾滋病药物）和伤口处理。",
+           "寻求支持：联系 RAINN (Rape, Abuse & Incest National Network) 或专业心理咨询。"
+        ]} />
+      </>
+    )
+  },
+
   "Abortion": {
     title: "堕胎 (Abortion)",
     subtitle: "安全、合法的医疗程序",
