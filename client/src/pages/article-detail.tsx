@@ -1323,7 +1323,7 @@ const articles: Record<string, any> = {
     content: (
       <>
         <p className="mb-6 text-foreground/80 leading-relaxed text-sm">
-          怀孕通常持续约 40 周（约 9-10 个月）。每一周，你和宝宝都在发生惊人的变化。这里是根据 Planned Parenthood 整理的逐月详细指南。
+          怀孕通常持续约 40 周（约 9-10 个月）。每一周，你和宝宝都在发生惊人的变化。这里是详细的逐月发育指南。
         </p>
         
         <div className="bg-rose-50 border border-rose-100 rounded-2xl p-4 mb-6">
@@ -1347,27 +1347,27 @@ const articles: Record<string, any> = {
             <div className="bg-white rounded-2xl p-5 shadow-sm border border-rose-100 mb-4">
               <div className="flex items-center justify-between mb-3">
                 <h4 className="font-bold text-lg text-foreground">第 1 个月 (1-4周)</h4>
-                <Badge variant="outline" className="text-rose-500 bg-rose-50 border-rose-200">胚胎期</Badge>
+                <Badge variant="outline" className="text-rose-500 bg-rose-50 border-rose-200">罂粟籽大小</Badge>
               </div>
               
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">受精卵着床。此时宝宝只是一个微小的细胞球（囊胚），大小像一粒罂粟籽。</p>
+                  <p className="text-xs text-muted-foreground">受精卵在输卵管中分裂，游向子宫并着床。分裂成两组细胞：一组发育成宝宝，一组发育成胎盘。</p>
                 </div>
               </div>
 
               <div className="space-y-3 pt-3 border-t border-dashed border-rose-100">
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
-                   <p className="text-xs text-muted-foreground">如果你月经规律，你可能会发现<span className="text-rose-600 font-medium">月经没来</span>。可能会有轻微的着床出血（褐色斑点）。你可能会感到异常疲惫。</p>
+                   <p className="text-xs text-muted-foreground">月经停止。可能会有轻微的着床出血（淡粉色或褐色）。有些人开始感到乳房胀痛、疲劳或类似感冒的症状。</p>
                 </div>
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
                    <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-                     <li>买验孕棒测试。</li>
-                     <li>开始服用含有<span className="text-rose-600">叶酸</span>的产前维生素。</li>
-                     <li>停止吸烟、饮酒，减少咖啡因摄入。</li>
+                     <li>使用验孕棒确认怀孕。</li>
+                     <li>开始服用含有<span className="text-rose-600">叶酸 (Folic Acid)</span> 的产前维生素，预防神经管缺陷。</li>
+                     <li>停止吸烟、饮酒，限制咖啡因。</li>
                    </ul>
                 </div>
               </div>
@@ -1383,20 +1383,20 @@ const articles: Record<string, any> = {
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">心脏开始跳动。神经管（大脑和脊髓的前身）形成。虽然还很小，但已经有了微小的手指和脚趾芽。</p>
+                  <p className="text-xs text-muted-foreground">心脏开始跳动（每分钟约160次）。神经管闭合，大脑和脊髓开始发育。微小的手臂和腿芽出现。面部特征（眼睛、鼻子、嘴巴）开始形成。</p>
                 </div>
               </div>
 
               <div className="space-y-3 pt-3 border-t border-dashed border-rose-100">
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
-                   <p className="text-xs text-muted-foreground"><span className="text-rose-600 font-medium">晨吐</span>（恶心）可能开始。乳房胀痛、乳晕变深。你需要频繁跑厕所（子宫压迫膀胱）。</p>
+                   <p className="text-xs text-muted-foreground"><span className="text-rose-600 font-medium">晨吐</span>（恶心呕吐）可能在第6周左右开始。乳晕颜色变深。子宫增大压迫膀胱，导致尿频。</p>
                 </div>
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
                    <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
                      <li>预约第一次产检（通常在第8周左右）。</li>
-                     <li>多休息，应对疲劳。</li>
+                     <li>注意饮食卫生，避免生肉、生鱼和未经巴氏消毒的奶制品。</li>
                    </ul>
                 </div>
               </div>
@@ -1412,7 +1412,7 @@ const articles: Record<string, any> = {
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">现在被称为“胎儿”。手指甲、脚趾甲形成。生殖器官开始发育（但B超还看不清）。宝宝可以握拳、张嘴。</p>
+                  <p className="text-xs text-muted-foreground">正式被称为“胎儿”。手指甲、脚趾甲形成。生殖器官开始发育。宝宝开始会吞咽羊水，并产生尿液。</p>
                 </div>
                  <img src={imgMicroFetus1} className="w-12 h-12 object-contain bg-rose-50 rounded-lg p-1" />
               </div>
@@ -1420,13 +1420,13 @@ const articles: Record<string, any> = {
               <div className="space-y-3 pt-3 border-t border-dashed border-rose-100">
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
-                   <p className="text-xs text-muted-foreground">恶心症状可能在月底开始缓解。你的小腹可能微微隆起，裤子开始变紧。激素可能导致情绪波动。</p>
+                   <p className="text-xs text-muted-foreground">恶心症状可能在第12周左右达到高峰后开始缓解。腹部可能微微隆起。由于激素作用，情绪波动可能较大。</p>
                 </div>
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
                    <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-                     <li>进行早期唐氏筛查（NT检查，11-13周）。</li>
-                     <li>可以听到胎心音了。</li>
+                     <li>进行 NT 扫描（11-13周），筛查唐氏综合征风险。</li>
+                     <li>此时可以用多普勒仪听到胎心音了。</li>
                    </ul>
                 </div>
               </div>
@@ -1452,20 +1452,20 @@ const articles: Record<string, any> = {
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">骨骼开始硬化。宝宝开始练习吸吮和吞咽。如果在B超下运气好，可能看出性别。</p>
+                  <p className="text-xs text-muted-foreground">骨骼开始从软骨硬化为骨头。宝宝能做鬼脸、皱眉。如果在B超下位置合适，可能看出性别。</p>
                 </div>
               </div>
 
               <div className="space-y-3 pt-3 border-t border-dashed border-orange-100">
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
-                   <p className="text-xs text-muted-foreground">食欲恢复！孕妇装开始成为必需品。你可能会感到烧心（胃酸倒流）。</p>
+                   <p className="text-xs text-muted-foreground">食欲大增。孕妇装开始成为必需品。可能会感到“圆韧带疼痛”（腹股沟锐痛），这是子宫拉伸引起的。</p>
                 </div>
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
                    <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-                     <li>唐氏筛查（中期）。</li>
-                     <li>开始侧睡（最好是左侧），有利于胎盘血流。</li>
+                     <li>中期唐氏筛查（如果需要）。</li>
+                     <li>开始练习侧睡（左侧卧位最佳），以改善流向胎盘的血液循环。</li>
                    </ul>
                 </div>
               </div>
@@ -1481,19 +1481,19 @@ const articles: Record<string, any> = {
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">头发、眉毛、睫毛开始生长。身上覆盖着一层白色的胎脂（Vernix）保护皮肤。</p>
+                  <p className="text-xs text-muted-foreground">头发、眉毛、睫毛生长。身上覆盖着一层白色的胎脂 (Vernix) 和细软的胎毛 (Lanugo)，保护皮肤在羊水中不被浸泡坏。</p>
                 </div>
               </div>
 
               <div className="space-y-3 pt-3 border-t border-dashed border-orange-100">
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
-                   <p className="text-xs text-muted-foreground"><span className="text-orange-600 font-bold">胎动！</span>（Quickening）你可能会第一次感觉到宝宝在动，像蝴蝶扇翅膀或小鱼游动。可能会出现腿抽筋。</p>
+                   <p className="text-xs text-muted-foreground"><span className="text-orange-600 font-bold">胎动！</span>（Quickening）你可能会第一次感觉到宝宝在动，像蝴蝶扇翅膀或小鱼游动。可能会出现腿抽筋或静脉曲张。</p>
                 </div>
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
                    <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
-                     <li><span className="font-bold">大排畸检查</span>（20周B超）：详细检查宝宝的所有器官发育情况。</li>
+                     <li><span className="font-bold">大排畸检查</span>（20周B超）：详细检查宝宝的所有器官发育结构。</li>
                    </ul>
                 </div>
               </div>
@@ -1509,19 +1509,20 @@ const articles: Record<string, any> = {
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">指纹形成。肺部开始发育表面活性物质（为呼吸做准备）。宝宝能听到外面的声音了——可以跟Ta说话了！</p>
+                  <p className="text-xs text-muted-foreground">指纹和足纹形成。肺部开始产生表面活性物质（为呼吸做准备）。听力发育完善，能听到你的声音和外面的噪音。</p>
                 </div>
               </div>
 
               <div className="space-y-3 pt-3 border-t border-dashed border-orange-100">
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
-                   <p className="text-xs text-muted-foreground">脚踝和脚可能会水肿。可能会感到假性宫缩（Braxton Hicks），肚子偶尔发紧但不痛。</p>
+                   <p className="text-xs text-muted-foreground">脚踝和脚可能会水肿。可能会感到假性宫缩（Braxton Hicks），肚子偶尔发紧但不痛。由于重心改变，背痛可能加重。</p>
                 </div>
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
                    <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
                      <li>妊娠期糖尿病筛查（喝糖水测试）。</li>
+                     <li>多跟宝宝说话、读书，建立连接。</li>
                    </ul>
                 </div>
               </div>
@@ -1547,14 +1548,14 @@ const articles: Record<string, any> = {
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">眼睑睁开，可以看到光。脂肪层开始堆积，皮肤变平滑。大脑快速发育。</p>
+                  <p className="text-xs text-muted-foreground">眼睑睁开，可以看到光。脂肪层开始堆积，皮肤变平滑。大脑快速发育，不仅变大，沟回也变多。</p>
                 </div>
               </div>
 
               <div className="space-y-3 pt-3 border-t border-dashed border-red-100">
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
-                   <p className="text-xs text-muted-foreground">肚子越来越大，可能出现妊娠纹。睡觉翻身变得困难。背痛可能加剧。</p>
+                   <p className="text-xs text-muted-foreground">肚子越来越大，可能出现妊娠纹。睡觉翻身变得困难，可能失眠。可能会有烧心和消化不良。</p>
                 </div>
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
@@ -1576,7 +1577,7 @@ const articles: Record<string, any> = {
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">骨骼完全硬化（除了头骨，为了通过产道）。宝宝开始练习呼吸运动。胎动变得有力（踢肋骨！）。</p>
+                  <p className="text-xs text-muted-foreground">除了头骨保持柔软（为了通过产道），其他骨骼完全硬化。宝宝开始练习呼吸运动。胎动变得有力，可能会踢到你的肋骨。</p>
                 </div>
               </div>
 
@@ -1590,6 +1591,7 @@ const articles: Record<string, any> = {
                    <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
                      <li>产检变为每两周一次。</li>
                      <li>开始数胎动：每天花时间记录宝宝的活动。</li>
+                     <li>参加分娩课程。</li>
                    </ul>
                 </div>
               </div>
@@ -1605,21 +1607,21 @@ const articles: Record<string, any> = {
               <div className="grid grid-cols-[1fr_auto] gap-4 mb-4">
                 <div className="space-y-1">
                   <p className="text-sm font-semibold text-foreground">👶 宝宝的变化</p>
-                  <p className="text-xs text-muted-foreground">肺部接近成熟。宝宝通常会转为头朝下的姿势（入盆）。体重迅速增加。</p>
+                  <p className="text-xs text-muted-foreground">肺部接近成熟。宝宝通常会转为头朝下的姿势（入盆）。体重迅速增加，每周长约半磅。</p>
                 </div>
               </div>
 
               <div className="space-y-3 pt-3 border-t border-dashed border-red-100">
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">🤰 你的身体</p>
-                   <p className="text-xs text-muted-foreground">因为宝宝入盆，骨盆压力增大，但呼吸会顺畅一些。可能会有“筑巢本能”（疯狂打扫卫生）。</p>
+                   <p className="text-xs text-muted-foreground">因为宝宝入盆，骨盆压力增大，耻骨可能会痛，但呼吸会顺畅一些。可能会有“筑巢本能”（疯狂打扫卫生、整理物品）。</p>
                 </div>
                 <div>
                    <p className="text-sm font-semibold text-foreground mb-1">✅ 本月重点</p>
                    <ul className="list-disc pl-4 space-y-1 text-xs text-muted-foreground">
                      <li>产检变为每周一次。</li>
-                     <li>B族链球菌 (GBS) 检查。</li>
-                     <li>准备好待产包。</li>
+                     <li>进行 B族链球菌 (GBS) 检查。</li>
+                     <li>准备好待产包，安装好汽车安全座椅。</li>
                    </ul>
                 </div>
               </div>
@@ -1633,14 +1635,14 @@ const articles: Record<string, any> = {
               </div>
               
               <div className="space-y-3">
-                <p className="text-xs text-muted-foreground"><strong>37周算足月</strong>，宝宝随时可能出生。只有5%的宝宝会在预产期当天出生。</p>
+                <p className="text-xs text-muted-foreground"><strong>37周算足月</strong>，宝宝随时可能出生。只有5%的宝宝会在预产期当天出生。宝宝身上的胎脂和胎毛大部分脱落。</p>
                 
                  <div className="bg-red-50 rounded-xl p-3 border border-red-100">
                    <p className="text-sm font-bold text-red-800 mb-1">⚠️ 分娩征兆：何时去医院？</p>
                    <ul className="list-disc pl-4 space-y-1 text-xs text-red-700">
                      <li><strong>规律宫缩：</strong> 每5分钟一次，持续1分钟，持续1小时 (5-1-1规则)。</li>
                      <li><strong>破水：</strong> 感到大量液体流出（哪怕没有阵痛也要去）。</li>
-                     <li><strong>见红：</strong> 粘液栓脱落，伴有血丝。</li>
+                     <li><strong>见红：</strong> 粘液栓脱落，伴有血丝（但这可能发生在分娩前几天）。</li>
                    </ul>
                 </div>
               </div>
@@ -1655,9 +1657,9 @@ const articles: Record<string, any> = {
             分娩后的前3个月被称为“第四孕期”。你的身体需要时间恢复，宝宝需要适应子宫外的生活。
           </p>
           <ul className="list-disc pl-4 space-y-2 text-xs text-muted-foreground">
-             <li><strong>恶露：</strong> 产后会有类似月经的出血，持续几周。</li>
+             <li><strong>恶露：</strong> 产后会有类似月经的出血，持续4-6周。</li>
              <li><strong>情绪：</strong> “产后抑郁” (Baby Blues) 很常见，但如果持续超过2周或感到绝望，请立即就医。</li>
-             <li><strong>恢复：</strong> 如果是顺产，伤口需要几周愈合；如果是剖腹产，则是大型腹部手术，需要更长恢复期。</li>
+             <li><strong>恢复：</strong> 如果是顺产，伤口需要几周愈合；如果是剖腹产，则是大型腹部手术，需要更长恢复期，避免提重物。</li>
           </ul>
         </div>
       </>
