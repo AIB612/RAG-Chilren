@@ -12,7 +12,7 @@
 
 *Nurturing growth with love and science* 💜
 
-[Live Demo](https://xiaobai-teacher.onrender.com) · [Contribute](#-contribute) · [Roadmap](#-roadmap)
+[Live Demo](https://rag-chilren.onrender.com) · [Contribute](#-contribute) · [Roadmap](#-roadmap)
 
 </div>
 
