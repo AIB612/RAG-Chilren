@@ -1,0 +1,43 @@
+services:
+  # RAG后端API服务
+  - type: web
+    name: rag-children-backend
+    env: node
+    region: singapore  # 选择离用户近的区域
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      # 在Render控制台中设置以下环境变量
+      # - key: OPENAI_API_KEY
+      #   sync: false
+      # - key: DEEPSEEK_API_KEY
+      #   sync: false
+      # - key: DEEPSEEK_API_URL
+      #   value: https://api.deepseek.com
+    
+    # 资源配置（根据需求调整）
+    plan: free  # 免费计划开始，后续可升级
+    # plan: starter  # 入门付费计划
+    # plan: standard  # 标准计划
+    
+    # 自动部署配置
+    autoDeploy: true
+    branch: main
+    
+    # 磁盘（如果需要持久化向量数据库）
+    disk:
+      name: chroma-data
+      mountPath: /data
+      sizeGB: 1
+
+# 数据库服务（如果需要）
+# databases:
+#   - name: rag-children-db
+#     databaseName: rag_children
+#     plan: free
+#     ipAllowList: []  # 允许所有IP访问

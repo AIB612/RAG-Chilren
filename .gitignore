@@ -4,3 +4,11 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# RAG后端相关
+rag-backend/node_modules
+rag-backend/chroma_db
+rag-backend/.env
+rag-backend/*.log
+rag-backend/data/*.json
+rag-backend/data/*.txt
